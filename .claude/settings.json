@@ -40,48 +40,9 @@
   },
   "model": "sonnet",
   "enableAllProjectMcpServers": false,
-  "hooks": {
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node .claude/hooks/gsd-check-update.js"
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "Bash|Edit|Write|MultiEdit|Agent|Task",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node .claude/hooks/gsd-context-monitor.js",
-            "timeout": 10
-          }
-        ]
-      }
-    ],
-    "PreToolUse": [
-      {
-        "matcher": "Write|Edit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node .claude/hooks/gsd-prompt-guard.js",
-            "timeout": 5
-          }
-        ]
-      }
-    ]
-  },
   "disableAllHooks": false,
-  "statusLine": {
-    "type": "command",
-    "command": "node .claude/hooks/gsd-statusline.js"
-  },
   "enabledPlugins": {
+<<<<<<< Updated upstream
     "worktrunk@worktrunk": false,
     "core@skogai-marketplace": false,
     "code-simplifier@claude-plugins-official": false,
@@ -98,6 +59,36 @@
     "atomic-agents@claude-plugins-official": false,
     "fakechat@claude-plugins-official": false,
     "mintlify@claude-plugins-official": false
+||||||| Stash base
+    "worktrunk@worktrunk": true,
+    "core@skogai-marketplace": true,
+    "code-simplifier@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "figma@claude-plugins-official": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "plugin-dev@claude-plugins-official": true,
+    "lua-lsp@claude-plugins-official": true,
+    "remember@claude-plugins-official": true,
+    "atomic-agents@claude-plugins-official": true,
+    "fakechat@claude-plugins-official": true,
+    "mintlify@claude-plugins-official": true
+=======
+    "skill-creator@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "plugin-dev@claude-plugins-official": true,
+    "lua-lsp@claude-plugins-official": true,
+    "atomic-agents@claude-plugins-official": true
+>>>>>>> Stashed changes
   },
   "extraKnownMarketplaces": {
     "worktrunk": {
