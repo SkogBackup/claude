@@ -1,1 +1,0 @@
-/home/claude/.skogai/SKOGAI.md
