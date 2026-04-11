@@ -1,0 +1,5 @@
+#!/bin/bash
+# wrapper script for skogai-todo taskwarrior
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec task rc:"$SCRIPT_DIR/taskrc" "$@"

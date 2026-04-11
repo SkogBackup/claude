@@ -1,0 +1,52 @@
+# skogai-todo taskrc
+# usage: task rc:./taskrc <command>
+
+# data location (relative to this file)
+data.location=./.taskdata
+
+# default command when just running 'task'
+default.command=next
+
+# urgency coefficients for smart sorting
+urgency.user.project.skogai.coefficient=5.0
+urgency.uda.priority.H.coefficient=6.0
+urgency.uda.priority.M.coefficient=3.0
+urgency.uda.priority.L.coefficient=1.0
+urgency.blocking.coefficient=8.0
+urgency.blocked.coefficient=-5.0
+
+# report: work-ready items (no blockers, pending status)
+report.ready.description=Ready to work (unblocked pending)
+report.ready.columns=id,depends,priority,project,tags,description
+report.ready.labels=ID,Deps,Pri,Project,Tags,Description
+report.ready.sort=urgency-
+report.ready.filter=status:pending -BLOCKED
+
+# report: waiting (blocked by dependencies)
+report.waiting.description=Blocked by dependencies
+report.waiting.columns=id,depends,priority,project,tags,description
+report.waiting.labels=ID,Deps,Pri,Project,Tags,Description
+report.waiting.sort=urgency-
+report.waiting.filter=status:pending +BLOCKED
+
+# report: active work
+report.active.description=Currently active tasks
+report.active.columns=id,start.age,priority,project,tags,description
+report.active.labels=ID,Active,Pri,Project,Tags,Description
+report.active.sort=start-
+report.active.filter=status:pending +ACTIVE
+
+# color theme (simple)
+color.active=bold white on rgb010
+color.blocked=gray8
+color.blocking=bold yellow
+color.due.today=bold red
+color.pri.H=bold red
+color.pri.M=bold yellow
+color.pri.L=bold cyan
+
+# context: skogai project only
+context.skogai=project:skogai
+
+# weekstart monday
+weekstart=monday

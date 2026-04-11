@@ -1,0 +1,124 @@
+zellij-action
+Send actions to a specific session
+
+USAGE:
+    zellij action <SUBCOMMAND>
+
+OPTIONS:
+    -h, --help    Print help information
+
+SUBCOMMANDS:
+    change-floating-pane-coordinates
+
+    clear
+            Clear all buffers for a focused pane
+    close-pane
+            Close the focused pane
+    close-tab
+            Close the current tab
+    dump-layout
+            Dump current layout to stdout
+    dump-screen
+            Dump the focused pane to a file
+    edit
+            Open the specified file in a new zellij pane with your default EDITOR
+    edit-scrollback
+            Open the pane scrollback in your default editor
+    focus-next-pane
+            Change focus to the next pane
+    focus-previous-pane
+            Change focus to the previous pane
+    go-to-next-tab
+            Go to the next tab
+    go-to-previous-tab
+            Go to the previous tab
+    go-to-tab
+            Go to tab with index [index]
+    go-to-tab-name
+            Go to tab with name [name]
+    half-page-scroll-down
+            Scroll down half page in focus pane
+    half-page-scroll-up
+            Scroll up half page in focus pane
+    help
+            Print this message or the help of the given subcommand(s)
+    launch-or-focus-plugin
+
+    launch-plugin
+
+    list-clients
+
+    move-focus
+            Move the focused pane in the specified direction. [right|left|up|down]
+    move-focus-or-tab
+            Move focus to the pane or tab (if on screen edge) in the specified direction [right|
+            left|up|down]
+    move-pane
+            Change the location of the focused pane in the specified direction or rotate forwrads
+            [right|left|up|down]
+    move-pane-backwards
+            Rotate the location of the previous pane backwards
+    move-tab
+            Move the focused tab in the specified direction. [right|left]
+    new-pane
+            Open a new pane in the specified direction [right|down] If no direction is specified,
+            will try to use the biggest available space
+    new-tab
+            Create a new tab, optionally with a specified tab layout and name
+    next-swap-layout
+
+    page-scroll-down
+            Scroll down one page in focus pane
+    page-scroll-up
+            Scroll up one page in focus pane
+    pipe
+            Send data to one or more plugins, launch them if they are not running
+    previous-swap-layout
+
+    query-tab-names
+            Query all tab names
+    rename-pane
+            Renames the focused pane
+    rename-session
+
+    rename-tab
+            Renames the focused pane
+    resize
+            [increase|decrease] the focused panes area at the [left|down|up|right] border
+    scroll-down
+            Scroll down in focus pane
+    scroll-to-bottom
+            Scroll down to bottom in focus pane
+    scroll-to-top
+            Scroll up to top in focus pane
+    scroll-up
+            Scroll up in the focused pane
+    stack-panes
+            Stack pane ids Ids are a space separated list of pane ids. They should either be in
+            the form of `terminal_<int>` (eg. terminal_1), `plugin_<int>` (eg. plugin_1) or bare
+            integers in which case they'll be considered terminals (eg. 1 is the equivalent of
+            terminal_1)
+    start-or-reload-plugin
+
+    switch-mode
+            Switch input mode of all connected clients [locked|pane|tab|resize|move|search|session]
+    toggle-active-sync-tab
+            Toggle between sending text commands to all panes on the current tab and normal mode
+    toggle-floating-panes
+            Toggle the visibility of all floating panes in the current Tab, open one if none exist
+    toggle-fullscreen
+            Toggle between fullscreen focus pane and normal layout
+    toggle-pane-embed-or-floating
+            Embed focused pane if floating or float focused pane if embedded
+    toggle-pane-frames
+            Toggle frames around panes in the UI
+    toggle-pane-pinned
+
+    undo-rename-pane
+            Remove a previously set pane name
+    undo-rename-tab
+            Remove a previously set tab name
+    write
+            Write bytes to the terminal
+    write-chars
+            Write characters to the terminal

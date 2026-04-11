@@ -1,0 +1,11 @@
+zellij-list-sessions
+List active sessions
+
+USAGE:
+    zellij list-sessions [OPTIONS]
+
+OPTIONS:
+    -h, --help             Print help information
+    -n, --no-formatting    Do not add colors and formatting to the list (useful for parsing)
+    -r, --reverse          List the sessions in reverse order (default is ascending order)
+    -s, --short            Print just the session name

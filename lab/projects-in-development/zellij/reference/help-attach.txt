@@ -1,0 +1,21 @@
+zellij-attach
+Attach to a session
+
+USAGE:
+    zellij attach [OPTIONS] [SESSION_NAME] [SUBCOMMAND]
+
+ARGS:
+    <SESSION_NAME>    Name of the session to attach to
+
+OPTIONS:
+    -b, --create-background     Create a detached session in the background if one does not exist
+    -c, --create                Create a session if one does not exist
+    -f, --force-run-commands    If resurrecting a dead session, immediately run all its commands
+                                on startup
+    -h, --help                  Print help information
+        --index <INDEX>         Number of the session index in the active sessions ordered creation
+                                date
+
+SUBCOMMANDS:
+    help       Print this message or the help of the given subcommand(s)
+    options    Change the behaviour of zellij

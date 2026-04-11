@@ -1,0 +1,7 @@
+{
+  "name": "Claude Code - @claude Mentions",
+  "description": "Trigger Claude Code by mentioning @claude in issues, PRs, or comments. Uses official Anthropic action.",
+  "iconName": "octoface",
+  "categories": ["Automation", "AI"],
+  "filePatterns": ["workflows/*.yml", "workflows/*.yaml"]
+}

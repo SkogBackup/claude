@@ -1,0 +1,195 @@
+zellij-options
+Change the behaviour of zellij
+
+USAGE:
+    zellij options [OPTIONS] [ARGS]
+
+ARGS:
+    <WEB_SERVER_IP>
+
+
+    <WEB_SERVER_PORT>
+
+
+    <WEB_SERVER_CERT>
+
+
+    <WEB_SERVER_KEY>
+
+
+    <ENFORCE_HTTPS_FOR_LOCALHOST>
+
+
+OPTIONS:
+        --advanced-mouse-actions <ADVANCED_MOUSE_ACTIONS>
+            Whether to enable mouse hover effects and pane grouping functionality default is true
+
+            [possible values: true, false]
+
+        --attach-to-session <ATTACH_TO_SESSION>
+            Whether to attach to a session specified in "session-name" if it exists
+
+            [possible values: true, false]
+
+        --auto-layout <AUTO_LAYOUT>
+            Whether to lay out panes in a predefined set of layouts whenever possible
+
+            [possible values: true, false]
+
+        --copy-clipboard <COPY_CLIPBOARD>
+            OSC52 destination clipboard
+
+            [possible values: system, primary]
+
+        --copy-command <COPY_COMMAND>
+            Switch to using a user supplied command for clipboard instead of OSC52
+
+        --copy-on-select <COPY_ON_SELECT>
+            Automatically copy when selecting text (true or false)
+
+            [possible values: true, false]
+
+        --default-cwd <DEFAULT_CWD>
+            Set the default cwd
+
+        --default-layout <DEFAULT_LAYOUT>
+            Set the default layout
+
+        --default-mode <DEFAULT_MODE>
+            Set the default mode
+
+        --default-shell <DEFAULT_SHELL>
+            Set the default shell
+
+        --disable-mouse-mode
+            Disable handling of mouse events
+
+        --disable-session-metadata <DISABLE_SESSION_METADATA>
+            If true, will disable writing session metadata to disk
+
+            [possible values: true, false]
+
+    -h, --help
+            Print help information
+
+        --layout-dir <LAYOUT_DIR>
+            Set the layout_dir, defaults to subdirectory of config dir
+
+        --mirror-session <MIRROR_SESSION>
+            Mirror session when multiple users are connected (true or false)
+
+            [possible values: true, false]
+
+        --mouse-mode <MOUSE_MODE>
+            Set the handling of mouse events (true or false) Can be temporarily bypassed by the
+            [SHIFT] key
+
+            [possible values: true, false]
+
+        --no-pane-frames
+            Disable display of pane frames
+
+        --on-force-close <ON_FORCE_CLOSE>
+            Set behaviour on force close (quit or detach)
+
+        --pane-frames <PANE_FRAMES>
+            Set display of the pane frames (true or false)
+
+            [possible values: true, false]
+
+        --post-command-discovery-hook <POST_COMMAND_DISCOVERY_HOOK>
+            A command to run after the discovery of running commands when serializing, for the
+            purpose of manipulating the command (eg. with a regex) before it gets serialized
+
+        --scroll-buffer-size <SCROLL_BUFFER_SIZE>
+
+
+        --scrollback-editor <SCROLLBACK_EDITOR>
+            Explicit full path to open the scrollback editor (default is $EDITOR or $VISUAL)
+
+        --scrollback-lines-to-serialize <SCROLLBACK_LINES_TO_SERIALIZE>
+            Scrollback lines to serialize along with the pane viewport when serializing sessions, 0
+            defaults to the scrollback size. If this number is higher than the scrollback size, it
+            will also default to the scrollback size
+
+        --serialization-interval <SERIALIZATION_INTERVAL>
+            The interval at which to serialize sessions for resurrection (in seconds)
+
+        --serialize-pane-viewport <SERIALIZE_PANE_VIEWPORT>
+            Whether pane viewports are serialized along with the session, default is false
+
+            [possible values: true, false]
+
+        --session-name <SESSION_NAME>
+            The name of the session to create when starting Zellij
+
+        --session-serialization <SESSION_SERIALIZATION>
+            Whether sessions should be serialized to the HD so that they can be later resurrected,
+            default is true
+
+            [possible values: true, false]
+
+        --show-release-notes <SHOW_RELEASE_NOTES>
+            Whether to show release notes on first run of a new version default is true
+
+            [possible values: true, false]
+
+        --show-startup-tips <SHOW_STARTUP_TIPS>
+            Whether to show startup tips when starting a new session default is true
+
+            [possible values: true, false]
+
+        --simplified-ui <SIMPLIFIED_UI>
+            Allow plugins to use a more simplified layout that is compatible with more fonts (true
+            or false)
+
+            [possible values: true, false]
+
+        --stacked-resize <STACKED_RESIZE>
+            Whether to stack panes when resizing beyond a certain size default is true
+
+            [possible values: true, false]
+
+        --styled-underlines <STYLED_UNDERLINES>
+            Whether to use ANSI styled underlines
+
+            [possible values: true, false]
+
+        --support-kitty-keyboard-protocol <SUPPORT_KITTY_KEYBOARD_PROTOCOL>
+            Whether to enable support for the Kitty keyboard protocol (must also be supported by the
+            host terminal), defaults to true if the terminal supports it
+
+            [possible values: true, false]
+
+        --theme <THEME>
+            Set the default theme
+
+        --theme-dir <THEME_DIR>
+            Set the theme_dir, defaults to subdirectory of config dir
+
+        --web-server <WEB_SERVER>
+            Whether to make sure a local web server is running when a new Zellij session starts.
+            This web server will allow creating new sessions and attaching to existing ones that
+            have opted in to being shared in the browser.
+
+            Note: a local web server can still be manually started from within a Zellij session or
+            from the CLI. If this is not desired, one can use a version of Zellij compiled without
+            web_server_capability
+
+            Possible values: - true - false Default: false
+
+            [possible values: true, false]
+
+        --web-sharing <WEB_SHARING>
+            Whether to allow new sessions to be shared through a local web server, assuming one is
+            running (see the `web_server` option for more details).
+
+            Note: if Zellij was compiled without web_server_capability, this option will be locked
+            to "disabled"
+
+            Possible values: - "on" (new sessions will allow web sharing through the local web
+            server if it is online) - "off" (new sessions will not allow web sharing unless they
+            explicitly opt-in to it) - "disabled" (new sessions will not allow web sharing and will
+            not be able to opt-in to it) Default: "off"
+
+            [possible values: on, off, disabled]

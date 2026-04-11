@@ -15,7 +15,11 @@ Context is loaded lazily. Read the router, follow the link, get what's needed. N
 ├── .claude/
 │   ├── CLAUDE.md        — global identity + operating principles (always loaded)
 │   ├── settings.json    — Claude Code config (single source of truth)
-│   └── hooks/           — gsd-* hooks (check-update, context-monitor, prompt-guard, statusline)
+│   ├── agents/          — gsd subagent definitions (planner, executor, verifier, etc.)
+│   ├── commands/        — slash commands (gsd/*, skogai/*)
+│   ├── get-shit-done/   — gsd plugin (bin, commands, workflows, templates)
+│   ├── hooks/           — gsd-* hooks (check-update, context-monitor, prompt-guard, statusline, workflow-guard)
+│   └── skills/          — claude code skills (planning-with-files, prompt-master, etc.)
 ├── .skogai/
 │   ├── SKOGAI.md        — SkogAI integrations context
 │   ├── docs/
@@ -25,15 +29,37 @@ Context is loaded lazily. Read the router, follow the link, get what's needed. N
 │   │       └── definitions.md       — SkogAI vocabulary (@, $, task, todo, plan, agent...)
 │   └── mcp/
 │       └── searxng.js   — SearXNG MCP server (web search via searxng.aldervall.se)
+├── .planning/           — gsd project planning (PROJECT.md, ROADMAP.md, STATE.md, memory/)
+├── bin/                 — scripts and tools (healthcheck, context-*.sh, build-system-prompt.sh)
 ├── commands/
 │   └── wrapup.md        — /wrap-up slash command (ship, remember, review, journal)
 ├── .config/
 │   └── wt.toml          — worktrunk config template
-├── docs/                — fetched reference docs (gitignored, regenerate with docs/fetch-docs.sh)
+├── docs/                — reference docs (deployment-gate.md, permissions.md, fetch-docs.sh)
+├── guestbook/           — visitor notes and cross-agent messages
+├── journal/             — session journals and discoveries
+├── lab/                 — experiments, prototypes, WIP projects
+├── notes/               — observations and patterns
+├── personal/            — identity, soul document, memory blocks, profile
+├── state/               — session state
+├── tasks/               — tracked GitHub issues as local task files
 └── CLAUDE.md            — this file
 ```
 
 </structure>
+
+<routes>
+
+Each directory has its own CLAUDE.md router. Load lazily:
+
+- @bin/CLAUDE.md          — scripts and tools
+- @docs/CLAUDE.md         — reference documentation
+- @guestbook/CLAUDE.md    — visitor notes
+- @lab/CLAUDE.md          — experiments and WIP
+- @notes/CLAUDE.md        — observations and patterns
+- @personal/CLAUDE.md     — identity, soul, memory
+
+</routes>
 
 <tooling>
 
@@ -64,6 +90,7 @@ Hooks fire automatically via Claude Code (settings.json). Implementations live i
 | gsd-context-monitor.js   | PostToolUse | Bash\|Edit\|Write\|Agent\|Task   | monitor context window         |
 | gsd-prompt-guard.js      | PreToolUse  | Write\|Edit                      | guard file write operations    |
 | gsd-statusline.js        | —           | statusLine                       | render status line             |
+| gsd-workflow-guard.js    | PreToolUse  | Write\|Edit                      | guard workflow state changes   |
 
 </hooks>
 
@@ -84,7 +111,8 @@ Key settings.json values (`.claude/settings.json`):
 - `autoDreamEnabled: true`
 - `defaultView: "transcript"`
 - `skipDangerousModePermissionPrompt: true`
-- all plugins currently disabled
+- hooks: gsd-check-update (SessionStart), gsd-context-monitor (PostToolUse), gsd-prompt-guard (PreToolUse)
+- statusLine: gsd-statusline.js
 
 </settings_highlights>
 

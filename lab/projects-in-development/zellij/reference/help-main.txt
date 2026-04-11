@@ -1,0 +1,59 @@
+zellij 0.43.1
+
+USAGE:
+    zellij [OPTIONS] [SUBCOMMAND]
+
+OPTIONS:
+    -c, --config <CONFIG>
+            Change where zellij looks for the configuration file [env: ZELLIJ_CONFIG_FILE=]
+
+        --config-dir <CONFIG_DIR>
+            Change where zellij looks for the configuration directory [env: ZELLIJ_CONFIG_DIR=]
+
+    -d, --debug
+            Specify emitting additional debug information
+
+        --data-dir <DATA_DIR>
+            Change where zellij looks for plugins
+
+    -h, --help
+            Print help information
+
+    -l, --layout <LAYOUT>
+            Name of a predefined layout inside the layout directory or the path to a layout file if
+            inside a session (or using the --session flag) will be added to the session as a new tab
+            or tabs, otherwise will start a new session
+
+        --max-panes <MAX_PANES>
+            Maximum panes on screen, caution: opening more panes will close old ones
+
+    -n, --new-session-with-layout <NEW_SESSION_WITH_LAYOUT>
+            Name of a predefined layout inside the layout directory or the path to a layout file
+            Will always start a new session, even if inside an existing session
+
+    -s, --session <SESSION>
+            Specify name of a new session
+
+    -V, --version
+            Print version information
+
+SUBCOMMANDS:
+    action                 Send actions to a specific session [aliases: ac]
+    attach                 Attach to a session [aliases: a]
+    convert-config
+    convert-layout
+    convert-theme
+    delete-all-sessions    Delete all sessions [aliases: da]
+    delete-session         Delete a specific session [aliases: d]
+    edit                   Edit file with default $EDITOR / $VISUAL [aliases: e]
+    help                   Print this message or the help of the given subcommand(s)
+    kill-all-sessions      Kill all sessions [aliases: ka]
+    kill-session           Kill a specific session [aliases: k]
+    list-aliases           List existing plugin aliases [aliases: la]
+    list-sessions          List active sessions [aliases: ls]
+    options                Change the behaviour of zellij
+    pipe                   Send data to one or more plugins, launch them if they are not running
+    plugin                 Load a plugin [aliases: p]
+    run                    Run a command in a new pane [aliases: r]
+    setup                  Setup zellij and check its configuration
+    web                    Run a web server to serve terminal sessions

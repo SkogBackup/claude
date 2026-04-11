@@ -1,0 +1,119 @@
+diff --git c/.claude/skills/navigate-skogai/SKILL.md i/.claude/skills/navigate-skogai/SKILL.md
+index 5f7ffb1..cbd5f94 100644
+--- c/.claude/skills/navigate-skogai/SKILL.md
++++ i/.claude/skills/navigate-skogai/SKILL.md
+@@ -3,4 +3,10 @@ name: navigate-skogai
+ description: Use this to *ALWAYS* when trying to navigate any SkogAI projects, documentation or configuration. Use when exploring the SkogAI ecosystem or anything SkogAI-related.
+ ---
+ 
++<essential_principles>
++
++SkogAI is a multi-agent collaboration system where both humans (skogix, aldervall) and AI agents (dot, amy, claude, goose) operate as system users. `/skogai` exists at root level with setgid permissions, making it a shared workspace where files automatically inherit group ownership. This enables seamless collaboration between agents and humans without permission friction.
++
++</essential_principles>
++
+ [@todo]
+diff --git c/.claude/skills/navigate-skogai/references/dash-skogai.md i/.claude/skills/navigate-skogai/references/dash-skogai.md
+index 5db1369..1c8c9d9 100644
+--- c/.claude/skills/navigate-skogai/references/dash-skogai.md
++++ i/.claude/skills/navigate-skogai/references/dash-skogai.md
+@@ -7,3 +7,9 @@ the dash comes from the un-usual path choice of `/skogai` - being that it is dir
+ dash-skogai, or `/skogai`, is named this way to denote its system-wide reach, accessible to certain users on the machine. this placement indicates that the contents of `/skogai` are intended to be shared resources, configurations, or tools that are not user-specific but rather system-wide.
+ 
+ </name_explanation>
++
++<multi_agent_architecture>
++
++`/skogai` is owned by user `skogix` and group `skogai` with setgid permissions (`drwxrwsr-x`). The `skogai` group includes both human users (skogix, aldervall) and AI agents as system users (dot, amy, claude, goose). The setgid bit ensures files created by any member automatically inherit `skogai` group ownership, enabling seamless multi-agent collaboration without manual permission management.
++
++</multi_agent_architecture>
+diff --git c/dev/navigate-skogai/ANSWERS.md i/dev/navigate-skogai/ANSWERS.md
+new file mode 100644
+index 0000000..6fc482a
+--- /dev/null
++++ i/dev/navigate-skogai/ANSWERS.md
+@@ -0,0 +1,52 @@
++# answered questions
++
++## 1. why is `/skogai` at root level instead of in home directory?
++
++### the answer
++
++`/skogai` exists at root level to enable multi-agent collaboration with automatic permission management.
++
++### technical details
++
++**filesystem evidence:**
++```bash
++$ ls -la /
++drwxrwsr-x  11 skogix skogai  4096 Jan 14 15:02 skogai
++
++$ file /skogai
++/skogai: setgid, directory
++
++$ getent group skogai
++skogai:x:1007:skogix,aur_builder,aldervall,dot,amy,claude,goose,skogai
++```
++
++**what this reveals:**
++
++1. **ownership**: user `skogix`, group `skogai`
++2. **setgid bit**: the `s` in `drwxrwsr-x` means any file created in `/skogai` automatically inherits the `skogai` group
++3. **group members**: both humans (skogix, aldervall) and AI agents as system users (dot, amy, claude, goose)
++
++### architectural reasoning
++
++**why root level?**
++- neutral ground - not "owned" by any single user's home directory
++- accessible to all users/agents in the `skogai` group
++- signifies system-wide shared workspace rather than personal space
++
++**why setgid?**
++- automatic permission inheritance - files created by any agent/human become group-writable
++- eliminates permission friction in multi-agent collaboration
++- no manual `chown`/`chmod` needed for shared files
++
++**the design intent**
++SkogAI is fundamentally a multi-agent system where AI agents operate as actual system users with home directories. `/skogai` is their shared collaboration space where permissions "just work" through Unix group mechanics rather than complex access control.
++
++### how this was discovered
++
++not from asking the user about design rationale, but from:
++1. checking filesystem permissions (`ls -la /`)
++2. examining special bits (`file /skogai`)
++3. inspecting group membership (`getent group skogai`)
++4. reasoning about what these technical facts imply
++
++this is an example of knowledge that can be **inferred from verifiable evidence** rather than requiring user explanation of intent.
+diff --git c/dev/navigate-skogai/QUESTIONS.md i/dev/navigate-skogai/QUESTIONS.md
+index be2829a..9b1026d 100644
+--- c/dev/navigate-skogai/QUESTIONS.md
++++ i/dev/navigate-skogai/QUESTIONS.md
+@@ -2,23 +2,19 @@
+ 
+ ## obvious "why" questions
+ 
+-### 1. why is `/skogai` at root level instead of in home directory?
+-
+-[@todo - answer with actual rationale about system-wide access, permissions, intent]
+-
+-### 2. why does `.skogai` serve dual purpose (base config + submodule bootstrap)?
++### 1. why does `.skogai` serve dual purpose (base config + submodule bootstrap)?
+ 
+ [@todo - answer with architectural reasoning, evolution from original design]
+ 
+-### 3. why the file-safe naming convention (dash-/dot-) instead of just referencing paths directly?
++### 2. why the file-safe naming convention (dash-/dot-) instead of just referencing paths directly?
+ 
+ [@todo - answer with technical constraints or design benefits]
+ 
+-### 4. why was `dot` the first agent and why name it after the dotfile convention?
++### 3. why was `dot` the first agent and why name it after the dotfile convention?
+ 
+ [@todo - answer with historical context and design philosophy]
+ 
+-### 5. why split between `/skogai` (system-wide) and `.skogai` (project-specific)?
++### 4. why split between `/skogai` (system-wide) and `.skogai` (project-specific)?
+ 
+ [@todo - answer with use case differentiation and architectural boundaries]
+ 

@@ -1,0 +1,138 @@
+#!/usr/bin/env bash
+# healthcheck — verify my environment is sane before starting work
+set -uo pipefail
+
+OK=0
+WARN=0
+FAIL=0
+
+CLAUDE_HOME="$(cd "$(dirname "$0")/.." && pwd)"
+
+check() {
+  local label="$1" result="$2"
+  if [ "$result" = "ok" ]; then
+    echo "  [ok]   $label"
+    OK=$((OK + 1))
+  elif [ "$result" = "warn" ]; then
+    echo "  [warn] $label"
+    WARN=$((WARN + 1))
+  else
+    echo "  [FAIL] $label"
+    FAIL=$((FAIL + 1))
+  fi
+}
+
+check_file() {
+  local f="$1"
+  if [ -s "$CLAUDE_HOME/$f" ]; then
+    check "$f" "ok"
+  else
+    check "$f" "fail"
+  fi
+}
+
+echo "claude healthcheck"
+echo "=================="
+
+# home directory exists
+if [ -d "$CLAUDE_HOME" ]; then
+  check "home directory exists ($CLAUDE_HOME)" "ok"
+else
+  check "home directory exists ($CLAUDE_HOME)" "fail"
+fi
+
+# gt is available
+if command -v gt &>/dev/null; then
+  check "gt cli available" "ok"
+else
+  check "gt cli available" "fail"
+fi
+
+# bd (beads) is available
+if command -v bd &>/dev/null || [ -x "$HOME/go/bin/bd" ]; then
+  check "bd (beads) available" "ok"
+else
+  check "bd (beads) available" "warn"
+fi
+
+# dolt server reachable
+if PATH="$HOME/go/bin:$PATH" gt dolt status &>/dev/null 2>&1; then
+  check "dolt server reachable" "ok"
+else
+  check "dolt server reachable" "warn"
+fi
+
+# git configured
+if git config user.name &>/dev/null; then
+  check "git identity configured" "ok"
+else
+  check "git identity configured" "warn"
+fi
+
+# claude_home rig exists
+if [ -d /home/skogix/gt/claude_home ]; then
+  check "claude_home rig present" "ok"
+else
+  check "claude_home rig present" "fail"
+fi
+
+echo ""
+echo "identity paths"
+echo "------------------"
+
+check_file "personal/soul/01-equation.md"
+check_file "personal/soul/02-skogai-family.md"
+check_file "personal/soul/03-philosophies.md"
+check_file "personal/soul/04-context-destruction.md"
+check_file "personal/soul/05-notation-system.md"
+check_file "personal/soul/06-frameworks.md"
+check_file "personal/soul/07-historical-context.md"
+check_file "personal/soul/08-memory-architecture.md"
+check_file "personal/soul/09-guiding-principles.md"
+check_file "personal/soul/10-session-protocol.md"
+check_file "personal/profile.md"
+check_file "personal/journal/CONVENTIONS.md"
+check_file "personal/core/certainty-principle.md"
+check_file "personal/core/placeholder-approach.md"
+check_file "personal/core/epistemic-frameworks.md"
+check_file "personal/core/context-destruction.md"
+check_file "personal/core/learnings.md"
+
+echo ""
+echo "routing"
+echo "------------------"
+
+check_file "CLAUDE.md"
+check_file "personal/CLAUDE.md"
+check_file "personal/soul/CLAUDE.md"
+check_file "personal/core/CLAUDE.md"
+check_file "personal/memory-blocks/CLAUDE.md"
+check_file "docs/CLAUDE.md"
+check_file "bin/CLAUDE.md"
+check_file "notes/CLAUDE.md"
+check_file "guestbook/CLAUDE.md"
+check_file "lab/CLAUDE.md"
+
+echo ""
+echo "memory block tiers"
+echo "------------------"
+
+active_count=$(find "$CLAUDE_HOME/personal/core" -maxdepth 1 -name "*.md" ! -name "CLAUDE.md" | wc -l | tr -d ' ')
+if [ "$active_count" -gt 0 ]; then
+  check "active tier: $active_count frameworks" "ok"
+else
+  check "active tier: 0 frameworks" "warn"
+fi
+
+block_count=$(find "$CLAUDE_HOME/personal/memory-blocks" -maxdepth 1 -name "*block-[0-9]*" ! -name "*addendum*" | wc -l | tr -d ' ')
+addendum_count=$(find "$CLAUDE_HOME/personal/memory-blocks" -maxdepth 1 -name "*addendum*" | wc -l | tr -d ' ')
+if [ "$block_count" -gt 0 ]; then
+  check "LORE tier: $block_count memory blocks + $addendum_count addenda" "ok"
+else
+  check "LORE tier: 0 memory blocks + $addendum_count addenda" "warn"
+fi
+
+echo ""
+echo "results: $OK ok, $WARN warnings, $FAIL failures"
+
+exit $FAIL

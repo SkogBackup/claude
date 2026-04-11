@@ -1,0 +1,7 @@
+{
+  "name": "Claude Code - Auto PR Review",
+  "description": "Automatically review pull requests with Claude Code when opened or updated.",
+  "iconName": "octoface",
+  "categories": ["Automation", "AI", "Code Review"],
+  "filePatterns": ["workflows/*.yml", "workflows/*.yaml"]
+}

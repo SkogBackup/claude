@@ -1,0 +1,7 @@
+{
+  "name": "Claude Code - Manual Trigger",
+  "description": "Manually trigger Claude Code with custom prompts via workflow dispatch.",
+  "iconName": "octoface",
+  "categories": ["Automation", "AI"],
+  "filePatterns": ["workflows/*.yml", "workflows/*.yaml"]
+}
