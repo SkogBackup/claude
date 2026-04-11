@@ -64,7 +64,6 @@ Context is loaded lazily. Read the router, follow the link, get what's needed. N
 ├── state/
 │   └── sessions/        — session-records.jsonl
 ├── tasks/               — tracked GitHub issues as local task files
-├── ~/                   — staging artifact (.claude/ copy, do not use directly)
 ├── CLAUDE.md            — this file
 ├── ONBOARDING.md        — teammate onboarding guide (usage stats, setup checklist)
 └── README.md            — one-pager: what this repo is
