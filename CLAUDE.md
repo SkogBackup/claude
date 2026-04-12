@@ -141,7 +141,23 @@ Journal entries use date-folder structure: `personal/journal/YYYY-MM-DD/<descrip
 - Append-only (formatting corrections permitted)
 - LORE (memory-blocks/) requires explicit navigation — not auto-loaded
 
-</journal_conventions>
+| hook file                | event       | matcher                          | purpose                        |
+|--------------------------|-------------|----------------------------------|--------------------------------|
+| gsd-check-update.js      | SessionStart | —                               | check for gsd plugin updates   |
+| gsd-context-monitor.js   | PostToolUse | Bash\|Edit\|Write\|Agent\|Task   | monitor context window         |
+| gsd-prompt-guard.js      | PreToolUse  | Write\|Edit                      | guard file write operations    |
+| gsd-statusline.js        | —           | statusLine                       | render status line             |
+| gsd-workflow-guard.js    | PreToolUse  | Write\|Edit                      | guard workflow state changes   |
+
+</hooks>
+
+<commands>
+
+Slash commands in `commands/`:
+
+- `/wrap-up` — end-of-session checklist. four phases: ship (commit/push/wt cleanup), remember (persist knowledge), review & apply (self-improvement), journal. auto-applies all findings.
+
+</commands>
 
 <settings_highlights>
 
