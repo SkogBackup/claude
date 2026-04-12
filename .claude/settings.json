@@ -38,6 +38,18 @@
   "model": "sonnet",
   "enableAllProjectMcpServers": false,
   "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/skogix/claude/bin/claude-md-linecheck",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
   },
   "disableAllHooks": false,
   "enabledPlugins": {},

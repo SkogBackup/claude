@@ -6,7 +6,7 @@ Pre-flight checklist for migrating Claude's home from staging (`/home/skogix/cla
 
 Run `bin/healthcheck` -- covers all of the following automatically:
 
-- [ ] Environment: home dir, gt cli, bd/beads, dolt server, git config, claude_home rig
+- [ ] Environment: home dir, git config
 - [ ] Identity paths: soul sections (10 files), profile, core frameworks, journal conventions
 - [ ] Routing: CLAUDE.md exists in all 10 directories
 - [ ] Memory block tiers: active tier (personal/core/) and LORE tier (personal/memory-blocks/) report non-zero counts

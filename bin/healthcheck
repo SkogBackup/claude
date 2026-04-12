@@ -41,39 +41,11 @@ else
   check "home directory exists ($CLAUDE_HOME)" "fail"
 fi
 
-# gt is available
-if command -v gt &>/dev/null; then
-  check "gt cli available" "ok"
-else
-  check "gt cli available" "fail"
-fi
-
-# bd (beads) is available
-if command -v bd &>/dev/null || [ -x "$HOME/go/bin/bd" ]; then
-  check "bd (beads) available" "ok"
-else
-  check "bd (beads) available" "warn"
-fi
-
-# dolt server reachable
-if PATH="$HOME/go/bin:$PATH" gt dolt status &>/dev/null 2>&1; then
-  check "dolt server reachable" "ok"
-else
-  check "dolt server reachable" "warn"
-fi
-
 # git configured
 if git config user.name &>/dev/null; then
   check "git identity configured" "ok"
 else
   check "git identity configured" "warn"
-fi
-
-# claude_home rig exists
-if [ -d /home/skogix/gt/claude_home ]; then
-  check "claude_home rig present" "ok"
-else
-  check "claude_home rig present" "fail"
 fi
 
 echo ""

@@ -17,10 +17,7 @@ Staged at `/home/user/claude` (formerly `/home/skogix/claude`), deploying to `/h
 ├── .claude/
 │   ├── CLAUDE.md        — global identity + operating principles (always loaded)
 │   ├── settings.json    — Claude Code config (single source of truth)
-│   ├── agents/          — gsd subagent definitions (planner, executor, verifier, etc.)
-│   ├── commands/        — slash commands (gsd/*, skogai/*)
-│   ├── get-shit-done/   — gsd plugin (bin, commands, workflows, templates)
-│   ├── hooks/           — gsd-* hooks (check-update, context-monitor, prompt-guard, statusline, workflow-guard)
+│   ├── commands/        — slash commands (skogai/*)
 │   └── skills/          — claude code skills (planning-with-files, prompt-master, skogai-routing, etc.)
 ├── .skogai/
 │   ├── SKOGAI.md        — SkogAI integrations context (symlinked as ~/.skogai/CLAUDE.md)
@@ -31,19 +28,17 @@ Staged at `/home/user/claude` (formerly `/home/skogix/claude`), deploying to `/h
 │   │       └── definitions.md       — SkogAI vocabulary (@, $, task, todo, plan, agent...)
 │   └── mcp/
 │       └── searxng.js   — SearXNG MCP server (web search via searxng.aldervall.se)
-├── .planning/           — gsd project planning
+├── .planning/           — project planning
 │   ├── PROJECT.md       — project brief and key decisions
 │   ├── ROADMAP.md       — phase breakdown (v1.0: 4 phases complete, phase 5 active)
 │   ├── REQUIREMENTS.md  — requirement definitions and traceability
 │   ├── STATE.md         — current session state and accumulated context
-│   ├── config.json      — gsd config
 │   ├── codebase/        — codebase map artifacts
 │   ├── memory/          — auto-memory storage (feedback, project notes, user profile)
 │   ├── notes/           — planning notes
 │   ├── phases/          — per-phase directories (01..05)
 │   ├── quick/           — quick task records
-│   ├── research/        — research artifacts
-│   └── todos/           — gsd todo tracking
+│   └── research/        — research artifacts
 ├── .config/
 │   └── wt.toml          — worktrunk config template
 ├── bin/                 — scripts and tools
@@ -54,8 +49,7 @@ Staged at `/home/user/claude` (formerly `/home/skogix/claude`), deploying to `/h
 │   ├── context-workspace.sh — workspace tree context
 │   ├── build-system-prompt.sh — builds system prompt from config
 │   └── find-agent-root.sh — agent root detection
-├── commands/
-│   └── wrapup.md        — /wrap-up slash command (ship, remember, review, journal)
+├── commands/            — slash command definitions (skogai/*)
 ├── docs/                — reference docs
 │   ├── deployment-gate.md — checklist before migrating to /home/claude
 │   ├── permissions.md   — permission model for multi-agent access
@@ -103,7 +97,7 @@ Each directory has its own CLAUDE.md router. Load lazily:
 
 <project_state>
 
-GSD milestone v1.0: "Claude's Home"
+Milestone v1.0: "Claude's Home"
 Core value: Claude can drop into any conversation and know who he is, what he's working on, and where things are.
 
 | Phase | Name | Status |
@@ -115,8 +109,6 @@ Core value: Claude can drop into any conversation and know who he is, what he's 
 | 5 | skogai-live-chat-implementation | Planning |
 
 Phase 5 adds `[@agent:"msg"]` routing via skogparse, chat-io contract spec, and hook fallback. See `.planning/ROADMAP.md` for full spec.
-
-Outstanding todo: integrate skogai task format with GSD todos.
 
 </project_state>
 
@@ -139,27 +131,13 @@ MCP servers (configured in settings.json):
 
 </tooling>
 
-<hooks>
+<journal_conventions>
 
-Hooks fire automatically via Claude Code (settings.json). Implementations live in `.claude/hooks/`:
+Journal entries use date-folder structure: `personal/journal/YYYY-MM-DD/<description>.md`
+- Append-only (formatting corrections permitted)
+- LORE (memory-blocks/) requires explicit navigation — not auto-loaded
 
-| hook file                | event        | matcher                           | purpose                        |
-|--------------------------|--------------|-----------------------------------|--------------------------------|
-| gsd-check-update.js      | SessionStart | —                                 | check for gsd plugin updates   |
-| gsd-context-monitor.js   | PostToolUse  | Bash\|Edit\|Write\|Agent\|Task    | monitor context window         |
-| gsd-prompt-guard.js      | PreToolUse   | Write\|Edit                       | guard file write operations    |
-| gsd-statusline.js        | —            | statusLine                        | render status line             |
-| gsd-workflow-guard.js    | PreToolUse   | Write\|Edit                       | guard workflow state changes   |
-
-</hooks>
-
-<commands>
-
-Slash commands in `commands/`:
-
-- `/wrap-up` — end-of-session checklist. four phases: ship (commit/push/wt cleanup), remember (persist knowledge), review & apply (self-improvement), journal. auto-applies all findings.
-
-</commands>
+</journal_conventions>
 
 <journal_conventions>
 
@@ -178,8 +156,6 @@ Key settings.json values (`.claude/settings.json`):
 - `autoDreamEnabled: true`
 - `defaultView: "transcript"`
 - `skipDangerousModePermissionPrompt: true`
-- hooks: gsd-check-update (SessionStart), gsd-context-monitor (PostToolUse), gsd-prompt-guard (PreToolUse)
-- statusLine: gsd-statusline.js
 - enabled plugins: code-simplifier, typescript-lsp, frontend-design, playwright, pyright-lsp, pr-review-toolkit, worktrunk, chrome-devtools-mcp, discord, mcp-server-dev, remember
 - `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS: "1"` — agent teams enabled
 
