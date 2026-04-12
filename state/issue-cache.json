@@ -1,0 +1,20 @@
+{
+  "https://github.com/SkogAI/claude/issues/2": {
+    "state": "MERGED",
+    "source": "github",
+    "last_fetched": "2026-04-12T20:31:24.914198+00:00",
+    "updatedAt": "2026-04-11T04:26:05Z"
+  },
+  "https://github.com/SkogAI/claude/issues/3": {
+    "state": "MERGED",
+    "source": "github",
+    "last_fetched": "2026-04-12T20:31:24.914198+00:00",
+    "updatedAt": "2026-04-11T04:52:46Z"
+  },
+  "https://github.com/SkogAI/claude/issues/4": {
+    "state": "CLOSED",
+    "source": "github",
+    "last_fetched": "2026-04-12T20:31:24.914198+00:00",
+    "updatedAt": "2026-04-11T07:09:04Z"
+  }
+}

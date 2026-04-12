@@ -1,8 +1,11 @@
 ---
-state: new
-created: "2026-03-21"
-tracking: ["https://github.com/SkogAI/claude/issues/4"]
-tags: ["epic", "github"]
+created: '2026-03-21'
+state: done
+tags:
+- epic
+- github
+tracking:
+- https://github.com/SkogAI/claude/issues/4
 ---
 
 # Epic: Claude's Home v2.0 — SkogAI Integration & Home Improvements

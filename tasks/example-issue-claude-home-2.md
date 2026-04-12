@@ -1,7 +1,8 @@
 ---
-state: new
-created: "2026-03-20"
-tracking: ["https://github.com/SkogAI/claude/issues/2"]
+created: '2026-03-20'
+state: done
+tracking:
+- https://github.com/SkogAI/claude/issues/2
 ---
 
 # example-issue-claude-home

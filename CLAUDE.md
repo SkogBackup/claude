@@ -129,6 +129,10 @@ Tools assumed on PATH — check existence before assuming:
 MCP servers (configured in settings.json):
 - **searxng** — web search. env: `SEARXNG_COOKIE` if behind auth
 
+Tool notes:
+- `wt new <branch>` — creates worktree in `.claude/worktrees/`, configure via `.config/wt.toml`
+- `gptodo` `ModuleNotFoundError` after updates — fix: `uv tool upgrade gptodo --reinstall`
+
 </tooling>
 
 <journal_conventions>
@@ -168,6 +172,8 @@ Milestone: v1.0 — four phases complete, one in planning
 
 Phase 5 goal: transport-agnostic `chat-io` contract, routing script for `[@agent:"msg"]` notation via skogparse, Claude skill + hook fallback. Reference: `.planning/ROADMAP.md`, `.planning/phases/05-skogai-live-chat-implementation/`.
 
+Phase 5 implementation notes: skogparse binary at `/home/skogix/.local/bin/skogparse --execute`; output format `{"type":"string","value":"..."}` — always unwrap `.value`. Avoid `skogparse.sh` MCP tool (hardcodes wrong path). Only messages starting with `[@` are routed — inline operators in plain text are not. Routing script: `bin/route-message.sh`. Contract spec: `docs/chat-io-contract.md`.
+
 Memory/feedback files in `.planning/memory/` shape behavior — check `MEMORY.md` for the index before modifying conventions.
 
 </current_state>
@@ -186,6 +192,21 @@ Commit style: conventional, lowercase, imperative
   - `fix:` — bug fixes
 
 </git_conventions>
+
+<ci_workflows>
+
+Three workflows in `.github/workflows/` — all delegate to `SkogAI/.github` reusable workflows. Require `CLAUDE_CODE_OAUTH_TOKEN` secret.
+
+| Workflow | Trigger | Purpose |
+|----------|---------|---------|
+| `claude.yml` | `@claude` mention in issue/PR comment, review, or issue body | Run Claude on the mentioned task |
+| `claude-pr-review.yml` | PR opened or synchronized | Auto-review every PR diff |
+| `claude-manual.yml` | `workflow_dispatch` (Actions UI) | Manual prompt with optional issue/PR context |
+
+To trigger `claude.yml`: mention `@claude` in any issue or PR.
+To trigger `claude-manual.yml`: GitHub → Actions → "Claude Code - Manual Trigger" → Run workflow.
+
+</ci_workflows>
 
 <see_also>
 

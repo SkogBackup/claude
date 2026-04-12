@@ -19,3 +19,4 @@
 
 ## Reference
 - [reference_brain_mcp.md](reference_brain_mcp.md) — brain-mcp setup: config, file provider, queue pipeline, known bugs
+- [reference_gptodo_reinstall.md](reference_gptodo_reinstall.md) — gptodo breaks (ModuleNotFoundError) when local install drifts; fix: `uv tool upgrade gptodo --reinstall`
