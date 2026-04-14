@@ -1,96 +1,36 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "respectGitignore": true,
+  "alwaysThinkingEnabled": true,
+  "autoDreamEnabled": true,
+  "autoMemoryDirectory": "/home/skogix/claude/.planning/memory",
+  "autoMemoryEnabled": true,
   "cleanupPeriodDays": 90,
-  "env": {
-    "ENABLE_CLAUDEAI_MCP_SERVERS": "false",
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
-    "CLAUDE_CODE_TMPDIR": "/home/skogix/claude/tmp",
-    "CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD": "1",
-    "DISABLE_AUTOUPDATER": "0",
-    "CLAUDE_CODE_SIMPLE": "false",
-    "CLAUDE_CODE_SHELL": "/usr/bin/zsh",
-    "CLAUDE_BASH_NO_LOGIN": "1",
-    "CLAUDE_CODE_NEW_INIT": "true"
-  },
-  "permissions": {
-    "allow": [
-      "mcp__skogchat__reply",
-      "Skill(gsd:new-project)",
-      "Skill(gsd:new-project:*)",
-      "Bash(wc -l .planning/codebase/*.md)",
-      "Bash(gita *)",
-      "Bash(gptodo *)",
-      "Bash(gh *)",
-      "Bash(skogai *)",
-      "Bash(argc *)",
-      "Bash(skogcli *)",
-      "Skill(gsd:*)",
-      "Skill(skogai-routing:*)",
-      "Skill(skogai-bats-testing:*)",
-      "Bash(wt *)"
-    ],
-    "defaultMode": "default",
-    "additionalDirectories": [
-      "/home/skogix/claude/"
-    ]
-  },
-  "model": "sonnet",
-  "enableAllProjectMcpServers": false,
-  "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "Write|Edit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/home/skogix/claude/bin/claude-md-linecheck",
-            "timeout": 10
-          },
-          {
-            "type": "command",
-            "command": "jq -r '.tool_input.file_path // empty' | { read -r f && [ -n \"$f\" ] && npx prettier --write --ignore-unknown \"$f\"; } 2>/dev/null || true",
-            "timeout": 30
-          },
-          {
-            "type": "command",
-            "command": "f=$(jq -r '.tool_input.file_path // empty'); [ -z \"$f\" ] && exit 0; [[ \"$f\" == *.sh || \"$f\" == */bin/* ]] || exit 0; shellcheck \"$f\" || true",
-            "timeout": 15
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "out=$(/home/skogix/claude/bin/healthcheck 2>&1); code=$?; if [ \"$code\" -ne 0 ]; then jq -nc --arg m \"$out\" '{\"systemMessage\":\"⚠ healthcheck failed\\n\\($m)\"}'; fi",
-            "timeout": 30
-          }
-        ]
-      }
-    ]
-  },
+  "defaultView": "transcript",
   "disableAllHooks": false,
+  "enableAllProjectMcpServers": false,
   "enabledPlugins": {
     "core@skogai-marketplace": true,
     "dreamers@skogai-marketplace": false,
-    "skogchat@skogai-marketplace": true,
     "frontend-design@claude-plugins-official": true,
+    "skogchat@skogai-marketplace": true,
     "worktrunk@worktrunk": true
   },
+  "env": {
+    "CLAUDE_BASH_NO_LOGIN": "1",
+    "CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD": "1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_NEW_INIT": "true",
+    "CLAUDE_CODE_SHELL": "/usr/bin/zsh",
+    "CLAUDE_CODE_SIMPLE": "false",
+    "CLAUDE_CODE_TMPDIR": "/home/skogix/claude/tmp",
+    "DISABLE_AUTOUPDATER": "0",
+    "ENABLE_CLAUDEAI_MCP_SERVERS": "false"
+  },
   "extraKnownMarketplaces": {
-    "worktrunk": {
-      "source": {
-        "source": "directory",
-        "path": "/home/skogix/.local/src/worktrunk"
-      }
-    },
     "claude-plugins-official": {
       "source": {
-        "source": "github",
-        "repo": "anthropics/claude-plugins-official"
+        "repo": "anthropics/claude-plugins-official",
+        "source": "github"
       }
     },
     "skogai-marketplace": {
@@ -98,16 +38,77 @@
         "source": "git",
         "url": "git@github.com:SkogAI/marketplace.git"
       }
+    },
+    "worktrunk": {
+      "source": {
+        "path": "/home/skogix/.local/src/worktrunk",
+        "source": "directory"
+      }
     }
   },
-  "spinnerTipsEnabled": true,
-  "syntaxHighlightingDisabled": false,
-  "alwaysThinkingEnabled": true,
-  "defaultView": "transcript",
-  "autoMemoryEnabled": true,
-  "autoMemoryDirectory": "/home/skogix/claude/.planning/memory",
-  "autoDreamEnabled": true,
+  "hooks": {
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "/home/skogix/claude/bin/claude-md-linecheck",
+            "timeout": 10,
+            "type": "command"
+          },
+          {
+            "command": "jq -r '.tool_input.file_path // empty' | { read -r f && [ -n \"$f\" ] && npx prettier --write --ignore-unknown \"$f\"; } 2>/dev/null || true",
+            "timeout": 30,
+            "type": "command"
+          },
+          {
+            "command": "f=$(jq -r '.tool_input.file_path // empty'); [ -z \"$f\" ] && exit 0; [[ \"$f\" == *.sh || \"$f\" == */bin/* ]] || exit 0; shellcheck \"$f\" || true",
+            "timeout": 15,
+            "type": "command"
+          }
+        ],
+        "matcher": "Write|Edit"
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "out=$(/home/skogix/claude/bin/healthcheck 2>&1); code=$?; if [ \"$code\" -ne 0 ]; then jq -nc --arg m \"$out\" '{\"systemMessage\":\"⚠ healthcheck failed\\n\\($m)\"}'; fi",
+            "timeout": 30,
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  },
+  "model": "sonnet",
+  "permissions": {
+    "additionalDirectories": [
+      "/home/skogix/claude/"
+    ],
+    "allow": [
+      "mcp__skogchat__reply",
+      "Bash(wc -l .planning/codebase/*.md)",
+      "Bash(gita *)",
+      "Bash(gptodo *)",
+      "Bash(gh *)",
+      "Bash(skogai *)",
+      "Bash(argc *)",
+      "Bash(skogcli *)",
+      "Skill(skogai-routing:*)",
+      "Skill(skogai-bats-testing:*)",
+      "Bash(wt *)"
+    ],
+    "defaultMode": "default"
+  },
+  "respectGitignore": true,
   "showThinkingSummaries": true,
+  "skipAutoPermissionPrompt": true,
   "skipDangerousModePermissionPrompt": true,
-  "skipAutoPermissionPrompt": true
+  "spinnerTipsEnabled": true,
+  "statusLine": {
+    "command": "wt list statusline --format=claude-code",
+    "type": "command"
+  },
+  "syntaxHighlightingDisabled": false
 }
