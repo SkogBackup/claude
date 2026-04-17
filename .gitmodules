@@ -1,3 +1,8 @@
-[submodule "projects/dot-skogai"]
+[submodule "dot-skogai"]
 	path = projects/dot-skogai
 	url = git@github.com:SkogAI/dot-skogai.git
+    branch = master
+[submodule "clawd"]
+	path = projects/clawd
+	url = git@github.com:SkogAI/clawd.git
+    branch = master
