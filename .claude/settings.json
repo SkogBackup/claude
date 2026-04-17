@@ -1,19 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "alwaysThinkingEnabled": true,
-  "autoDreamEnabled": true,
-  "autoMemoryDirectory": "/home/skogix/claude/.planning/memory",
-  "autoMemoryEnabled": true,
+  "respectGitignore": true,
   "cleanupPeriodDays": 90,
-  "defaultView": "transcript",
-  "disableAllHooks": false,
-  "enableAllProjectMcpServers": false,
-  "enabledPlugins": {
-    "core@skogai-marketplace": true,
-    "dreamers@skogai-marketplace": false,
-    "frontend-design@claude-plugins-official": true,
-    "worktrunk@worktrunk": true
-  },
   "env": {
     "CLAUDE_BASH_NO_LOGIN": "1",
     "CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD": "1",
@@ -25,97 +13,7 @@
     "DISABLE_AUTOUPDATER": "0",
     "ENABLE_CLAUDEAI_MCP_SERVERS": "false"
   },
-  "extraKnownMarketplaces": {
-    "claude-plugins-official": {
-      "source": {
-        "repo": "anthropics/claude-plugins-official",
-        "source": "github"
-      }
-    },
-    "skogai-marketplace": {
-      "source": {
-        "source": "git",
-        "url": "git@github.com:SkogAI/marketplace.git"
-      }
-    },
-    "worktrunk": {
-      "source": {
-        "path": "/home/skogix/.local/src/worktrunk",
-        "source": "directory"
-      }
-    }
-  },
-  "hooks": {
-    "PostToolUse": [
-      {
-        "hooks": [
-          {
-            "command": "/home/skogix/claude/bin/claude-md-linecheck",
-            "timeout": 10,
-            "type": "command"
-          },
-          {
-            "command": "jq -r '.tool_input.file_path // empty' | { read -r f && [ -n \"$f\" ] && npx prettier --write --ignore-unknown \"$f\"; } 2>/dev/null || true",
-            "timeout": 30,
-            "type": "command"
-          },
-          {
-            "command": "f=$(jq -r '.tool_input.file_path // empty'); [ -z \"$f\" ] && exit 0; [[ \"$f\" == *.sh || \"$f\" == */bin/* ]] || exit 0; shellcheck \"$f\" || true",
-            "timeout": 15,
-            "type": "command"
-          }
-        ],
-        "matcher": "Write|Edit"
-      },
-      {
-        "hooks": [
-          {
-            "command": "atuin hook claude-code",
-            "type": "command"
-          }
-        ],
-        "matcher": "Bash"
-      }
-    ],
-    "PostToolUseFailure": [
-      {
-        "hooks": [
-          {
-            "command": "atuin hook claude-code",
-            "type": "command"
-          }
-        ],
-        "matcher": "Bash"
-      }
-    ],
-    "PreToolUse": [
-      {
-        "hooks": [
-          {
-            "command": "atuin hook claude-code",
-            "type": "command"
-          }
-        ],
-        "matcher": "Bash"
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "command": "out=$(/home/skogix/claude/bin/healthcheck 2>&1); code=$?; if [ \"$code\" -ne 0 ]; then jq -nc --arg m \"$out\" '{\"systemMessage\":\"⚠ healthcheck failed\\n\\($m)\"}'; fi",
-            "timeout": 30,
-            "type": "command"
-          }
-        ]
-      }
-    ]
-  },
-  "model": "sonnet",
   "permissions": {
-    "additionalDirectories": [
-      "/home/skogix/claude/"
-    ],
     "allow": [
       "mcp__skogchat__reply",
       "Bash(wc -l .planning/codebase/*.md)",
@@ -129,16 +27,118 @@
       "Skill(skogai-bats-testing:*)",
       "Bash(wt *)"
     ],
-    "defaultMode": "default"
+    "defaultMode": "default",
+    "additionalDirectories": [
+      "/home/skogix/claude/"
+    ]
   },
-  "respectGitignore": true,
-  "showThinkingSummaries": true,
-  "skipAutoPermissionPrompt": true,
-  "skipDangerousModePermissionPrompt": true,
-  "spinnerTipsEnabled": true,
+  "model": "sonnet",
+  "enableAllProjectMcpServers": false,
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/skogix/claude/bin/claude-md-linecheck",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // empty' | { read -r f && [ -n \"$f\" ] && npx prettier --write --ignore-unknown \"$f\"; } 2>/dev/null || true",
+            "timeout": 30
+          },
+          {
+            "type": "command",
+            "command": "f=$(jq -r '.tool_input.file_path // empty'); [ -z \"$f\" ] && exit 0; [[ \"$f\" == *.sh || \"$f\" == */bin/* ]] || exit 0; shellcheck \"$f\" || true",
+            "timeout": 15
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "atuin hook claude-code"
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "atuin hook claude-code"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "atuin hook claude-code"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "out=$(/home/skogix/claude/bin/healthcheck 2>&1); code=$?; if [ \"$code\" -ne 0 ]; then jq -nc --arg m \"$out\" '{\"systemMessage\":\"⚠ healthcheck failed\\n\\($m)\"}'; fi",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  },
+  "disableAllHooks": false,
   "statusLine": {
-    "command": "wt list statusline --format=claude-code",
-    "type": "command"
+    "type": "command",
+    "command": "wt list statusline --format=claude-code"
   },
-  "syntaxHighlightingDisabled": false
+  "enabledPlugins": {
+    "core@skogai-marketplace": false,
+    "dreamers@skogai-marketplace": false,
+    "frontend-design@claude-plugins-official": false,
+    "worktrunk@worktrunk": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    },
+    "skogai-marketplace": {
+      "source": {
+        "source": "git",
+        "url": "git@github.com:SkogAI/marketplace.git"
+      }
+    },
+    "worktrunk": {
+      "source": {
+        "source": "directory",
+        "path": "/home/skogix/.local/src/worktrunk"
+      }
+    }
+  },
+  "spinnerTipsEnabled": true,
+  "syntaxHighlightingDisabled": false,
+  "alwaysThinkingEnabled": true,
+  "autoMemoryEnabled": true,
+  "autoMemoryDirectory": "/home/skogix/claude/.planning/memory",
+  "autoDreamEnabled": true,
+  "showThinkingSummaries": true,
+  "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true,
+  "defaultView": "transcript"
 }
