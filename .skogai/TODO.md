@@ -3,4 +3,7 @@
 - [ ] .claude/skills/deploy-gate should be a workflow to be followed in a bigger skill which essentially we might call "migration" from /home/skogix/claude to /home/claude in the end
   - [ ] .claude/skills/healthcheck would be ./scripts/healthcheck.sh in that new skill folder
 - [ ] moving back to the .skogai-setup in general slowly but surely
-  - [ ] start reworking and moving from the "gsd"-.planning setup to our own "skogai-planning-with-files"-setup
+  - [x] establish .skogai/plan/ and .skogai/templates/ structure (see #14)
+  - [ ] migrate .planning/ROADMAP.md, PROJECT.md, STATE.md references to .skogai/plan/claudes-home/
+  - [ ] migrate or bridge .planning/memory/ (auto-memory) to .skogai/-compatible location
+  - [ ] remove .planning/ once all references are updated
