@@ -1,0 +1,2 @@
+- [ ] .claude/skills/ci should be a reference document and not a skill to be called. move to .github/CLAUDE.md ?
+- [ ] .claude/skills/cleanup-worktrees should probably be managed by wt/worktrunk instead of being a callable skill
