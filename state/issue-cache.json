@@ -2,19 +2,157 @@
   "https://github.com/SkogAI/claude/issues/2": {
     "state": "MERGED",
     "source": "github",
-    "last_fetched": "2026-04-12T20:31:24.914198+00:00",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
     "updatedAt": "2026-04-11T04:26:05Z"
   },
   "https://github.com/SkogAI/claude/issues/3": {
     "state": "MERGED",
     "source": "github",
-    "last_fetched": "2026-04-12T20:31:24.914198+00:00",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
     "updatedAt": "2026-04-11T04:52:46Z"
   },
   "https://github.com/SkogAI/claude/issues/4": {
     "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-12T20:31:24.914198+00:00",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
     "updatedAt": "2026-04-11T07:09:04Z"
+  },
+  "https://github.com/SkogAI/claude/issues/11": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T02:39:01Z"
+  },
+  "https://github.com/SkogAI/claude/issues/12": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T02:39:04Z"
+  },
+  "https://github.com/SkogAI/claude/issues/14": {
+    "state": "CLOSED",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T07:47:44Z"
+  },
+  "https://github.com/SkogAI/claude/issues/15": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T02:39:24Z"
+  },
+  "https://github.com/SkogAI/claude/issues/8": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-12T00:37:02Z"
+  },
+  "https://github.com/SkogAI/claude/issues/9": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-12T03:33:34Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/10": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-03-10T16:59:11Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/11": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T07:59:25Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/12": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T07:59:33Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/13": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T07:59:40Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/14": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T07:59:47Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/15": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T07:59:53Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/16": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T08:00:00Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/17": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T08:00:06Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/18": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T08:00:14Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/19": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T08:04:35Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/20": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T08:04:36Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/21": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T08:04:37Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/22": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-04-17T08:04:38Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/6": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-03-06T18:39:40Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/7": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-03-10T16:59:20Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/8": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-03-10T16:59:02Z"
+  },
+  "https://github.com/SkogAI/dot-skogai/issues/9": {
+    "state": "OPEN",
+    "source": "github",
+    "last_fetched": "2026-04-17T09:15:58.879312+00:00",
+    "updatedAt": "2026-03-10T16:59:06Z"
   }
 }
