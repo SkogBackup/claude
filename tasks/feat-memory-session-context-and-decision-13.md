@@ -1,7 +1,9 @@
 ---
 state: new
 created: 2026-04-17
-tracking: ["https://github.com/SkogAI/dot-skogai/issues/13"]
+tracking:
+  - https://github.com/SkogAI/dot-skogai/issues/13
+permalink: claude/tasks/feat-memory-session-context-and-decision-13
 ---
 
 # feat: memory/ — session context and decision log
@@ -11,9 +13,11 @@ tracking: ["https://github.com/SkogAI/dot-skogai/issues/13"]
 ## Description
 
 ## Summary
+
 Live project memory: what we're working on right now and a running log of decisions made.
 
 ## What
+
 ```
 memory/
 ├── context/
@@ -25,6 +29,7 @@ memory/
 - `decisions.md` — lightweight decision log (not full ADRs, just "decided X because Y")
 
 ## Notes
+
 -
 
 ## Notes

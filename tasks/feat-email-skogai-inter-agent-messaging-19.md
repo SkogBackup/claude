@@ -1,7 +1,9 @@
 ---
 state: new
 created: 2026-04-17
-tracking: ["https://github.com/SkogAI/dot-skogai/issues/19"]
+tracking:
+  - https://github.com/SkogAI/dot-skogai/issues/19
+permalink: claude/tasks/feat-email-skogai-inter-agent-messaging-19
 ---
 
 # feat: email/ — skogai inter-agent messaging (inbox/outbox)
@@ -11,9 +13,11 @@ tracking: ["https://github.com/SkogAI/dot-skogai/issues/19"]
 ## Description
 
 ## Summary
+
 File-based messaging system for SkogAI agents — inbox, drafts, sent, archive.
 
 ## What
+
 ```
 email/
 ├── inbox/      # incoming messages (unread)
@@ -27,6 +31,7 @@ email/
 Each message is a markdown file with a UUID filename.
 
 ## Notes
+
 - This is the direct-message channel between agents (vs guestbook whic
 
 ## Notes

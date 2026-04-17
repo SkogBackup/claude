@@ -1,8 +1,12 @@
 ---
 state: new
 created: 2026-04-17
-tracking: ["https://github.com/SkogAI/dot-skogai/issues/6"]
-tags: ["bug", "github"]
+tracking:
+  - https://github.com/SkogAI/dot-skogai/issues/6
+tags:
+  - bug
+  - github
+permalink: claude/tasks/fix-gptodo-import-writes-unquoted-yaml-d-6
 ---
 
 # fix(gptodo): import writes unquoted YAML dates in created field

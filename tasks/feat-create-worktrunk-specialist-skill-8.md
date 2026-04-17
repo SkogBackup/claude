@@ -1,7 +1,9 @@
 ---
 state: new
 created: 2026-04-17
-tracking: ["https://github.com/SkogAI/dot-skogai/issues/8"]
+tracking:
+  - https://github.com/SkogAI/dot-skogai/issues/8
+permalink: claude/tasks/feat-create-worktrunk-specialist-skill-8
 ---
 
 # feat: create worktrunk specialist skill

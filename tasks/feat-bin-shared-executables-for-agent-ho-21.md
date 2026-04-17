@@ -1,7 +1,9 @@
 ---
 state: new
 created: 2026-04-17
-tracking: ["https://github.com/SkogAI/dot-skogai/issues/21"]
+tracking:
+  - https://github.com/SkogAI/dot-skogai/issues/21
+permalink: claude/tasks/feat-bin-shared-executables-for-agent-ho-21
 ---
 
 # feat: bin/ — shared executables for agent home
@@ -11,9 +13,11 @@ tracking: ["https://github.com/SkogAI/dot-skogai/issues/21"]
 ## Description
 
 ## Summary
+
 Shared binaries/scripts available to all agents in the household — on PATH or invoked directly.
 
 ## What
+
 ```
 bin/
 ├── skogai-cli        # main SkogAI CLI entrypoint
@@ -25,6 +29,7 @@ bin/
 ```
 
 ## Notes
+
 - These are literally shared executables — the equivalent of `/usr/local/bin` for
 
 ## Notes
