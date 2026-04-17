@@ -140,5 +140,6 @@
   "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,
   "skipAutoPermissionPrompt": true,
-  "defaultView": "transcript"
+  "defaultView": "transcript",
+  "advisorModel": "opus"
 }
