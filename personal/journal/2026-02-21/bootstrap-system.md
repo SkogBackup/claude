@@ -1,3 +1,9 @@
+---
+title: bootstrap-system
+type: note
+permalink: claude/personal/journal/2026-02-21/bootstrap-system
+---
+
 # Bootstrap System for Fresh Arch Installs
 
 Built `SkogAI/bootstrap` — a public repo that reduces ~13 manual post-archinstall steps to a single curl|bash one-liner with one vault password prompt.
@@ -5,13 +11,15 @@ Built `SkogAI/bootstrap` — a public repo that reduces ~13 manual post-archinst
 ## What it solves
 
 Three problems from `projects/newinstall/steps.md`:
+
 1. AUR helper (yay) not available early enough
-2. SSH key setup was a 5-step manual process with org name confusion
-3. No automation — everything was copy-paste from docs
+1. SSH key setup was a 5-step manual process with org name confusion
+1. No automation — everything was copy-paste from docs
 
 ## Architecture
 
 Three-phase bash script (~200 lines):
+
 - **Phase 1 (Foundation)**: pacman -Syu, install git/base-devel/openssh/gh/ansible-core, build yay from AUR
 - **Phase 2 (Secret Unlock)**: clone public repo, ansible-vault decrypt (password via /dev/tty works in curl|bash context), extract tar.gz
 - **Phase 3 (Identity)**: deploy SSH keys (dynamic key type detection), git config, gh auth with PAT, verify

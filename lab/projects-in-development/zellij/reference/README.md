@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: claude/lab/projects-in-development/zellij/reference/readme
+---
+
 # zellij reference materials
 
 generated from zellij 0.43.1

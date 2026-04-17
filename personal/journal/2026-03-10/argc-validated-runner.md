@@ -1,9 +1,14 @@
+---
+title: argc-validated-runner
+type: note
+permalink: claude/personal/journal/2026-03-10/argc-validated-runner
+---
+
 # argc validated runner
 
 ## intent
 
-creating a single entry point for running cli commands with runtime validation.
-instead of running the binary directly we validate with the help of argc.
+creating a single entry point for running cli commands with runtime validation. instead of running the binary directly we validate with the help of argc.
 
 ## what exists
 

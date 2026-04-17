@@ -1,3 +1,9 @@
+---
+title: reference
+type: note
+permalink: claude/lab/projects-in-development/skogdocs/reference
+---
+
 # Documentation Skill Reference
 
 Complete reference for the documentation skill including advanced patterns, edge cases, and detailed protocols.
@@ -27,8 +33,7 @@ Complete reference for the documentation skill including advanced patterns, edge
 
 #### When Multiple Categories Apply
 
-**Payment Processing Example:**
-Could span all three:
+**Payment Processing Example:** Could span all three:
 
 - `docs/domain/payment-rules.md` - Refund policies, pricing rules
 - `docs/patterns/payment-processing.md` - Internal payment handling
@@ -284,41 +289,33 @@ When a pattern/interface is superseded:
 
 ### ❌ Mistake 1: Creating Without Checking
 
-**Problem:** Duplicate documentation proliferates
-**Solution:** Always search first - multiple ways (grep, find, ls)
+**Problem:** Duplicate documentation proliferates **Solution:** Always search first - multiple ways (grep, find, ls)
 
 ### ❌ Mistake 2: Wrong Category
 
-**Problem:** Business rules in patterns/, technical details in domain/
-**Solution:** Ask "Is this about WHAT (domain) or HOW (patterns)?"
+**Problem:** Business rules in patterns/, technical details in domain/ **Solution:** Ask "Is this about WHAT (domain) or HOW (patterns)?"
 
 ### ❌ Mistake 3: Too Generic Names
 
-**Problem:** Can't find documentation later
-**Solution:** Full descriptive names, not abbreviations
+**Problem:** Can't find documentation later **Solution:** Full descriptive names, not abbreviations
 
 ### ❌ Mistake 4: No Cross-References
 
-**Problem:** Related knowledge stays siloed
-**Solution:** Link liberally between related docs
+**Problem:** Related knowledge stays siloed **Solution:** Link liberally between related docs
 
 ### ❌ Mistake 5: Template Ignored
 
-**Problem:** Inconsistent structure makes scanning hard
-**Solution:** Follow templates for consistency
+**Problem:** Inconsistent structure makes scanning hard **Solution:** Follow templates for consistency
 
 ### ❌ Mistake 6: No Examples
 
-**Problem:** Abstract descriptions don't help
-**Solution:** Include real code snippets and scenarios
+**Problem:** Abstract descriptions don't help **Solution:** Include real code snippets and scenarios
 
 ## Edge Case Handling
 
 ### What if Nothing Fits the Categories?
 
-**Option 1:** Expand categories (rare, think hard first)
-**Option 2:** Create `docs/architecture/` for cross-cutting concerns
-**Option 3:** Add to specification docs if feature-specific
+**Option 1:** Expand categories (rare, think hard first) **Option 2:** Create `docs/architecture/` for cross-cutting concerns **Option 3:** Add to specification docs if feature-specific
 
 **Example:** ADRs (Architecture Decision Records) might warrant `docs/decisions/`
 
@@ -430,10 +427,10 @@ Automate the search process:
 The documentation skill ensures:
 
 1. **No duplication** - Always check before creating
-2. **Correct categorization** - Business vs Technical vs External
-3. **Discoverability** - Descriptive names and cross-references
-4. **Consistency** - Template-based structure
-5. **Maintainability** - Clear, complete, and up-to-date
+1. **Correct categorization** - Business vs Technical vs External
+1. **Discoverability** - Descriptive names and cross-references
+1. **Consistency** - Template-based structure
+1. **Maintainability** - Clear, complete, and up-to-date
 
 When in doubt, ask:
 

@@ -1,4 +1,10 @@
-<name_explanation>
+---
+title: dot-skogai
+type: note
+permalink: claude/lab/projects-in-development/navigate-skogai/navigate-skogai/references/dot-skogai
+---
+
+\<name_explanation>
 
 **dot-skogai** is the file-safe name for `.skogai`
 
@@ -8,4 +14,4 @@ originally this was `$HOME/.skogai` and the only real folder in the SkogaAI syst
 
 now today the `SkogAI/.skogai` repository serves as both "the base configuration" as well as "add as a submodule to your own projects" folder - making .skogai a folder for both system wide settings as well as a way to quickly setup new projects by using the .skogai-submodule as a bootstrap for everything SkogAI.
 
-</name_explanation>
+\</name_explanation>

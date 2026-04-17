@@ -1,3 +1,9 @@
+---
+title: SKOGTOWN
+type: note
+permalink: claude/lab/projects-in-development/skogtown/skogtown
+---
+
 ## SkogAI; Persona-Driven-Workflows
 
 ### **Mayor** 🎩
@@ -74,7 +80,7 @@ The **Deacon's watchdog**.
 - Cleans stale handoffs
 - Exits immediately — always fresh, no persistent state
 
----
+______________________________________________________________________
 
 ## The Choreography
 
@@ -102,20 +108,20 @@ Meanwhile:
 - Dogs handle heavy cleanup tasks
 ```
 
----
+______________________________________________________________________
 
 ## Worth paying attention to
 
 1. **ZFC (trust agent beads)** — Don't infer state from PIDs/tmux. Trust what agents report about themselves.
 
-2. **Self-cleaning polecats** — No zombie workers. Done = gone.
+1. **Self-cleaning polecats** — No zombie workers. Done = gone.
 
-3. **Separate lifecycles** — Polecat lifecycle ≠ MR lifecycle. Conflicts spawn NEW polecats.
+1. **Separate lifecycles** — Polecat lifecycle ≠ MR lifecycle. Conflicts spawn NEW polecats.
 
-4. **Second-order monitoring** — Witnesses watch Deacon. Boot watches Deacon. Who watches the watchers? Solved.
+1. **Second-order monitoring** — Witnesses watch Deacon. Boot watches Deacon. Who watches the watchers? Solved.
 
-5. **Exponential backoff on idle** — Deacon sleeps longer when nothing's happening (up to 10 min), wakes instantly on activity.
+1. **Exponential backoff on idle** — Deacon sleeps longer when nothing's happening (up to 10 min), wakes instantly on activity.
 
-6. **Formulas as durable state** — Molecules survive crashes. Resume from last completed step.
+1. **Formulas as durable state** — Molecules survive crashes. Resume from last completed step.
 
-7. **Claude hooks** — `SessionStart` injects mail, `UserPromptSubmit` injects mail, `Stop` records costs. The agents are wired in.
+1. **Claude hooks** — `SessionStart` injects mail, `UserPromptSubmit` injects mail, `Stop` records costs. The agents are wired in.

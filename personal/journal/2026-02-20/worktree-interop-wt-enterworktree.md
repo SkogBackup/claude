@@ -1,3 +1,9 @@
+---
+title: worktree-interop-wt-enterworktree
+type: note
+permalink: claude/personal/journal/2026-02-20/worktree-interop-wt-enterworktree
+---
+
 # Worktree Interop: wt + EnterWorktree
 
 Tested whether Claude Code's `EnterWorktree` tool and the `wt` (worktrunk) CLI can coexist for git worktree management.
@@ -29,7 +35,8 @@ Tested spawning a subagent to create a PR from a worktree. The subagent prompt i
 **Consequences:** The push created a remote branch, tracking config in `.git/config`, and `FETCH_HEAD` in the worktree's git dir. After the PR was merged and the remote branch auto-deleted, the local tracking config and worktree artifacts persisted as zombies requiring manual cleanup.
 
 **Rules established:**
+
 1. Prompts to subagents are commands — don't add steps
-2. Worktree agents commit and create PRs only — no `git push`, no origin manipulation
-3. `gh pr create` handles push implicitly — no separate push step exists
-4. Worktree lifecycle cleanup is outside the subagent's scope
+1. Worktree agents commit and create PRs only — no `git push`, no origin manipulation
+1. `gh pr create` handles push implicitly — no separate push step exists
+1. Worktree lifecycle cleanup is outside the subagent's scope

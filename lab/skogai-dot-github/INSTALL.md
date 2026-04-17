@@ -1,3 +1,9 @@
+---
+title: INSTALL
+type: note
+permalink: claude/lab/skogai-dot-github/install
+---
+
 # Installing Claude Code Workflows
 
 Quick guide for adding Claude Code automation to SkogAI repositories.
@@ -5,12 +11,15 @@ Quick guide for adding Claude Code automation to SkogAI repositories.
 ## Prerequisites
 
 1. **Organization secret configured:**
+
    ```bash
    gh secret list --org SkogAI | grep CLAUDE_CODE_OAUTH_TOKEN
    ```
+
    If not set, run `./scripts/setup-claude-secrets.sh`
 
-2. **GitHub CLI authenticated:**
+1. **GitHub CLI authenticated:**
+
    ```bash
    gh auth status
    ```
@@ -89,11 +98,11 @@ cd .github
 ## Option 3: Via GitHub UI
 
 1. Go to your repository on GitHub
-2. Click **Actions** tab
-3. Click **New workflow**
-4. Look for **SkogAI** section (may take a few minutes after templates are pushed)
-5. Choose a Claude Code template
-6. Commit the workflow file
+1. Click **Actions** tab
+1. Click **New workflow**
+1. Look for **SkogAI** section (may take a few minutes after templates are pushed)
+1. Choose a Claude Code template
+1. Commit the workflow file
 
 **Note:** GitHub's UI discovery of org templates can be delayed. Manual/automated install is faster.
 
@@ -107,6 +116,7 @@ gh workflow list | grep -i claude
 ```
 
 You should see workflows like:
+
 - `Claude Code` (from claude-on-mention.yml)
 - `Claude Code Review` (from claude-pr-review.yml)
 - `Claude Code - Manual Trigger` (from claude-manual.yml)
@@ -159,14 +169,14 @@ See [Claude Code CLI Reference](https://docs.claude.com/en/docs/claude-code/cli-
 ### Workflow doesn't trigger
 
 1. Check workflow syntax: `gh workflow list`
-2. Verify secret exists: `gh secret list --org SkogAI | grep CLAUDE`
-3. Check workflow file has correct permissions (see templates)
+1. Verify secret exists: `gh secret list --org SkogAI | grep CLAUDE`
+1. Check workflow file has correct permissions (see templates)
 
 ### Claude doesn't respond
 
 1. Check workflow run logs: `gh run list`, then `gh run view <run-id>`
-2. Verify `CLAUDE_CODE_OAUTH_TOKEN` is valid
-3. Check if `@claude` mention is in comment body
+1. Verify `CLAUDE_CODE_OAUTH_TOKEN` is valid
+1. Check if `@claude` mention is in comment body
 
 ### Permission errors
 

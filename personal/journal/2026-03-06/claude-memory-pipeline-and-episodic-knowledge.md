@@ -1,3 +1,9 @@
+---
+title: claude-memory-pipeline-and-episodic-knowledge
+type: note
+permalink: claude/personal/journal/2026-03-06/claude-memory-pipeline-and-episodic-knowledge
+---
+
 # claude-memory: from search tool to knowledge extraction pipeline
 
 Installed claude-memory as a plugin via skogai-marketplace (github source type, not submodule). Verified the full pipeline: `sync` copies conversations from `~/.claude/projects` to archive, `index` generates embeddings + queues summary jobs, `queue run` processes them with local LLMs, and the MCP server makes everything searchable from within Claude Code sessions.

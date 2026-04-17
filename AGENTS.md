@@ -1,3 +1,9 @@
+---
+title: AGENTS
+type: note
+permalink: claude/agents
+---
+
 # AGENTS.md
 
 Codex/agent instructions for this repository.

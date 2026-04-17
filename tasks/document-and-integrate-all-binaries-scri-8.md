@@ -1,7 +1,9 @@
 ---
 state: new
 created: 2026-04-17
-tracking: ["https://github.com/SkogAI/claude/issues/8"]
+tracking:
+  - https://github.com/SkogAI/claude/issues/8
+permalink: claude/tasks/document-and-integrate-all-binaries-scri-8
 ---
 
 # Document and integrate all binaries/scripts into CLAUDE.md

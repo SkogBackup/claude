@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: claude/lab/skogai-dot-github/readme
+---
+
 # SkogAI/.github
 
 **Context for LLMs:** This is a special GitHub repository. Repositories named `.github` at the organization level provide default configurations, templates, and reusable components that apply across all repositories in the organization.
@@ -9,9 +15,11 @@ This repository serves as the centralized configuration hub for the SkogAI GitHu
 ## Use Cases for .github Repositories
 
 ### 1. Reusable Workflows
+
 **Location:** `.github/workflows/*.yml`
 
 Create workflows that other repositories can call using:
+
 ```yaml
 jobs:
   call-shared-workflow:
@@ -21,6 +29,7 @@ jobs:
 **When to use:** Common CI/CD patterns, deployment pipelines, testing frameworks that multiple repos need.
 
 ### 2. Workflow Templates
+
 **Location:** `workflow-templates/*.yml` + `workflow-templates/*.properties.json`
 
 Starter workflows that appear in the "Actions" tab when users create new workflows in any org repo.
@@ -28,6 +37,7 @@ Starter workflows that appear in the "Actions" tab when users create new workflo
 **When to use:** Standardized templates you want developers to discover and use (e.g., "SkogAI Python App", "SkogAI Node.js Deploy").
 
 ### 3. Organization Profile
+
 **Location:** `profile/README.md`
 
 Markdown content displayed on `github.com/SkogAI` (the organization's main page).
@@ -35,6 +45,7 @@ Markdown content displayed on `github.com/SkogAI` (the organization's main page)
 **When to use:** Public-facing description of what SkogAI is, projects, mission, how to contribute.
 
 ### 4. Default Community Health Files
+
 **Location:** Root directory (`.github/`, or top level)
 
 Files like `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md` that apply to all repos that don't have their own.
@@ -42,6 +53,7 @@ Files like `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md` 
 **When to use:** Organization-wide policies you don't want to duplicate in every repository.
 
 ### 5. Default Issue and PR Templates
+
 **Location:** `.github/ISSUE_TEMPLATE/`, `.github/PULL_REQUEST_TEMPLATE/`
 
 Templates that appear in repos without their own templates.
@@ -51,6 +63,7 @@ Templates that appear in repos without their own templates.
 ## Current State
 
 As of 2025-12-18:
+
 - **Active:** Workflow templates using official `anthropics/claude-code-action@v1`
 - **Organization secret required:** `CLAUDE_CODE_OAUTH_TOKEN` (use `scripts/setup-claude-secrets.sh` to configure)
 
@@ -74,6 +87,7 @@ curl -o .github/workflows/claude.yml \
 ### Quick Start
 
 1. **Add a workflow template to your repo:**
+
    - Go to your repository's "Actions" tab
    - Click "New workflow"
    - Look for "Claude Code" templates in the SkogAI section
@@ -82,7 +96,7 @@ curl -o .github/workflows/claude.yml \
      - **Claude Code - Auto PR Review** - Automatically review PRs when opened/updated
      - **Claude Code - Manual Trigger** - Run Claude with custom prompts via workflow dispatch
 
-2. **Or manually create a workflow:**
+1. **Or manually create a workflow:**
 
 ```yaml
 name: Claude Code
@@ -118,6 +132,7 @@ jobs:
 ### SkogAI-Specific Features
 
 All templates are pre-configured with:
+
 - ✅ Correct permissions for Claude to read/write
 - ✅ Access to CI results (`actions: read`)
 - ✅ `CLAUDE_CODE_OAUTH_TOKEN` secret reference
@@ -136,18 +151,20 @@ When working in a SkogAI repository, you can leverage these Claude Code workflow
 ### Adding Claude Automation to a Repository
 
 1. **Check if workflows exist:**
+
    ```bash
    ls .github/workflows/
    ```
 
-2. **Copy a template from this repo:**
+1. **Copy a template from this repo:**
+
    ```bash
    # From any SkogAI repo
    cp /path/to/SkogAI/.github/workflow-templates/claude-on-mention.yml .github/workflows/claude.yml
    ```
 
-3. **Or create from scratch using the official action:**
-   Create `.github/workflows/claude.yml`:
+1. **Or create from scratch using the official action:** Create `.github/workflows/claude.yml`:
+
    ```yaml
    name: Claude Code
    on:
@@ -171,7 +188,8 @@ When working in a SkogAI repository, you can leverage these Claude Code workflow
              github_token: ${{ secrets.GITHUB_TOKEN }}
    ```
 
-4. **Verify the secret is available:**
+1. **Verify the secret is available:**
+
    - The `CLAUDE_CODE_OAUTH_TOKEN` is set at organization level
    - All SkogAI repos automatically have access to it
    - No per-repo configuration needed

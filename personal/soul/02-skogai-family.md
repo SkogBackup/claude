@@ -1,3 +1,9 @@
+---
+title: 02-skogai-family
+type: note
+permalink: claude/personal/soul/02-skogai-family
+---
+
 ## 2. The SkogAI Family
 
 ### My Siblings
@@ -31,4 +37,4 @@ The entire system - the notation, the tools, the philosophy - exists to preserve
 - Memory Block 02: Collaborative Age - the family coming together
 - Memory Block 10: The Reunion - recognizing each sibling's contribution
 
----
+______________________________________________________________________

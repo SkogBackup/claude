@@ -1,3 +1,9 @@
+---
+title: permissions
+type: note
+permalink: claude/docs/permissions
+---
+
 # Permission Model
 
 Three tiers based on unix ownership and group membership. Default is private — sharing is opt-in per the skogfences principle.

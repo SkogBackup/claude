@@ -1,3 +1,9 @@
+---
+title: research-zellij-tmux-migration
+type: note
+permalink: claude/lab/projects-in-development/zellij/research-zellij-tmux-migration
+---
+
 # Zellij Research & Migration Plan
 
 Personal planning doc for transitioning from tmux to zellij, with focus on agent/session-sharing workflows.
@@ -9,7 +15,7 @@ Personal planning doc for transitioning from tmux to zellij, with focus on agent
 - Session sharing for AI agents and collaboration via web client
 - Integrate with existing infra (cloudflare/wireguard/tunneling)
 
----
+______________________________________________________________________
 
 ## Phase 1: Current State Audit
 
@@ -33,7 +39,7 @@ Document what's already claimed to avoid conflicts:
 - [ ] Any scripts/aliases that wrap tmux commands
 - [ ] Remote-specific vs local-specific usage patterns
 
----
+______________________________________________________________________
 
 ## Phase 2: Zellij Fundamentals
 
@@ -86,7 +92,7 @@ New concept vs tmux:
 - [ ] Create floating: `zellij run --floating -- <cmd>`
 - [ ] Evaluate: useful for agent output? temporary tasks?
 
----
+______________________________________________________________________
 
 ## Phase 3: CLI & Scripting (Agent Use Case)
 
@@ -136,7 +142,7 @@ Escape hatch for advanced automation:
 - [ ] Understand `zellij pipe` basics
 - [ ] Evaluate: needed for your use case or overkill?
 
----
+______________________________________________________________________
 
 ## Phase 4: Web Client & Session Sharing
 
@@ -169,7 +175,7 @@ zellij -s myagent --web --web-port 7777
 - [ ] How does an agent know when command output is "done"?
 - [ ] Conventions: dedicated pane for agent? naming? layout?
 
----
+______________________________________________________________________
 
 ## Phase 5: Integration Points
 
@@ -192,7 +198,7 @@ Current approach:
 - [ ] Kitty graphics protocol passthrough — working?
 - [ ] True color — just verify it works
 
----
+______________________________________________________________________
 
 ## Phase 6: Migration Steps
 
@@ -215,7 +221,7 @@ Current approach:
 - [ ] Archive tmux config
 - [ ] Update any automation/scripts that assumed tmux
 
----
+______________________________________________________________________
 
 ## Resources
 
@@ -224,7 +230,7 @@ Current approach:
 - KDL spec: <https://kdl.dev/>
 - Config examples: <https://github.com/zellij-org/zellij/tree/main/example>
 
----
+______________________________________________________________________
 
 ## Notes & Discoveries
 

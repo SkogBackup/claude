@@ -1,3 +1,9 @@
+---
+title: argc-completions-as-claude-sandbox
+type: note
+permalink: claude/personal/journal/2026-03-10/argc-completions-as-claude-sandbox
+---
+
 # argc-completions as Claude Code command sandbox
 
 ## context
@@ -17,6 +23,7 @@ argc --argc-eval $ARGC_COMPLETIONS_ROOT/completions/gptodo.sh import --source gi
 ```
 
 Wrapper shim (goal):
+
 ```bash
 #!/bin/bash
 argc --argc-eval $ARGC_COMPLETIONS_ROOT/completions/${0##*/}.sh "$@" | bash

@@ -1,3 +1,9 @@
+---
+title: build-against-the-collection
+type: note
+permalink: claude/personal/journal/2026-02-27/build-against-the-collection
+---
+
 # Build Against the Collection — Session Journal
 
 Built a context-aware agent harness (`examples/context-harness/`) as a stress test of the 13-skill collection. The harness implements filesystem-context patterns (scratch pad, plan persistence, dynamic skill loading, context budget, observation masking) as working Python with 45 tests.
@@ -5,6 +11,7 @@ Built a context-aware agent harness (`examples/context-harness/`) as a stress te
 ## The Number That Matters
 
 Observation masking saves **5x tokens** on a realistic task. Analyzing all 13 skills:
+
 - With masking: 7,373 tokens (29% of 25k budget)
 - Without masking: 43,069 tokens (172% — budget blown before finishing)
 

@@ -1,3 +1,9 @@
+---
+title: projects-merge-into-claude-hq
+type: note
+permalink: claude/personal/journal/2026-02-27/projects-merge-into-claude-hq
+---
+
 # Projects Merge into Claude HQ
 
 Nelson squadron mission to survey ~/projects/ and merge relevant content into ~/claude.
@@ -7,17 +13,20 @@ Nelson squadron mission to survey ~/projects/ and merge relevant content into ~/
 Surveyed 6 projects (hq, claude-code, dotfiles, git, system, skogai-core) and classified each as merge, absorb, or reference-only.
 
 **Merged:**
+
 - hq/CONVENTIONS.md → ~/claude/CONVENTIONS.md (file conventions, @-imports)
 - hq/DECISIONS.md → ~/claude/DECISIONS.md (120 lines of architectural history)
 - hq/RULES.md → absorbed into ~/claude/RULES.md (@ notation, .list convention)
 - skogai-core/ → ~/claude/projects/skogai-core/ (plugin scaffold)
 
 **Cleaned up:**
+
 - Removed .todo/demodotfiles/ (4,772 lines of redundant project snapshots)
 - Moved findings-nelson-memory-patterns.md to journal/
 - Removed duplicate todo/rtk-optimized.md
 
 **Promoted to global ~/.claude/:**
+
 - Commands: learn, catchup
 - Agents: doc-writer
 
@@ -26,6 +35,7 @@ Surveyed 6 projects (hq, claude-code, dotfiles, git, system, skogai-core) and cl
 ## Fleet-memory audit
 
 Applied fleet-memory tier classification to ~/claude post-merge:
+
 - Policy: CLAUDE.md, RULES.md, CONVENTIONS.md, SKILL.md, AGENTS.md
 - Knowledge: DECISIONS.md, .todo/skills/
 - State: merge-log.md, journal/

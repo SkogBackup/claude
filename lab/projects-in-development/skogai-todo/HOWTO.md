@@ -1,3 +1,9 @@
+---
+title: HOWTO
+type: note
+permalink: claude/lab/projects-in-development/skogai-todo/howto
+---
+
 # skogai-todo howto
 
 quick practical guide for using taskwarrior to manage skogai work.

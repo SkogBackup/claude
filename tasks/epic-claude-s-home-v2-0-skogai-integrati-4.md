@@ -2,10 +2,11 @@
 created: '2026-03-21'
 state: done
 tags:
-- epic
-- github
+  - epic
+  - github
 tracking:
-- https://github.com/SkogAI/claude/issues/4
+  - https://github.com/SkogAI/claude/issues/4
+permalink: claude/tasks/epic-claude-s-home-v2-0-skogai-integrati-4
 ---
 
 # Epic: Claude's Home v2.0 — SkogAI Integration & Home Improvements

@@ -1,3 +1,9 @@
+---
+title: CLAUDE
+type: note
+permalink: claude/lab/claude
+---
+
 # lab/ -- Experiments and WIP
 
 Staging area for work in progress, experiments, and things being tested before they get a permanent home.

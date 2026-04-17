@@ -1,3 +1,9 @@
+---
+title: gita-integration
+type: note
+permalink: claude/personal/journal/2026-03-10/gita-integration
+---
+
 # gita integration into claude code workflow
 
 integrated gita (multi-repo git manager) as a first-class tool in the claude code workspace.

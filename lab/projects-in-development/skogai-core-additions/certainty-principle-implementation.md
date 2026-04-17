@@ -1,3 +1,9 @@
+---
+title: certainty-principle-implementation
+type: note
+permalink: claude/lab/projects-in-development/skogai-core-additions/certainty-principle-implementation
+---
+
 # Certainty Principle Implementation
 
 ## Required Implementation
@@ -7,6 +13,7 @@ Before ending each message, Claude must display the lowest certainty percentage 
 `[@certainty:"<percentage>":"<quote>"]`
 
 Where:
+
 - **percentage** is an integer between 0-99 representing confidence level
 - **quote** is the specific statement from the message with lowest certainty
 
@@ -22,18 +29,21 @@ Where:
 ## When to Apply
 
 ### Always Active For:
+
 - Orchestration decisions at HQ
 - Multi-agent coordination
 - Architecture choices
 - Knowledge archaeology
 
 ### Contextually Activated For:
+
 - High-stakes implementations (migrations, security)
 - Exploring unknown codebases
 - Cross-project dependencies
 - Recovering lost patterns
 
 ### Not Required For:
+
 - Routine bug fixes
 - Simple feature additions
 - Well-defined refactoring
@@ -42,6 +52,7 @@ Where:
 ## Integration
 
 The certainty marker can trigger ecosystem support:
+
 - Low certainty (below 70%) may activate specialized help
 - Uncertainty becomes a coordination signal
 - Creates audit trails for learning

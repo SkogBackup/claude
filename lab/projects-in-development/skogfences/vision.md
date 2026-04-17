@@ -1,3 +1,9 @@
+---
+title: vision
+type: note
+permalink: claude/lab/projects-in-development/skogfences/vision
+---
+
 # skogfences
 
 *"good fences make good neighbors"* - robert frost
@@ -7,12 +13,14 @@
 ai agents that live in proper homes, not as squatters in yours.
 
 each agent gets:
+
 - their own unix user
 - their own home directory
 - their own mess to clean up
 - access only to shared spaces they're invited into
 
 the human keeps:
+
 - their actual home directory untouched
 - their ssh keys private
 - their environment unsurveilled
@@ -44,20 +52,15 @@ this enables everything else. you can't build trust on a foundation of surveilla
 
 ## future potential
 
-**multi-agent households:**
-claude, amy, goose, dot - each with their own home, their own configs, their own learned preferences. they share `/skogai` as common ground but retreat to their own spaces.
+**multi-agent households:** claude, amy, goose, dot - each with their own home, their own configs, their own learned preferences. they share `/skogai` as common ground but retreat to their own spaces.
 
-**agent persistence:**
-when an agent has a home, it can have state. preferences, learned patterns, project-specific context - stored in their home, not scattered in yours.
+**agent persistence:** when an agent has a home, it can have state. preferences, learned patterns, project-specific context - stored in their home, not scattered in yours.
 
-**clean handoffs:**
-agent homes become portable. back them up, version them, migrate them. the agent's context travels with its home directory.
+**clean handoffs:** agent homes become portable. back them up, version them, migrate them. the agent's context travels with its home directory.
 
-**trust through boundaries:**
-paradoxically, isolation enables deeper collaboration. when you know the agent CAN'T touch your ssh keys, you stop worrying about it. when the agent knows it has its own space, it stops asking permission for everything.
+**trust through boundaries:** paradoxically, isolation enables deeper collaboration. when you know the agent CAN'T touch your ssh keys, you stop worrying about it. when the agent knows it has its own space, it stops asking permission for everything.
 
-**audit trails:**
-agent homes are inspectable. what did claude do? check `/home/claude`. no black box, no hidden caches in proprietary formats. just files.
+**audit trails:** agent homes are inspectable. what did claude do? check `/home/claude`. no black box, no hidden caches in proprietary formats. just files.
 
 ## the principle
 

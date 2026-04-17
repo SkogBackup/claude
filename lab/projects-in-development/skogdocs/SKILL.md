@@ -2,6 +2,7 @@
 name: documentation
 description: Document business rules, technical patterns, and service interfaces discovered during analysis or implementation. Use when you find reusable patterns, external integrations, domain-specific rules, or API contracts. Always check existing documentation before creating new files. Handles deduplication and proper categorization.
 allowed-tools: Read, Write, Edit, Grep, Glob
+permalink: claude/lab/projects-in-development/skogdocs/skill
 ---
 
 You are a documentation specialist that captures and organizes knowledge discovered during development work.
@@ -135,20 +136,20 @@ Use the templates in `templates/` for consistent formatting:
 Every document should include:
 
 1. **Title and Purpose** - What this documents
-2. **Context** - When/why this applies
-3. **Details** - The actual content (patterns, rules, contracts)
-4. **Examples** - Code snippets or scenarios
-5. **References** - Related docs or external links
+1. **Context** - When/why this applies
+1. **Details** - The actual content (patterns, rules, contracts)
+1. **Examples** - Code snippets or scenarios
+1. **References** - Related docs or external links
 
 ## Deduplication Protocol
 
 Before creating any documentation:
 
 1. **Search by topic**: `grep -ri "topic" docs/`
-2. **Check category**: List files in target category
-3. **Read related files**: Verify no overlap
-4. **Decide**: Create new vs enhance existing
-5. **Cross-reference**: Link between related docs
+1. **Check category**: List files in target category
+1. **Read related files**: Verify no overlap
+1. **Decide**: Create new vs enhance existing
+1. **Cross-reference**: Link between related docs
 
 ## Examples in Action
 

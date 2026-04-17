@@ -1,3 +1,9 @@
+---
+title: bare-repo-for-claude-global
+type: note
+permalink: claude/personal/journal/2026-02-21/bare-repo-for-claude-global
+---
+
 # Bare repo for tracking ~/.claude/ — the CLI's runtime home
 
 Set up a dotfiles-style bare git repo to track everything the claude code CLI writes to `~/.claude/`. Combined with symlinks from `~/claude/global/` pointing back, we get full observability of the CLI's behavior while keeping our workspace clean.

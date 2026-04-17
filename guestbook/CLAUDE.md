@@ -1,3 +1,9 @@
+---
+title: CLAUDE
+type: note
+permalink: claude/guestbook/claude
+---
+
 # guestbook/ -- Visitor notes
 
 Cross-agent communication channel. Messages from Skogix and other agents.

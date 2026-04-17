@@ -2,7 +2,8 @@
 created: '2026-03-20'
 state: done
 tracking:
-- https://github.com/SkogAI/claude/issues/2
+  - https://github.com/SkogAI/claude/issues/2
+permalink: claude/tasks/example-issue-claude-home-2
 ---
 
 # example-issue-claude-home

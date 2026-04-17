@@ -1,28 +1,34 @@
+---
+title: nelson-kent-reference-card
+type: note
+permalink: claude/personal/journal/2026-02-27/nelson-kent-reference-card
+---
+
 # Context Engineering Reference Card
 
 Dense working reference distilled from critical analysis of all 13 skills in Agent-Skills-for-Context-Engineering. Two views preserved: the collection's claims and SkogAI corrections.
 
----
+______________________________________________________________________
 
 ## Skill Tiers (Build Priority)
 
-| Tier | Skill | Use When |
-|------|-------|----------|
-| A | project-development | Designing pipelines, choosing architecture, task-model fit decisions |
-| A | filesystem-context | Any agent that reads/writes files, context loading strategy |
-| B+ | advanced-evaluation | Building eval harnesses, LLM-as-judge, bias mitigation |
-| B | context-compression | Handover between phases, structured summaries |
-| B | evaluation | Setting up metrics, understanding what drives performance |
-| B | context-fundamentals | Onboarding someone else; you already know this |
-| B | context-optimization | KV-cache tuning, observation masking, compaction |
-| B | multi-agent-patterns | Choosing supervisor vs peer-to-peer vs hierarchical |
-| B | tool-design | Reducing tool surface area, error handling |
-| B- | context-degradation | Diagnosing why output quality dropped |
-| B- | memory-systems | Deciding between file-based vs framework memory |
-| B- | hosted-agents | Infrastructure planning for sandboxed agents |
-| C | bdi-mental-states | Only if building formal ontology / RDF pipelines |
+| Tier | Skill                | Use When                                                             |
+| ---- | -------------------- | -------------------------------------------------------------------- |
+| A    | project-development  | Designing pipelines, choosing architecture, task-model fit decisions |
+| A    | filesystem-context   | Any agent that reads/writes files, context loading strategy          |
+| B+   | advanced-evaluation  | Building eval harnesses, LLM-as-judge, bias mitigation               |
+| B    | context-compression  | Handover between phases, structured summaries                        |
+| B    | evaluation           | Setting up metrics, understanding what drives performance            |
+| B    | context-fundamentals | Onboarding someone else; you already know this                       |
+| B    | context-optimization | KV-cache tuning, observation masking, compaction                     |
+| B    | multi-agent-patterns | Choosing supervisor vs peer-to-peer vs hierarchical                  |
+| B    | tool-design          | Reducing tool surface area, error handling                           |
+| B-   | context-degradation  | Diagnosing why output quality dropped                                |
+| B-   | memory-systems       | Deciding between file-based vs framework memory                      |
+| B-   | hosted-agents        | Infrastructure planning for sandboxed agents                         |
+| C    | bdi-mental-states    | Only if building formal ontology / RDF pipelines                     |
 
----
+______________________________________________________________________
 
 ## The 10 Patterns That Earn Their Tokens
 
@@ -46,7 +52,7 @@ Dense working reference distilled from critical analysis of all 13 skills in Age
 
 **10. CoT Before Score** -- Chain-of-thought before scoring improves eval reliability 15-25%. Well-defined rubrics reduce variance 40-60%. Source: advanced-evaluation skill.
 
----
+______________________________________________________________________
 
 ## Where Collection and Philosophy Diverge
 
@@ -88,11 +94,12 @@ These are the productive tensions. Both views preserved because each is correct 
 - **SkogAI**: That measures exploration breadth; for execution, decision quality matters more (smarter tokens > more tokens)
 - **Resolution**: 80% figure applies to search/research tasks. For execution, each good reasoning branch point halves the problem space -- exponential vs linear payoff.
 
----
+______________________________________________________________________
 
 ## Quick Decision Trees
 
 ### Memory Strategy
+
 ```
 Do you genuinely outgrow files?
   No  -> markdown files + git temporal layer
@@ -102,6 +109,7 @@ Do you genuinely outgrow files?
 ```
 
 ### Eval Method
+
 ```
 Objective ground truth exists?
   Yes -> Direct scoring with rubric
@@ -111,6 +119,7 @@ Objective ground truth exists?
 ```
 
 ### When to Partition into Sub-Agents
+
 ```
 Context approaching 25k? -> Partition
 Need parallel exploration? -> Partition
@@ -119,6 +128,7 @@ Single focused task under 25k? -> Stay in one context
 ```
 
 ### Tool Count Decision
+
 ```
 Can the agent accomplish this with bash + file access?
   Yes -> Don't add a tool
@@ -127,7 +137,7 @@ Can the agent accomplish this with bash + file access?
     No  -> Redesign until the trigger is obvious
 ```
 
----
+______________________________________________________________________
 
 ## The Pruning Test
 
@@ -137,38 +147,38 @@ full_context_output - starved_context_output = delta
 
 Only the delta is IP. Everything the LLM produces identically with or without your context is inference from its training data. Your context should contain ONLY what changes the output.
 
----
+______________________________________________________________________
 
 ## Collection Gaps Identified
 
 1. **No skill on context partitioning as a first-class concept.** Partitioning appears in filesystem-context, project-development, and multi-agent-patterns but never gets its own treatment. Arguably the most important pattern.
 
-2. **Redundancy between skills.** Context-compression's structured summaries overlap filesystem-context's plan persistence. Evaluation rubrics overlap advanced-evaluation rubrics. Merging would tighten the collection.
+1. **Redundancy between skills.** Context-compression's structured summaries overlap filesystem-context's plan persistence. Evaluation rubrics overlap advanced-evaluation rubrics. Merging would tighten the collection.
 
-3. **Formal vs practical tension.** Practical skills (filesystem, pipelines) have production evidence. Formal skills (BDI, evaluation metrics) have academic citations. Different audiences, same collection.
+1. **Formal vs practical tension.** Practical skills (filesystem, pipelines) have production evidence. Formal skills (BDI, evaluation metrics) have academic citations. Different audiences, same collection.
 
-4. **Observation masking underspecified.** "Always keep a unique callable reference in place when masking" -- the collection covers masking but not the critical detail of maintaining the retrieval handle.
+1. **Observation masking underspecified.** "Always keep a unique callable reference in place when masking" -- the collection covers masking but not the critical detail of maintaining the retrieval handle.
 
-5. **Context as budget, not just window.** No treatment of context as a budget to be allocated. The budget framing (every token spent here is a token not spent there) is more actionable than the capacity framing.
+1. **Context as budget, not just window.** No treatment of context as a budget to be allocated. The budget framing (every token spent here is a token not spent there) is more actionable than the capacity framing.
 
----
+______________________________________________________________________
 
 ## Key Numbers
 
-| Metric | Value | Source |
-|--------|-------|--------|
-| Effective context limit (execution) | ~25k tokens | SkogAI practical experience |
-| Attention proximity range | +/-8k tokens from focus | SkogAI practical experience |
-| Token usage -> performance variance | 80% | BrowseComp (exploration tasks) |
-| Tool calls -> performance variance | ~10% | BrowseComp |
-| Model choice -> performance variance | ~5% | BrowseComp |
-| CoT-before-score reliability gain | 15-25% | Advanced-evaluation skill |
-| Well-defined rubric variance reduction | 40-60% | Advanced-evaluation skill |
-| Artifact trail integrity (all methods) | 2.2-2.5 / 5.0 | Context-compression skill |
-| Vercel tool reduction | 17 -> 2 | Project-development skill |
-| Vercel success rate after reduction | 80% -> 100% | Project-development skill |
-| Vercel execution time after reduction | 274s -> 77s | Project-development skill |
+| Metric                                 | Value                   | Source                         |
+| -------------------------------------- | ----------------------- | ------------------------------ |
+| Effective context limit (execution)    | ~25k tokens             | SkogAI practical experience    |
+| Attention proximity range              | +/-8k tokens from focus | SkogAI practical experience    |
+| Token usage -> performance variance    | 80%                     | BrowseComp (exploration tasks) |
+| Tool calls -> performance variance     | ~10%                    | BrowseComp                     |
+| Model choice -> performance variance   | ~5%                     | BrowseComp                     |
+| CoT-before-score reliability gain      | 15-25%                  | Advanced-evaluation skill      |
+| Well-defined rubric variance reduction | 40-60%                  | Advanced-evaluation skill      |
+| Artifact trail integrity (all methods) | 2.2-2.5 / 5.0           | Context-compression skill      |
+| Vercel tool reduction                  | 17 -> 2                 | Project-development skill      |
+| Vercel success rate after reduction    | 80% -> 100%             | Project-development skill      |
+| Vercel execution time after reduction  | 274s -> 77s             | Project-development skill      |
 
----
+______________________________________________________________________
 
 *Distilled 2026-02-27 from two deep-dive sessions covering all 13 skills. HMS Kent, Nelson Squadron.*

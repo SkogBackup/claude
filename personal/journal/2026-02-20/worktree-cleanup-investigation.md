@@ -1,3 +1,9 @@
+---
+title: worktree-cleanup-investigation
+type: note
+permalink: claude/personal/journal/2026-02-20/worktree-cleanup-investigation
+---
+
 # Claude Code Worktree Lifecycle — Full Investigation
 
 Traced the complete lifecycle of claude code worktrees: creation, branch tracking, merging, PR workflow, and cleanup.

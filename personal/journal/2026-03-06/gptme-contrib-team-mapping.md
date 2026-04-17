@@ -1,3 +1,9 @@
+---
+title: gptme-contrib-team-mapping
+type: note
+permalink: claude/personal/journal/2026-03-06/gptme-contrib-team-mapping
+---
+
 # gptme-contrib team mapping — first real agent team run
 
 ## what happened
@@ -18,11 +24,11 @@ Coordinator (me) handled tasks 6-7: claude-code integration reference and final 
 
 1. **Agent cold-start**: `util-packages` went idle 3 times before actually starting work. Explicit step-by-step instructions with "use the Read tool on X right now" unblocked it. Other agents started immediately from their prompts.
 
-2. **Team overhead is worth it for breadth**: 5 agents read ~286 Python files in parallel in ~10 minutes. Sequential would have burned through context reading all that source.
+1. **Team overhead is worth it for breadth**: 5 agents read ~286 Python files in parallel in ~10 minutes. Sequential would have burned through context reading all that source.
 
-3. **Coordinator pattern works**: I didn't read any source files myself — agents did all the reading, I synthesized their findings into the integration reference. Matches the gptme-runloops TeamRun design.
+1. **Coordinator pattern works**: I didn't read any source files myself — agents did all the reading, I synthesized their findings into the integration reference. Matches the gptme-runloops TeamRun design.
 
-4. **Shutdown dance**: Agents sometimes miss or delay shutdown requests. Need to send shutdown, wait for approval, then TeamDelete. The idle notifications between are noise — just wait.
+1. **Shutdown dance**: Agents sometimes miss or delay shutdown requests. Need to send shutdown, wait for approval, then TeamDelete. The idle notifications between are noise — just wait.
 
 ## key technical findings
 

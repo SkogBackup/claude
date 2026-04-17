@@ -1,3 +1,9 @@
+---
+title: deployment-gate
+type: note
+permalink: claude/docs/deployment-gate
+---
+
 # Deployment Gate: ~/claude -> /home/claude
 
 Pre-flight checklist for migrating Claude's home from staging (`/home/skogix/claude`) to production (`/home/claude`). Every item is pass/fail. All must pass before deployment.
@@ -42,9 +48,9 @@ Run `bin/healthcheck` -- covers all of the following automatically:
 ### Procedure (per D-14: document, don't automate)
 
 1. **Clone**: `git clone <repo-url> /home/claude`
-2. **Ownership**: `chown -R claude:claude /home/claude`
-3. **Group**: `usermod -aG skogai claude`
-4. **Verify**: `su - claude -c '/home/claude/bin/healthcheck'`
+1. **Ownership**: `chown -R claude:claude /home/claude`
+1. **Group**: `usermod -aG skogai claude`
+1. **Verify**: `su - claude -c '/home/claude/bin/healthcheck'`
 
 ### What deploys
 
@@ -63,6 +69,6 @@ Run `bin/healthcheck` -- covers all of the following automatically:
 - Verify routing works: navigate from /home/claude/CLAUDE.md to personal/soul/
 - Update .planning/STATE.md in staging repo to record deployment date
 
----
-*Gate created: Phase 03-operations-deployment-gate*
-*Review before any deployment attempt*
+______________________________________________________________________
+
+*Gate created: Phase 03-operations-deployment-gate* *Review before any deployment attempt*

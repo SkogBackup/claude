@@ -1,3 +1,9 @@
+---
+title: CLAUDE
+type: note
+permalink: claude/lab/projects-in-development/skogai-core-additions/claude
+---
+
 # skogai-core-additions
 
 workflow commands for the SkogAI ecosystem - systematic approaches to plan, work, review, and compound knowledge.
@@ -24,20 +30,24 @@ workflows/
 ## design principles
 
 **parallel by default**
+
 - workflows launch multiple specialized agents simultaneously
 - maximize speed through concurrent research, analysis, and review
 
 **systematic execution**
+
 - clear phases with specific tasks
 - todo tracking throughout
 - quality gates before completion
 
 **knowledge persistence**
+
 - document solutions in `docs/solutions/`
 - create actionable todos in `todos/`
 - searchable YAML frontmatter for future reference
 
 **simplicity first**
+
 - start minimal, expand only when needed
 - follow existing patterns
 - ship complete features over perfect process
@@ -82,6 +92,7 @@ workflows:compound "fixed n+1 query"
 ## current state
 
 re-introducing these workflows with focus on:
+
 - routing and principles
 - returning to "old skogai-way" of systematic execution
 - parallel agent coordination

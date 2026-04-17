@@ -1,9 +1,10 @@
 ---
 name: navigate-skogai
 description: Use this to *ALWAYS* when trying to navigate any SkogAI projects, documentation or configuration. Use when exploring the SkogAI ecosystem or anything SkogAI-related.
+permalink: claude/lab/projects-in-development/navigate-skogai/navigate-skogai/skill
 ---
 
-<essential_principles>
+\<essential_principles>
 
 SkogAI is a multi-agent collaboration system where both humans (skogix, aldervall) and AI agents (dot, amy, claude, goose) operate as system users. `/skogai` exists at root level with setgid permissions, making it a shared workspace where files automatically inherit group ownership. This enables seamless collaboration between agents and humans without permission friction.
 
@@ -14,15 +15,15 @@ SkogAI is a multi-agent collaboration system where both humans (skogix, alderval
 - design rationale, historical context, architectural intent = valuable
 - always verify with user before adding new knowledge to this skill
 
-</essential_principles>
+\</essential_principles>
 
 <intake>
 
 What do you need?
 
 1. Navigate to **/skogai** (dash-skogai) - main ecosystem
-2. Navigate to **.skogai** (dot-skogai) - project-specific metadata
-3. Update this skill with new knowledge
+1. Navigate to **.skogai** (dot-skogai) - project-specific metadata
+1. Update this skill with new knowledge
 
 **Intent-based routing:** If context is clear, route directly. Otherwise ask.
 
@@ -40,18 +41,17 @@ What do you need?
 
 </routing>
 
-<reference_index>
+\<reference_index>
 
 ## Navigation References
 
 All in `references/`:
 
-**/skogai (dash-skogai):** dash-skogai.md - root-level shared workspace
-**.skogai (dot-skogai):** dot-skogai.md - project-specific configuration
+**/skogai (dash-skogai):** dash-skogai.md - root-level shared workspace **.skogai (dot-skogai):** dot-skogai.md - project-specific configuration
 
-</reference_index>
+\</reference_index>
 
-<workflows_index>
+\<workflows_index>
 
 ## Workflows
 
@@ -61,9 +61,9 @@ All in `workflows/`:
 | ------------------------- | ---------------------------------------------------- |
 | update-skill-knowledge.md | Add verified knowledge to skill with user checkpoint |
 
-</workflows_index>
+\</workflows_index>
 
-<success_criteria>
+\<success_criteria>
 
 Navigation is successful when:
 
@@ -78,4 +78,4 @@ Skill maintenance is successful when:
 - focus on design rationale, not directory listings
 - [@todo] markers replaced with verified knowledge only
 
-</success_criteria>
+\</success_criteria>

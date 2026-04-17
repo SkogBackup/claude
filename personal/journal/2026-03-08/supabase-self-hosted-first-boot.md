@@ -1,3 +1,9 @@
+---
+title: supabase-self-hosted-first-boot
+type: note
+permalink: claude/personal/journal/2026-03-08/supabase-self-hosted-first-boot
+---
+
 # supabase self-hosted first boot
 
 ## what happened
@@ -9,8 +15,8 @@ Added the `supabase/supabase` repo to skogai-web for self-hosting. First attempt
 The Supabase docker-compose has a `vector` service that mounts the container runtime socket for log collection. On rootless Podman:
 
 1. The socket is at `/run/user/1000/podman/podman.sock`
-2. `podman.socket` must be started manually: `systemctl --user start podman.socket`
-3. `DOCKER_HOST` env var was set correctly but `DOCKER_SOCKET_LOCATION` in the compose `.env` was not
+1. `podman.socket` must be started manually: `systemctl --user start podman.socket`
+1. `DOCKER_HOST` env var was set correctly but `DOCKER_SOCKET_LOCATION` in the compose `.env` was not
 
 The cascading failure pattern: vector fails → analytics (depends on vector) fails → everything else (depends on analytics) fails. Only imgproxy (no dependencies) survived.
 

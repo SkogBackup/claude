@@ -1,12 +1,19 @@
+---
+title: environment-diff
+type: note
+permalink: claude/lab/projects-in-development/web-setup-for-claude/environment-diff
+---
+
 # Environment Comparison: Cloud vs Local
 
 Quick reference for differences between cloud container and local skogai setup.
 
----
+______________________________________________________________________
 
 ## Critical Path Differences
 
 ### Working Directory
+
 ```bash
 # Cloud Container (current)
 /home/user/skogai
@@ -16,6 +23,7 @@ Quick reference for differences between cloud container and local skogai setup.
 ```
 
 ### Config Directory
+
 ```bash
 # Cloud Container
 /root/.claude
@@ -25,6 +33,7 @@ Quick reference for differences between cloud container and local skogai setup.
 ```
 
 ### User Context
+
 ```bash
 # Cloud Container
 User: root (uid=0, gid=0)
@@ -35,11 +44,12 @@ User: skogix (or current user)
 Identity: User-configured
 ```
 
----
+______________________________________________________________________
 
 ## Environment Variables to Check
 
 ### Cloud Container Detection
+
 ```bash
 CLAUDE_CODE_REMOTE=true
 CLAUDE_CODE_REMOTE_ENVIRONMENT_TYPE=cloud_default
@@ -48,16 +58,18 @@ IS_SANDBOX=yes
 ```
 
 ### Local Setup Detection
+
 ```bash
 SKOGAI_ROOT=/skogai  # (expected to be set by bin/claude)
 # CLAUDE_CODE_REMOTE not set or false
 ```
 
----
+______________________________________________________________________
 
 ## Script Adaptation Examples
 
 ### Before (hardcoded paths)
+
 ```bash
 #!/usr/bin/env bash
 echo "[\$skogai:context]" > /skogai/tmp/context
@@ -66,6 +78,7 @@ echo "[\$/skogai:context]" >> /skogai/tmp/context
 ```
 
 ### After (environment-aware)
+
 ```bash
 #!/usr/bin/env bash
 
@@ -81,39 +94,42 @@ git diff --cached >> "$SKOGAI_ROOT/tmp/context"
 echo "[\$/skogai:context]" >> "$SKOGAI_ROOT/tmp/context"
 ```
 
----
+______________________________________________________________________
 
 ## Persistence Differences
 
-| Item | Cloud Container | Local Setup |
-|------|----------------|-------------|
-| **Git commits** | Persistent (if pushed) | Persistent |
-| **Unstaged files** | Lost on session end | Persistent |
-| **Config changes** | Lost on session end | Persistent |
-| **Installed tools** | Pre-installed, reset | User-managed |
-| **Session duration** | 1-4 hours typical | Unlimited |
+| Item                 | Cloud Container        | Local Setup  |
+| -------------------- | ---------------------- | ------------ |
+| **Git commits**      | Persistent (if pushed) | Persistent   |
+| **Unstaged files**   | Lost on session end    | Persistent   |
+| **Config changes**   | Lost on session end    | Persistent   |
+| **Installed tools**  | Pre-installed, reset   | User-managed |
+| **Session duration** | 1-4 hours typical      | Unlimited    |
 
----
+______________________________________________________________________
 
 ## Network Differences
 
 ### Cloud Container
+
 - All traffic proxied through Anthropic (21.0.0.125:15004)
 - JWT-based authentication for proxy
 - Specific NO_PROXY exceptions
 - Session-limited GH_TOKEN provided
 
 ### Local Setup
+
 - Direct network access
 - User's own GitHub credentials
 - No proxy by default
 - Persistent authentication
 
----
+______________________________________________________________________
 
 ## Quick Reference Commands
 
 ### Check Current Environment
+
 ```bash
 # Are we in cloud?
 [ -n "$CLAUDE_CODE_REMOTE" ] && echo "CLOUD" || echo "LOCAL"
@@ -126,6 +142,7 @@ git rev-parse --show-toplevel
 ```
 
 ### Get Environment Info
+
 ```bash
 # In cloud container
 env | grep CLAUDE_CODE | sort
@@ -134,7 +151,7 @@ env | grep CLAUDE_CODE | sort
 echo "User: $(whoami) | Home: $HOME | PWD: $PWD"
 ```
 
----
+______________________________________________________________________
 
 ## Recommended Variables to Export
 
@@ -157,7 +174,7 @@ else
 fi
 ```
 
----
+______________________________________________________________________
 
 ## Testing Checklist
 
@@ -171,7 +188,7 @@ When adapting scripts for both environments:
 - [ ] Respects `$SKOGAI_MODE` for mode-specific behavior
 - [ ] Documents which environment it's designed for
 
----
+______________________________________________________________________
 
 ## See Also
 

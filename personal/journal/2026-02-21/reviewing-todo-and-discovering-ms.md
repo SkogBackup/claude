@@ -1,3 +1,9 @@
+---
+title: reviewing-todo-and-discovering-ms
+type: note
+permalink: claude/personal/journal/2026-02-21/reviewing-todo-and-discovering-ms
+---
+
 # Reviewing .todo/ and discovering ms
 
 Session where user showed me their curated `.todo/` reference collection and the `ms` (Meta Skill) CLI.
@@ -8,9 +14,9 @@ User asked me to review things they'd found. I wasted time asking what to review
 
 1. **RTK (Rust Token Killer)** — `rtk git log` produces 10 compact lines vs raw git log's wall of text. 92% token reduction on git log. Already installed and working.
 
-2. **`.todo/` collection** — ~25 hook scripts, skill templates, demodotfiles with a complete project organization system, CLAUDE.md templates. Key finds: `dangerous-actions-blocker.sh` (comprehensive PreToolUse guard), `auto-checkpoint.sh` (git stash on session end), `audit-agents-skills` skill (16-criterion scoring framework).
+1. **`.todo/` collection** — ~25 hook scripts, skill templates, demodotfiles with a complete project organization system, CLAUDE.md templates. Key finds: `dangerous-actions-blocker.sh` (comprehensive PreToolUse guard), `auto-checkpoint.sh` (git stash on session end), `audit-agents-skills` skill (16-criterion scoring framework).
 
-3. **`ms` CLI** — Skill management platform indexing 814 skills system-wide. Has suggest (with Thompson sampling), search (BM25 + semantic), lint, dedup, doctor. `ms suggest --explain` gives scored recommendations with context match breakdown.
+1. **`ms` CLI** — Skill management platform indexing 814 skills system-wide. Has suggest (with Thompson sampling), search (BM25 + semantic), lint, dedup, doctor. `ms suggest --explain` gives scored recommendations with context match breakdown.
 
 ## Lesson
 

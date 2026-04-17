@@ -1,3 +1,9 @@
+---
+title: QUESTIONS
+type: note
+permalink: claude/lab/projects-in-development/navigate-skogai/questions
+---
+
 # questions about skogai navigation
 
 ## obvious "why" questions
@@ -23,6 +29,7 @@
 ### what makes knowledge "real" vs "made up"?
 
 the difference between:
+
 - directory listings (what ls shows)
 - design rationale (why it's organized this way)
 - historical context (how it evolved)

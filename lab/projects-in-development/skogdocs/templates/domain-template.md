@@ -1,13 +1,16 @@
+---
+title: domain-template
+type: note
+permalink: claude/lab/projects-in-development/skogdocs/templates/domain-template
+---
+
 # [Domain Concept/Entity Name]
 
-> **Category:** Domain/Business Rules
-> **Last Updated:** [Date] > **Status:** [Active/Under Review/Deprecated]
+> **Category:** Domain/Business Rules **Last Updated:** [Date] > **Status:** [Active/Under Review/Deprecated]
 
 ## Overview
 
-**What:** [What this concept represents in the business]
-**Why:** [Why this exists, business justification]
-**Scope:** [Where in the application this applies]
+**What:** [What this concept represents in the business] **Why:** [Why this exists, business justification] **Scope:** [Where in the application this applies]
 
 ## Business Context
 
@@ -17,29 +20,25 @@
 
 ### Stakeholders
 
-- **[Role 1]:** [How they interact with this]
-- **[Role 2]:** [How they interact with this]
-- **[Role 3]:** [How they interact with this]
+- **\[Role 1\]:** [How they interact with this]
+- **\[Role 2\]:** [How they interact with this]
+- **\[Role 3\]:** [How they interact with this]
 
 ### Business Goals
 
 1. [Goal 1]
-2. [Goal 2]
-3. [Goal 3]
+1. [Goal 2]
+1. [Goal 3]
 
 ## Core Concepts
 
 ### [Concept 1]
 
-**Definition:** [Clear definition]
-**Examples:** [Real-world examples]
-**Constraints:** [Business constraints]
+**Definition:** [Clear definition] **Examples:** [Real-world examples] **Constraints:** [Business constraints]
 
 ### [Concept 2]
 
-**Definition:** [Clear definition]
-**Examples:** [Real-world examples]
-**Constraints:** [Business constraints]
+**Definition:** [Clear definition] **Examples:** [Real-world examples] **Constraints:** [Business constraints]
 
 ## Business Rules
 
@@ -86,8 +85,7 @@ Then: [Expected outcome]
 - **Exit conditions:** [How entity leaves this state]
 - **Allowed actions:** [What can happen in this state]
 
-**[State 2]**
-[Same structure]
+**[State 2]** [Same structure]
 
 ### Transition Rules
 
@@ -102,19 +100,17 @@ Then: [Expected outcome]
 
 ### Who Can Do What
 
-**[Role 1]:**
+**\[Role 1\]:**
 
 - ✅ Can: [Action 1, Action 2]
 - ❌ Cannot: [Action 3, Action 4]
 - ⚠️ Conditional: [Action 5 - under conditions]
 
-**[Role 2]:**
-[Same structure]
+**\[Role 2\]:** [Same structure]
 
 ### Permission Rules
 
-**Rule:** [Permission rule statement]
-**Logic:**
+**Rule:** [Permission rule statement] **Logic:**
 
 ```
 IF [condition]
@@ -126,7 +122,7 @@ IF [condition]
 
 ### Field Validations
 
-**[Field 1]:**
+**\[Field 1\]:**
 
 - **Type:** [Data type]
 - **Required:** [Yes/No]
@@ -134,8 +130,7 @@ IF [condition]
 - **Range:** [Min/max values]
 - **Business rule:** [Any business constraint]
 
-**[Field 2]:**
-[Same structure]
+**\[Field 2\]:** [Same structure]
 
 ### Cross-Field Validations
 
@@ -167,14 +162,11 @@ IF [field1] is [value]
    - Validation: [What's checked]
    - Outcome: [Result]
 
-2. **[Step 2]**
-   [Same structure]
+1. **[Step 2]** [Same structure]
 
-3. **[Step 3]**
-   [Same structure]
+1. **[Step 3]** [Same structure]
 
-**Success Criteria:** [What defines success]
-**Failure Scenarios:** [What can go wrong]
+**Success Criteria:** [What defines success] **Failure Scenarios:** [What can go wrong]
 
 ## Calculations and Algorithms
 
@@ -210,23 +202,21 @@ Output: [result]
 
 ### Business Constraints
 
-1. **[Constraint 1]:** [Description and rationale]
-2. **[Constraint 2]:** [Description and rationale]
-3. **[Constraint 3]:** [Description and rationale]
+1. **\[Constraint 1\]:** [Description and rationale]
+1. **\[Constraint 2\]:** [Description and rationale]
+1. **\[Constraint 3\]:** [Description and rationale]
 
 ### System Limits
 
-- **[Limit 1]:** [Value and reason]
-- **[Limit 2]:** [Value and reason]
-- **[Limit 3]:** [Value and reason]
+- **\[Limit 1\]:** [Value and reason]
+- **\[Limit 2\]:** [Value and reason]
+- **\[Limit 3\]:** [Value and reason]
 
 ## Edge Cases
 
 ### Edge Case 1: [Scenario]
 
-**Situation:** [Describe the edge case]
-**Business Rule:** [How to handle it]
-**Example:** [Concrete example]
+**Situation:** [Describe the edge case] **Business Rule:** [How to handle it] **Example:** [Concrete example]
 
 ### Edge Case 2: [Scenario]
 
@@ -236,8 +226,7 @@ Output: [result]
 
 ### Regulatory Requirements
 
-**[Regulation 1]:** [How it affects this domain concept]
-**[Regulation 2]:** [How it affects this domain concept]
+**\[Regulation 1\]:** [How it affects this domain concept] **\[Regulation 2\]:** [How it affects this domain concept]
 
 ### Audit Requirements
 
@@ -249,14 +238,14 @@ Output: [result]
 
 ### Key Metrics
 
-1. **[Metric 1]:** [What it measures and why it matters]
-2. **[Metric 2]:** [What it measures and why it matters]
-3. **[Metric 3]:** [What it measures and why it matters]
+1. **\[Metric 1\]:** [What it measures and why it matters]
+1. **\[Metric 2\]:** [What it measures and why it matters]
+1. **\[Metric 3\]:** [What it measures and why it matters]
 
 ### Reporting Requirements
 
-- **[Report 1]:** [Purpose, frequency, audience]
-- **[Report 2]:** [Purpose, frequency, audience]
+- **\[Report 1\]:** [Purpose, frequency, audience]
+- **\[Report 2\]:** [Purpose, frequency, audience]
 
 ## Examples and Scenarios
 
@@ -306,20 +295,17 @@ Output: [result]
 
 ### System Touchpoints
 
-**[System 1]:**
+**\[System 1\]:**
 
 - **Interaction:** [How they interact]
 - **Data shared:** [What data flows]
 - **Trigger:** [What causes interaction]
 
-**[System 2]:**
-[Same structure]
+**\[System 2\]:** [Same structure]
 
 ## Glossary
 
-**[Term 1]:** [Definition in this context]
-**[Term 2]:** [Definition in this context]
-**[Term 3]:** [Definition in this context]
+**\[Term 1\]:** [Definition in this context] **\[Term 2\]:** [Definition in this context] **\[Term 3\]:** [Definition in this context]
 
 ## Related Documentation
 

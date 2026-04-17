@@ -1,3 +1,9 @@
+---
+title: review-skogai-prompting
+type: note
+permalink: claude/lab/projects-in-development/skill-reviews/review-skogai-prompting
+---
+
 ## Summary: skogai-prompting Skill
 
 **Location:** `/home/skogix/docs/skills/skogai-prompting/`
@@ -7,6 +13,7 @@
 The skogai-prompting skill teaches **prompt-native (agent-native) architecture** - a paradigm that inverts traditional software engineering. Instead of writing code that agents execute, you define desired outcomes in prompts and let agents figure out HOW to achieve them.
 
 It's used when:
+
 - Building autonomous AI agents
 - Designing MCP (Model Context Protocol) servers
 - Implementing self-modifying systems
@@ -15,11 +22,13 @@ It's used when:
 ### 2. Key Concepts & Patterns
 
 **Core Philosophy:**
+
 - **The Foundational Principle:** Whatever users can do, agents should be able to do. Don't artificially limit agents.
 - **Features Are Prompts:** Each feature is a prompt defining outcomes + primitive tools, not code workflows
 - **Tools Provide Capability, Not Behavior:** Tools are primitives (read, write, list) that enable capability; prompts define what to do with that capability
 
 **Key Patterns Covered:**
+
 - **Architecture Patterns** - System design following prompt-native principles
 - **MCP Tool Design** - Building primitive tools with Dynamic Capability Discovery and CRUD Completeness
 - **System Prompt Design** - Defining agent behavior in natural language
@@ -31,6 +40,7 @@ It's used when:
 - **Mobile Patterns** - Background execution, permissions, cost awareness
 
 **Anti-Patterns Highlighted:**
+
 - Agent executing your code instead of figuring things out
 - Artificial capability limits
 - Encoding decisions in tools
@@ -41,10 +51,10 @@ It's used when:
 
 ### 3. How It's Meant to Be Invoked
 
-**Progressive Disclosure Routing:**
-The skill uses a guided intake + routing pattern:
+**Progressive Disclosure Routing:** The skill uses a guided intake + routing pattern:
 
 1. **User describes their need** (11 intake options):
+
    - Design architecture
    - Create MCP tools
    - Write system prompts
@@ -57,9 +67,10 @@ The skill uses a guided intake + routing pattern:
    - Mobile patterns
    - API integration
 
-2. **Skill routes to relevant reference document** based on keywords (design, tool, prompt, self-modify, review, context, parity, workspace, test, mobile, api)
+1. **Skill routes to relevant reference document** based on keywords (design, tool, prompt, self-modify, review, context, parity, workspace, test, mobile, api)
 
-3. **Skill applies patterns** to the user's specific context using:
+1. **Skill applies patterns** to the user's specific context using:
+
    - Architecture Checklist (tool design, action parity, UI integration, context injection, mobile considerations)
    - Success Criteria (prompt-native, tool design, agent-native, mobile-specific)
    - Reference documents (8 detailed MD files)

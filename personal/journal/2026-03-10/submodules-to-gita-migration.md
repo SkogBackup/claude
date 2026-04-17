@@ -1,3 +1,9 @@
+---
+title: submodules-to-gita-migration
+type: note
+permalink: claude/personal/journal/2026-03-10/submodules-to-gita-migration
+---
+
 # submodules → gita + symlinks migration
 
 migrated ~/claude/ from git submodules to gita-managed repos in ~/.local/src/ with symlinks.
@@ -9,12 +15,12 @@ submodules cause pain: detached HEAD, two-step commits, sync friction on startup
 ## what changed
 
 1. removed all 5 submodules (marketplace, worktrunk, claude-memory, gptme-contrib, small-hours)
-2. registered 17 repos in gita under `src` group, all in ~/.local/src/
-3. added `freeze.csv` as bootstrap/restore source of truth (includes URLs, paths, branches)
-4. created symlinks: projects/ and marketplaces/ → ~/.local/src/ for legacy compatibility
-5. added idempotency principle to CLAUDE.md conventions
-6. cleaned .envrc (removed submodule update lines)
-7. dumped scaling questions to inbox (200+ SkogAI repos, bootstrap script, group taxonomy)
+1. registered 17 repos in gita under `src` group, all in ~/.local/src/
+1. added `freeze.csv` as bootstrap/restore source of truth (includes URLs, paths, branches)
+1. created symlinks: projects/ and marketplaces/ → ~/.local/src/ for legacy compatibility
+1. added idempotency principle to CLAUDE.md conventions
+1. cleaned .envrc (removed submodule update lines)
+1. dumped scaling questions to inbox (200+ SkogAI repos, bootstrap script, group taxonomy)
 
 ## key learnings
 

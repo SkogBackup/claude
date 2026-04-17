@@ -1,16 +1,20 @@
+---
+title: update-skill-knowledge
+type: note
+permalink: claude/lab/projects-in-development/navigate-skogai/navigate-skogai/workflows/update-skill-knowledge
+---
+
 # Workflow: Update Skill Knowledge
 
 <objective>
 Add verified knowledge to the navigate-skogai skill after working in the SkogAI ecosystem. This workflow ensures only real knowledge (not directory listings) gets added, with user review before changes.
 </objective>
 
-<required_reading>
-**Read these before updating:**
+\<required_reading> **Read these before updating:**
 
 1. `@dev/navigate-skogai/CLAUDE.md` - detailed methodology and failure patterns
-2. `@dev/navigate-skogai/QUESTIONS.md` - current unanswered questions
-3. `@dev/navigate-skogai/ANSWERS.md` - examples of good knowledge capture
-   </required_reading>
+1. `@dev/navigate-skogai/QUESTIONS.md` - current unanswered questions
+1. `@dev/navigate-skogai/ANSWERS.md` - examples of good knowledge capture \</required_reading>
 
 <process>
 
@@ -66,12 +70,13 @@ After user approval:
    - keep it concise in references
    - use appropriate XML tags
 
-2. **add detailed version to ANSWERS.md** (if significant)
+1. **add detailed version to ANSWERS.md** (if significant)
 
    - include methodology (commands run, reasoning applied)
    - explain how knowledge was discovered
 
-3. **update SKILL.md only if needed** (structural changes or essential principles)
+1. **update SKILL.md only if needed** (structural changes or essential principles)
+
    - keep SKILL.md under 500 lines
    - most content goes in references, not SKILL.md
 
@@ -84,7 +89,7 @@ Update tracking files:
 
 </process>
 
-<anti_patterns>
+\<anti_patterns>
 
 **never:**
 
@@ -100,9 +105,9 @@ Update tracking files:
 - document methodology along with knowledge
 - keep skill references concise
 
-</anti_patterns>
+\</anti_patterns>
 
-<success_criteria>
+\<success_criteria>
 
 Knowledge update is successful when:
 
@@ -113,4 +118,4 @@ Knowledge update is successful when:
 - detailed context lives in ANSWERS.md
 - [@todo] markers are only replaced with real, verified knowledge
 
-</success_criteria>
+\</success_criteria>

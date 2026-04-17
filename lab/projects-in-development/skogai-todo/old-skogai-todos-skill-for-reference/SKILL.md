@@ -1,6 +1,7 @@
 ---
 name: skogai-todos
 description: This skill should be used when managing the file-based todo tracking system in the todos/ directory. It provides workflows for creating todos, managing status and dependencies, conducting triage, and integrating with slash commands and code review processes.
+permalink: claude/lab/projects-in-development/skogai-todo/old-skogai-todos-skill-for-reference/skill
 ---
 
 # File-Based Todo Tracking Skill
@@ -79,15 +80,15 @@ dependencies: ["001"] # Issue IDs this is blocked by
 **To create a new todo from findings or feedback:**
 
 1. Determine next issue ID: `ls todos/ | grep -o '^[0-9]\+' | sort -n | tail -1`
-2. Copy template: `cp assets/todo-template.md todos/{NEXT_ID}-pending-{priority}-{description}.md`
-3. Edit and fill required sections:
+1. Copy template: `cp assets/todo-template.md todos/{NEXT_ID}-pending-{priority}-{description}.md`
+1. Edit and fill required sections:
    - Problem Statement
    - Findings (if from investigation)
    - Proposed Solutions (multiple options)
    - Acceptance Criteria
    - Add initial Work Log entry
-4. Determine status: `pending` (needs triage) or `ready` (pre-approved)
-5. Add relevant tags for filtering
+1. Determine status: `pending` (needs triage) or `ready` (pre-approved)
+1. Add relevant tags for filtering
 
 **When to create a todo:**
 
@@ -111,16 +112,16 @@ dependencies: ["001"] # Issue IDs this is blocked by
 **To triage pending todos:**
 
 1. List pending items: `ls todos/*-pending-*.md`
-2. For each todo:
+1. For each todo:
    - Read Problem Statement and Findings
    - Review Proposed Solutions
    - Make decision: approve, defer, or modify priority
-3. Update approved todos:
+1. Update approved todos:
    - Rename file: `mv {file}-pending-{pri}-{desc}.md {file}-ready-{pri}-{desc}.md`
    - Update frontmatter: `status: pending` → `status: ready`
    - Fill "Recommended Action" section with clear plan
    - Adjust priority if different from initial assessment
-4. Deferred todos stay in `pending` status
+1. Deferred todos stay in `pending` status
 
 **Use slash command:** `/triage` for interactive approval workflow
 
@@ -188,11 +189,11 @@ Work logs serve as:
 **To mark a todo as complete:**
 
 1. Verify all acceptance criteria checked off
-2. Update Work Log with final session and results
-3. Rename file: `mv {file}-ready-{pri}-{desc}.md {file}-complete-{pri}-{desc}.md`
-4. Update frontmatter: `status: ready` → `status: complete`
-5. Check for unblocked work: `grep -l 'dependencies:.*"002"' todos/*-ready-*.md`
-6. Commit with issue reference: `feat: resolve issue 002`
+1. Update Work Log with final session and results
+1. Rename file: `mv {file}-ready-{pri}-{desc}.md {file}-complete-{pri}-{desc}.md`
+1. Update frontmatter: `status: ready` → `status: complete`
+1. Check for unblocked work: `grep -l 'dependencies:.*"002"' todos/*-ready-*.md`
+1. Commit with issue reference: `feat: resolve issue 002`
 
 ## Integration with Development Workflows
 

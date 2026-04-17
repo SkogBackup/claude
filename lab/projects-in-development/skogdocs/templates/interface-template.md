@@ -1,14 +1,16 @@
+---
+title: interface-template
+type: note
+permalink: claude/lab/projects-in-development/skogdocs/templates/interface-template
+---
+
 # [Service Name] Integration
 
-> **Category:** External Interface
-> **Service:** [Service Name] > **Last Updated:** [Date] > **Status:** [Active/Deprecated/Planned]
+> **Category:** External Interface **Service:** [Service Name] > **Last Updated:** [Date] > **Status:** [Active/Deprecated/Planned]
 
 ## Overview
 
-**Service:** [Full service name]
-**Provider:** [Company/organization]
-**Purpose:** [What this integration accomplishes]
-**Documentation:** [Link to official API docs]
+**Service:** [Full service name] **Provider:** [Company/organization] **Purpose:** [What this integration accomplishes] **Documentation:** [Link to official API docs]
 
 ## Authentication
 
@@ -18,8 +20,7 @@
 
 ### Credentials Management
 
-**Location:** [Where credentials are stored]
-**Environment Variables:**
+**Location:** [Where credentials are stored] **Environment Variables:**
 
 ```bash
 SERVICE_API_KEY=xxx
@@ -40,8 +41,7 @@ SERVICE_ENDPOINT=https://...
 
 ### Endpoint 1: [Name]
 
-**URL:** `[METHOD] /path/to/endpoint`
-**Purpose:** [What this endpoint does]
+**URL:** `[METHOD] /path/to/endpoint` **Purpose:** [What this endpoint does]
 
 **Request:**
 
@@ -69,8 +69,7 @@ SERVICE_ENDPOINT=https://...
 
 ### Endpoint 2: [Name]
 
-**URL:** `[METHOD] /path/to/endpoint`
-**Purpose:** [What this endpoint does]
+**URL:** `[METHOD] /path/to/endpoint` **Purpose:** [What this endpoint does]
 
 [Same structure as above]
 
@@ -78,9 +77,7 @@ SERVICE_ENDPOINT=https://...
 
 ### Webhook 1: [Event Name]
 
-**Event Type:** `[event.type]`
-**Trigger:** [When this fires]
-**URL:** `[Your webhook endpoint]`
+**Event Type:** `[event.type]` **Trigger:** [When this fires] **URL:** `[Your webhook endpoint]`
 
 **Payload:**
 
@@ -163,13 +160,11 @@ SERVICE_ENDPOINT=https://...
 
 ### Test Credentials
 
-**Sandbox URL:** `https://sandbox.service.com`
-**Test API Key:** `[Where to get it]`
+**Sandbox URL:** `https://sandbox.service.com` **Test API Key:** `[Where to get it]`
 
 ### Mock Server
 
-**Location:** `tests/mocks/[service]-mock.ts`
-**Usage:**
+**Location:** `tests/mocks/[service]-mock.ts` **Usage:**
 
 ```[language]
 // How to use mock in tests
@@ -187,8 +182,7 @@ SERVICE_ENDPOINT=https://...
 
 ### Health Checks
 
-**Endpoint:** `[Service status endpoint]`
-**Frequency:** [How often we check]
+**Endpoint:** `[Service status endpoint]` **Frequency:** [How often we check]
 
 ### Metrics to Track
 
@@ -224,21 +218,17 @@ SERVICE_ENDPOINT=https://...
 
 ## Cost Considerations
 
-**Pricing Model:** [How service charges]
-**Cost per request:** [Estimate]
-**Monthly estimate:** [Based on usage]
+**Pricing Model:** [How service charges] **Cost per request:** [Estimate] **Monthly estimate:** [Based on usage]
 
 ## Migration/Upgrade Path
 
-**Current Version:** [Version]
-**Upgrade Available:** [Yes/No, version]
-**Breaking Changes:** [List if applicable]
+**Current Version:** [Version] **Upgrade Available:** [Yes/No, version] **Breaking Changes:** [List if applicable]
 
 **Migration Steps:**
 
 1. [Step 1]
-2. [Step 2]
-3. [Step 3]
+1. [Step 2]
+1. [Step 3]
 
 ## Related Documentation
 
@@ -255,9 +245,7 @@ SERVICE_ENDPOINT=https://...
 
 ## Contact
 
-**Support:** [How to get help]
-**Account Manager:** [If applicable]
-**Escalation:** [Critical issue contact]
+**Support:** [How to get help] **Account Manager:** [If applicable] **Escalation:** [Critical issue contact]
 
 ## Version History
 

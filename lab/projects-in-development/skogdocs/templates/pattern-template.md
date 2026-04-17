@@ -1,7 +1,12 @@
+---
+title: pattern-template
+type: note
+permalink: claude/lab/projects-in-development/skogdocs/templates/pattern-template
+---
+
 # [Pattern Name]
 
-> **Category:** Technical Pattern
-> **Last Updated:** [Date] > **Status:** [Active/Deprecated/Proposed]
+> **Category:** Technical Pattern **Last Updated:** [Date] > **Status:** [Active/Deprecated/Proposed]
 
 ## Purpose
 
@@ -83,29 +88,23 @@
 
 ### Edge Case 1: [Case Name]
 
-**Problem:** [What can go wrong]
-**Solution:** [How to handle it]
+**Problem:** [What can go wrong] **Solution:** [How to handle it]
 
 ### Edge Case 2: [Case Name]
 
-**Problem:** [What can go wrong]
-**Solution:** [How to handle it]
+**Problem:** [What can go wrong] **Solution:** [How to handle it]
 
 ## Best Practices
 
-1. **[Practice 1]:** [Description]
-2. **[Practice 2]:** [Description]
-3. **[Practice 3]:** [Description]
+1. **\[Practice 1\]:** [Description]
+1. **\[Practice 2\]:** [Description]
+1. **\[Practice 3\]:** [Description]
 
 ## Anti-Patterns
 
-❌ **Don't:** [What to avoid]
-**Why:** [Reason]
-**Instead:** [Better approach]
+❌ **Don't:** [What to avoid] **Why:** [Reason] **Instead:** [Better approach]
 
-❌ **Don't:** [What to avoid]
-**Why:** [Reason]
-**Instead:** [Better approach]
+❌ **Don't:** [What to avoid] **Why:** [Reason] **Instead:** [Better approach]
 
 ## Testing Strategy
 
@@ -123,9 +122,9 @@
 
 ## Performance Considerations
 
-- **[Aspect 1]:** [Performance implication]
-- **[Aspect 2]:** [Performance implication]
-- **[Aspect 3]:** [Performance implication]
+- **\[Aspect 1\]:** [Performance implication]
+- **\[Aspect 2\]:** [Performance implication]
+- **\[Aspect 3\]:** [Performance implication]
 
 ## Related Patterns
 

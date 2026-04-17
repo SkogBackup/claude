@@ -1,3 +1,9 @@
+---
+title: research-git-conversations
+type: note
+permalink: claude/lab/projects-in-development/skogdiff/research-git-conversations
+---
+
 # Git-native agent memory: Beads and comparable systems
 
 **Beads** implements a dual-persistence architecture where JSONL files serve as git-tracked source of truth while SQLite provides sub-100ms local query performance. This pattern—git for durability, local database for speed—has emerged as the dominant approach among systems linking code commits to semantic intent, with variations in how they handle memory decay, multi-agent concurrency, and conversation-to-code traceability.
@@ -38,12 +44,12 @@ Rather than embedding metadata in commit messages, Beads relies on a **conventio
 
 The `events` table provides comprehensive audit trails with typed event records:
 
-| Event Type | Purpose |
-|------------|---------|
-| `EventCreated` | Issue creation with initial state |
-| `EventStatusChanged` | State transitions (open → in_progress → closed) |
-| `EventCompacted` | Memory decay applied |
-| `EventDependencyAdded` | Blocking relationship established |
+| Event Type             | Purpose                                         |
+| ---------------------- | ----------------------------------------------- |
+| `EventCreated`         | Issue creation with initial state               |
+| `EventStatusChanged`   | State transitions (open → in_progress → closed) |
+| `EventCompacted`       | Memory decay applied                            |
+| `EventDependencyAdded` | Blocking relationship established               |
 
 All write operations require an `actor` parameter, resolved in priority order: `--actor` flag → `BD_ACTOR` env → `BEADS_ACTOR` env → `git config user.name` → `$USER` → `"unknown"`. This enables attribution across multi-agent scenarios.
 
@@ -84,16 +90,17 @@ Research identified **11 systems** implementing git-semantic linking with distin
 
 Analysis reveals four implementation patterns with clear trade-offs:
 
-| Pattern | Example | Storage | Pros | Cons |
-|---------|---------|---------|------|------|
-| **Dual-layer** | Beads | JSONL + SQLite | Fast queries, git portability | Sync complexity |
-| **Git notes** | Tigs | YAML in notes | Non-invasive, survives rebase | Manual linking |
-| **Markdown current-state** | DiffMem | .md files | Human-readable, lean context | Index rebuild cost |
-| **Database-backed** | Claude-Mem | SQLite + embeddings | Semantic search | Not portable |
+| Pattern                    | Example    | Storage             | Pros                          | Cons               |
+| -------------------------- | ---------- | ------------------- | ----------------------------- | ------------------ |
+| **Dual-layer**             | Beads      | JSONL + SQLite      | Fast queries, git portability | Sync complexity    |
+| **Git notes**              | Tigs       | YAML in notes       | Non-invasive, survives rebase | Manual linking     |
+| **Markdown current-state** | DiffMem    | .md files           | Human-readable, lean context  | Index rebuild cost |
+| **Database-backed**        | Claude-Mem | SQLite + embeddings | Semantic search               | Not portable       |
 
 The **dual-layer pattern** (Beads, GitHub Copilot Memory) has emerged as most robust for multi-agent scenarios. Copilot's approach adds **citation-based verification**: memories store specific code locations, and before use the agent verifies citations against current branch state. If code contradicts memory, store corrected version; if valid, refresh timestamp. This elegantly handles stale data.
 
 **Memory decay** proves critical for long-horizon agents. Three approaches dominate:
+
 - **Compaction** (Beads): LLM-generated summaries replace detailed content
 - **Auto-compaction** (Claude Code): Summarizes at 80% context window usage
 - **Citation verification** (Copilot): Real-time staleness detection

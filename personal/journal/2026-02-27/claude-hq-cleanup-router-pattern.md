@@ -1,15 +1,19 @@
+---
+title: claude-hq-cleanup-router-pattern
+type: note
+permalink: claude/personal/journal/2026-02-27/claude-hq-cleanup-router-pattern
+---
+
 # Claude HQ Cleanup — Router Pattern Applied
 
 ## What happened
 
-Cleaned up ~/claude/ (Claude's home folder). The CLAUDE.md had grown to 358 lines
-of information dumps — full RTK command reference (130 lines), full beads instructions
-(107 lines), project structure referencing 8 non-existent directories, sections for
-tools not installed (ms, cm, CASS).
+Cleaned up ~/claude/ (Claude's home folder). The CLAUDE.md had grown to 358 lines of information dumps — full RTK command reference (130 lines), full beads instructions (107 lines), project structure referencing 8 non-existent directories, sections for tools not installed (ms, cm, CASS).
 
 ## The problem
 
 Every session paid ~500 tokens of context for duplicated or dead content:
+
 - RTK: hook auto-rewrites + ~/.claude/RTK.md already cover it
 - Beads: session hook injects full docs every conversation
 - Project structure: referenced dirs that were removed in prior merge
@@ -42,6 +46,4 @@ Applied skogai-routing's progressive disclosure pattern to CLAUDE.md itself:
 
 ## Insight
 
-CLAUDE.md should be treated as a **router** — it says WHERE to find things,
-not WHAT to know. Same principle as skill routing: 7 quick choices per level
-gives exponential coverage at minimal token cost.
+CLAUDE.md should be treated as a **router** — it says WHERE to find things, not WHAT to know. Same principle as skill routing: 7 quick choices per level gives exponential coverage at minimal token cost.

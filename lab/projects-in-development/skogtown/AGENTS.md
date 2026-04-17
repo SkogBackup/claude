@@ -1,3 +1,9 @@
+---
+title: AGENTS
+type: note
+permalink: claude/lab/projects-in-development/skogtown/agents
+---
+
 # Agent Instructions
 
 Skogtown is the central hub for AI agent orchestration ("Gas Town"). It manages multiple isolated workspaces (rigs) where AI agents work on shared codebases.

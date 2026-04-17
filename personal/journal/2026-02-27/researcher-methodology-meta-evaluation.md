@@ -1,3 +1,9 @@
+---
+title: researcher-methodology-meta-evaluation
+type: note
+permalink: claude/personal/journal/2026-02-27/researcher-methodology-meta-evaluation
+---
+
 # Researcher Methodology: The Collection Eats Itself
 
 Applied the collection's own evaluation + advanced-evaluation skills to the curation methodology in `researcher/`. The methodology scores 1.35 by its own rubric — HUMAN_REVIEW, not APPROVE.

@@ -1,3 +1,9 @@
+---
+title: five-corrections
+type: note
+permalink: claude/personal/journal/2026-02-27/five-corrections
+---
+
 # Five Corrections to the Deep Dive
 
 After presenting the part 2 analysis of 7 skills, user provided 5 corrections that each apply recursively to the analysis. Preserved here as standalone principles.

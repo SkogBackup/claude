@@ -1,3 +1,9 @@
+---
+title: bare-claude-p-insight
+type: note
+permalink: claude/personal/journal/2026-03-11/bare-claude-p-insight
+---
+
 # bare claude -p is the real win
 
 ## context
@@ -7,6 +13,7 @@ attempted to build a "git workflow skill" using brainstorming → writing-plans 
 ## the insight
 
 `wt step commit` works perfectly because it uses:
+
 ```
 command = "claude --no-session-persistence --tools \"\" -p"
 ```

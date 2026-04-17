@@ -1,3 +1,9 @@
+---
+title: understanding-from-diff-alone
+type: note
+permalink: claude/lab/projects-in-development/skogdiff/understanding-from-diff-alone
+---
+
 # The Change Pattern
 
 Someone investigated a "why" question about /skogai location, found the answer through filesystem inspection, then propagated that knowledge to multiple locations.
@@ -19,8 +25,8 @@ The inferred architecture:
 The Workflow Being Demonstrated
 
 1. QUESTIONS.md contained a list of unanswered "why" questions
-2. One question was investigated and answered
-3. The answer was:
+1. One question was investigated and answered
+1. The answer was:
 
 - Added to ANSWERS.md (new file)
 - Propagated upstream to skill docs (SKILL.md, dash-skogai.md)

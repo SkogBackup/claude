@@ -1,3 +1,9 @@
+---
+title: SKOGTOWN-EVENT-DRIVEN-SUPERVISION
+type: note
+permalink: claude/lab/projects-in-development/skogtown/skogtown-event-driven-supervision
+---
+
 ## 1. SkogAI; Event-Driven-Orchestration
 
 ```
@@ -45,7 +51,7 @@ Key Commands:
 
 **Key insight**: Wisps get "squashed" into digest beads. This prevents log pollution while maintaining audit trails. Example: 5 patrol cycle wisps → 1 "Digest: deacon-patrol" bead.
 
----
+______________________________________________________________________
 
 ## 2. The Communication System — How Agents Talk
 
@@ -102,7 +108,7 @@ Key Commands:
 
 **Key insight**: Mail must be archived after processing. Inbox hygiene is enforced — accumulation indicates problems.
 
----
+______________________________________________________________________
 
 ## 3. The Lifecycle System — Birth, Work, Death, Rebirth
 
@@ -167,7 +173,7 @@ Key Commands:
 
 **Key insight**: Agents are designed to be stateless across sessions. Context is reconstructed via `gt prime`. Handoffs are mail-based. The system assumes agents will crash/restart.
 
----
+______________________________________________________________________
 
 ## 4. The Work Orchestration System — Getting Things Done
 
@@ -239,7 +245,7 @@ Key Commands:
 └──────────────────────────────────────────────────────────────────┘
 ```
 
----
+______________________________________________________________________
 
 ## 5. The Git Integration — Code Flow
 
@@ -301,7 +307,7 @@ Key Commands:
 
 **Key insight**: Polecat lifecycle ≠ MR lifecycle. Polecats are gone after `gt done`. If conflicts arise, the Refinery spawns a _new_ polecat to resolve them. No zombie workers.
 
----
+______________________________________________________________________
 
 ## 6. The Supervision Hierarchy — Who Watches Whom
 
@@ -364,7 +370,7 @@ Key Commands:
 
 **Key insight**: "Who watches the watchers?" is solved through layered monitoring. Witnesses ping Deacon. Boot checks Deacon. Deacon can restart Mayor. The system is designed to self-heal.
 
----
+______________________________________________________________________
 
 ## Summary: The Gas Town Philosophy
 

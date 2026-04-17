@@ -1,6 +1,12 @@
+---
+title: CLAUDE
+type: note
+permalink: claude
+---
+
 # @~/ — home folder and workspace
 
-<what_is_this>
+\<what_is_this>
 
 My home directory and primary operating environment. Not application code — this repo IS the workspace: dotfiles, configuration, knowledge base, and staging for tools I'm developing.
 
@@ -8,7 +14,7 @@ Context is loaded lazily. Read the router, follow the link, get what's needed. N
 
 Staged at `/home/user/claude` (formerly `/home/skogix/claude`), deploying to `/home/claude` when the deployment gate passes.
 
-</what_is_this>
+\</what_is_this>
 
 <structure>
 
@@ -95,10 +101,9 @@ Each directory has its own CLAUDE.md router. Load lazily:
 
 </routes>
 
-<project_state>
+\<project_state>
 
-Milestone v1.0: "Claude's Home"
-Core value: Claude can drop into any conversation and know who he is, what he's working on, and where things are.
+Milestone v1.0: "Claude's Home" Core value: Claude can drop into any conversation and know who he is, what he's working on, and where things are.
 
 | Phase | Name                            | Status                |
 | ----- | ------------------------------- | --------------------- |
@@ -110,7 +115,7 @@ Core value: Claude can drop into any conversation and know who he is, what he's 
 
 Phase 5 adds `[@agent:"msg"]` routing via skogparse, chat-io contract spec, and hook fallback. See `.planning/ROADMAP.md` for full spec.
 
-</project_state>
+\</project_state>
 
 <tooling>
 
@@ -137,7 +142,7 @@ Tool notes:
 
 </tooling>
 
-<journal_conventions>
+\<journal_conventions>
 
 Journal entries use date-folder structure: `personal/journal/YYYY-MM-DD/<description>.md`
 
@@ -162,7 +167,7 @@ Slash commands in `commands/`:
 
 </commands>
 
-<settings_highlights>
+\<settings_highlights>
 
 Key settings.json values (`.claude/settings.json`):
 
@@ -175,12 +180,11 @@ Key settings.json values (`.claude/settings.json`):
 - enabled plugins: code-simplifier, typescript-lsp, frontend-design, playwright, pyright-lsp, pr-review-toolkit, worktrunk, chrome-devtools-mcp, discord, mcp-server-dev, remember
 - `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS: "1"` — agent teams enabled
 
-</settings_highlights>
+\</settings_highlights>
 
-<current_state>
+\<current_state>
 
-Active project: **Claude's Home** (SkogAI/claude)
-Milestone: v1.0 — four phases complete, one in planning
+Active project: **Claude's Home** (SkogAI/claude) Milestone: v1.0 — four phases complete, one in planning
 
 | Phase | Name                            | Status                |
 | ----- | ------------------------------- | --------------------- |
@@ -196,14 +200,13 @@ Phase 5 implementation notes: skogparse binary at `/home/skogix/.local/bin/skogp
 
 Memory/feedback files in `.planning/memory/` shape behavior — check `MEMORY.md` for the index before modifying conventions.
 
-</current_state>
+\</current_state>
 
-<git_conventions>
+\<git_conventions>
 
 Remote: `origin → SkogAI/claude`
 
-Branch naming: `<agent>/<description>-<id>`
-example: `claude/add-claude-documentation-KmFlh`
+Branch naming: `<agent>/<description>-<id>` example: `claude/add-claude-documentation-KmFlh`
 
 Commit style: conventional, lowercase, imperative
 
@@ -212,15 +215,15 @@ Commit style: conventional, lowercase, imperative
 - `feat:` — new features
 - `fix:` — bug fixes
 
-</git_conventions>
+\</git_conventions>
 
-<ci_workflows>
+\<ci_workflows>
 
 See @.github/CLAUDE.md for full CI reference.
 
-</ci_workflows>
+\</ci_workflows>
 
-<see_also>
+\<see_also>
 
 - @~/.claude/CLAUDE.md — global identity and operating principles
 - @~/.skogai/SKOGAI.md — SkogAI integrations and shared infrastructure
@@ -231,4 +234,4 @@ See @.github/CLAUDE.md for full CI reference.
 - @docs/deployment-gate.md — deployment gate checklist
 - @docs/permissions.md — permission model
 
-</see_also>
+\</see_also>
