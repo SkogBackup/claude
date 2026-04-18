@@ -8,7 +8,10 @@
       "Bash(rtk read *)",
       "Bash(git -C /home/skogix/claude add .claude/settings.local.json .skogai/CLAUDE.md .skogai/state/issue-cache.json)",
       "Bash(rm /home/skogix/claude/.git/index.lock)",
-      "Bash(git -C /home/skogix/claude diff .claude/settings.local.json)"
+      "Bash(git -C /home/skogix/claude diff .claude/settings.local.json)",
+      "Bash(git -C /home/skogix/claude push)",
+      "Bash(git -C /home/skogix/claude add .planning/memory/ personal/journal/2026-04-18/)",
+      "Bash(git -C /home/skogix/claude add .planning/memory/ personal/journal/ .claude/settings.local.json)"
     ]
   }
 }
