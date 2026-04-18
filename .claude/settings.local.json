@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /home/skogix/claude mv .skogai/plan/claudes-home-project-plan-todo-fixthis-please .skogai/plan/claudes-home)",
+      "Bash(rtk ls *)"
+    ]
+  }
+}
