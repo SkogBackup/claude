@@ -149,7 +149,7 @@
   "alwaysThinkingEnabled": true,
   "advisorModel": "opus",
   "autoMemoryEnabled": true,
-  "autoMemoryDirectory": "/home/skogix/claude/.planning/memory",
+  "autoMemoryDirectory": "/home/skogix/claude/.skogai/memory",
   "autoDreamEnabled": true,
   "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,

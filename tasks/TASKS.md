@@ -1,7 +1,7 @@
 ---
 title: TASKS
 type: note
-permalink: claude/tasks
+permalink: claude/tasks/tasks
 ---
 
 # Tasks
