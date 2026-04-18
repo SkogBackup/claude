@@ -71,7 +71,7 @@ This repository is the shared configuration, knowledge base, and tooling layer f
 Before starting any work, read:
 
 ```
-@memory/context/current.md   — what we are currently working on
+@CONTEXT.md   — dynamically generated current context (workspace, git state, memory)
 ```
 
 ## Architecture Modes
@@ -168,8 +168,8 @@ eval "$(argc --argc-eval "$0" "$@")"
 
 `@path/to/file` expands the file at prompt-time, bypassing cache. Use it for files that must be current:
 
-- `@memory/context/current.md` — always current session context
-- `@knowledge/learnings/` — current learnings
+- `@CONTEXT.md` — dynamically generated current context
+- `@knowledge/lessons/` — current lessons
 
 ## Todo System
 
