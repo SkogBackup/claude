@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-04-18T12:07:48.767057+00:00",
+  "payload": {
+    "type": "AgentSessionEvent",
+    "action": "created",
+    "createdAt": "2026-04-18T12:07:48.671Z",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "oauthClientId": "e01308f086a6af93ed2191adfcfc9c3c",
+    "appUserId": "7cc703ad-906d-4cca-8418-f5e01c9e5c0e",
+    "agentSession": {
+      "id": "910b4d54-809e-4a6b-af14-c8bfadc0cdaf",
+      "createdAt": "2026-04-18T12:07:48.310Z",
+      "updatedAt": "2026-04-18T12:07:48.310Z",
+      "archivedAt": null,
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "appUserId": "7cc703ad-906d-4cca-8418-f5e01c9e5c0e",
+      "commentId": "09f70867-9abe-4015-b0ad-b91a4346afd3",
+      "sourceCommentId": null,
+      "issueId": "110ae066-d7e3-47f0-96c2-4a3536810dac",
+      "slugId": "e0205c9250691",
+      "status": "pending",
+      "startedAt": null,
+      "endedAt": null,
+      "dismissedAt": null,
+      "dismissedById": null,
+      "externalLink": null,
+      "summary": null,
+      "sourceMetadata": null,
+      "plan": null,
+      "context": [],
+      "url": "https://linear.app/skogai/issue/SKO-177/test-issue#agent-session-910b4d54",
+      "externalUrls": [],
+      "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+      "creator": {
+        "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+        "name": "Emil Skogsund",
+        "email": "emil.skogsund@gmail.com",
+        "url": "https://linear.app/skogai/profiles/skogix"
+      },
+      "comment": {
+        "id": "09f70867-9abe-4015-b0ad-b91a4346afd3",
+        "body": "This thread is for an agent session with claude.",
+        "issueId": "110ae066-d7e3-47f0-96c2-4a3536810dac"
+      },
+      "issue": {
+        "id": "110ae066-d7e3-47f0-96c2-4a3536810dac",
+        "title": "test-issue",
+        "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "team": {
+          "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+          "key": "SKO",
+          "name": "SkogAI"
+        },
+        "identifier": "SKO-177",
+        "url": "https://linear.app/skogai/issue/SKO-177/test-issue",
+        "description": "hello! <issue-label id=\"8004a90e-0b7d-4160-8b0e-ea33b23bd264\">claude</issue-label>  whazzup  @claude?"
+      }
+    },
+    "previousComments": null,
+    "guidance": null,
+    "promptContext": "<issue identifier=\"SKO-177\">\n<title>test-issue</title>\n<description>hello! <issue-label id=\"8004a90e-0b7d-4160-8b0e-ea33b23bd264\">claude</issue-label>  whazzup  @claude?</description>\n<team name=\"SkogAI\"/>\n</issue>\n\n<other-thread comment-id=\"777e6231-8753-46f6-85f0-857dc0f51158\">\n<comment created-at=\"2026-04-18T11:55:23.652Z\">This comment thread is synced to a corresponding [GitHub issue](<https://github.com/SkogAI/claude/issues/42>). All replies are displayed in both locations.</comment>\n<comment created-at=\"2026-04-18T11:55:39.000Z\">\n**Claude finished** <user id=\"bd8e4951-8b83-4952-8fc5-09e9e6a61987\">skogix</user>**'s task in 12s** \u2014\u2014 [View job](<https://github.com/SkogAI/claude/actions/runs/24604129040>)\n\n---\n\nHey Skogix! \ud83d\udc4b All systems operational \u2014 Claude Code is up and responding to mentions.\n\nNothing to implement here, just a friendly wave back. Let me know if you have a real task for me!\n</comment>\n</other-thread>",
+    "webhookTimestamp": 1776514068683,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

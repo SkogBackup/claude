@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-04-18T12:12:05.057127+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "7cc703ad-906d-4cca-8418-f5e01c9e5c0e",
+      "name": "claude",
+      "email": "11f7a1aa-e947-460f-beb6-0e6b76532992@oauthapp.linear.app",
+      "url": "https://linear.app/skogai/profiles/claude",
+      "type": "user"
+    },
+    "createdAt": "2026-04-18T12:12:04.057Z",
+    "data": {
+      "id": "f1c9f97e-8bee-4e1a-af73-596aded7afc2",
+      "createdAt": "2026-04-18T12:12:04.057Z",
+      "updatedAt": "2026-04-18T12:12:04.022Z",
+      "body": "Handled SKO-177 test mention with no implementation requested. Verified synced GitHub thread context, logged progress activities, wrote journal entry at personal/journal/2026-04-18/linear-sko-177-test-issue-session.md, committed and pushed branch linear-session-910b4d54-809e-4a6b-af14-c8bfadc0cdaf (docs: add journal entry for sko-177 test session), merged into master, and pushed master.",
+      "issueId": "110ae066-d7e3-47f0-96c2-4a3536810dac",
+      "parentId": "09f70867-9abe-4015-b0ad-b91a4346afd3",
+      "userId": "7cc703ad-906d-4cca-8418-f5e01c9e5c0e",
+      "reactionData": [],
+      "isArtificialAgentSessionRoot": false,
+      "botActor": null,
+      "user": {
+        "id": "7cc703ad-906d-4cca-8418-f5e01c9e5c0e",
+        "name": "claude",
+        "email": "11f7a1aa-e947-460f-beb6-0e6b76532992@oauthapp.linear.app",
+        "url": "https://linear.app/skogai/profiles/claude"
+      },
+      "issue": {
+        "id": "110ae066-d7e3-47f0-96c2-4a3536810dac",
+        "title": "test-issue",
+        "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "team": {
+          "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+          "key": "SKO",
+          "name": "SkogAI"
+        },
+        "identifier": "SKO-177",
+        "url": "https://linear.app/skogai/issue/SKO-177/test-issue"
+      }
+    },
+    "url": "https://linear.app/skogai/issue/SKO-177/test-issue#comment-f1c9f97e",
+    "type": "Comment",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776514324962,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

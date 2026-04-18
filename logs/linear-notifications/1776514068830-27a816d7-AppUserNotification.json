@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-04-18T12:07:48.830203+00:00",
+  "payload": {
+    "type": "AppUserNotification",
+    "action": "issueSubscribed",
+    "createdAt": "2026-04-18T12:07:48.713Z",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "oauthClientId": "e01308f086a6af93ed2191adfcfc9c3c",
+    "appUserId": "7cc703ad-906d-4cca-8418-f5e01c9e5c0e",
+    "notification": {
+      "id": "27dbc695-4f85-42af-b6cc-e40dca191196",
+      "createdAt": "2026-04-18T12:07:48.681Z",
+      "updatedAt": "2026-04-18T12:07:48.681Z",
+      "archivedAt": null,
+      "type": "issueSubscribed",
+      "actorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "externalUserActorId": null,
+      "userId": "7cc703ad-906d-4cca-8418-f5e01c9e5c0e",
+      "issueId": "110ae066-d7e3-47f0-96c2-4a3536810dac",
+      "issue": {
+        "id": "110ae066-d7e3-47f0-96c2-4a3536810dac",
+        "title": "test-issue",
+        "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "team": {
+          "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+          "key": "SKO",
+          "name": "SkogAI"
+        },
+        "identifier": "SKO-177",
+        "url": "https://linear.app/skogai/issue/SKO-177/test-issue"
+      },
+      "actor": {
+        "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+        "name": "Emil Skogsund",
+        "email": "emil.skogsund@gmail.com",
+        "url": "https://linear.app/skogai/profiles/skogix"
+      }
+    },
+    "webhookTimestamp": 1776514068730,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}
