@@ -61,7 +61,7 @@ eval "$(argc --argc-eval "$0" "$@")"
 
 \<always_load>
 
-- @memory/context/current.md - what we are currently working on
+- @CONTEXT.md - dynamically generated current context (workspace, git state, memory)
 
 \</always_load>
 
@@ -69,27 +69,27 @@ eval "$(argc --argc-eval "$0" "$@")"
 
 **@ is source of truth.** The `@/path` syntax expands real files at prompt-time. Read tool often returns cached content. Always use `@` for files that must be current.
 
-See @knowledge/learnings/2026-01-20-at-file-reference.md for details.
+See @knowledge/lessons/2026-01-20-at-file-reference.md for details.
 
 </important>
 
 \<where_to_look>
 
-| task                          | location             |
-| ----------------------------- | -------------------- |
-| log a decision                | memory/decisions.md  |
-| document a learning           | knowledge/learnings/ |
-| record architectural decision | knowledge/decisions/ |
-| capture reusable pattern      | knowledge/patterns/  |
-| track project status          | projects/overview.md |
-| quick capture                 | inbox/               |
-| create new content            | templates/           |
+| task                          | location                                               |
+| ----------------------------- | ------------------------------------------------------ |
+| log a decision                | knowledge/decisions/ + index in knowledge/DECISIONS.md |
+| document a lesson             | knowledge/lessons/                                     |
+| record architectural decision | knowledge/decisions/                                   |
+| capture reusable pattern      | knowledge/patterns/                                    |
+| track project status          | projects/overview.md                                   |
+| quick capture                 | inbox/                                                 |
+| create new content            | templates/                                             |
 
 \</where_to_look>
 
 \<content_creation>
 
-to create new content, see @templates/claude.md for available templates:
+to create new content, see @templates/CLAUDE.md for available templates:
 
 - knowledge-entry.md for learnings and patterns
 - project-status.md for project tracking files

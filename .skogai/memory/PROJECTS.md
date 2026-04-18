@@ -14,7 +14,7 @@ Overview index. One line per project — link to plan for depth.
 | ------------- | ----------------- | ------------------------------------------------- | ---------------------------- |
 | Claude's Home | SkogAI/claude     | v1.0 — phase 5 planning                           | `.skogai/plan/claudes-home/` |
 | dot-skogai    | SkogAI/dot-skogai | Active — skogai-git orchestrator epic in progress | `.skogai/plan/dot-skogai.md` |
-| clawd         | SkogAI/clawd      | Unknown — check `projects/clawd/`                 | —                            |
+| clawd         | SkogAI/clawd      | Unknown — check `~/projects/clawd/`               | —                            |
 
 ## Notes
 
