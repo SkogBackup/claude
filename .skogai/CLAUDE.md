@@ -39,17 +39,21 @@ This repository is the shared configuration, knowledge base, and tooling layer f
 │   └── install.sh              # Safety-checked dotfiles installer
 ├── email/                      # Email management (inbox, drafts, sent, archive)
 ├── knowledge/
+│   ├── DECISIONS.md            # Decision index (router → decisions/)
 │   ├── decisions/              # Architectural decision records (ADRs)
-│   ├── learnings/              # Documented lessons from sessions
+│   ├── lessons/                # Documented lessons from sessions
 │   └── patterns/               # Reusable patterns and style guides
 ├── memory/
-│   ├── context/current.md      # ALWAYS LOAD - current working context
-│   └── decisions.md            # Decision log
+│   ├── GLOSSARY.md             # Shared vocabulary
+│   ├── PROJECTS.md             # Active project index (router)
+│   ├── feedback/               # Behavioral feedback records
+│   └── references/             # External system pointers
 ├── plan/
+│   ├── claudes-home/           # Claude's Home project plan (phases 1-5)
+│   ├── codebase/               # Architecture, conventions, stack docs
 │   ├── PROJECT.md              # Project definition and requirements
 │   ├── ROADMAP.md              # 4-phase roadmap
-│   ├── STATE.md                # Current phase/plan progress
-│   └── codebase/               # Architecture, conventions, stack docs
+│   └── STATE.md                # Current phase/plan progress
 ├── projects/
 │   └── overview.md             # Active/paused/archived projects table
 ├── scripts/
@@ -148,15 +152,15 @@ eval "$(argc --argc-eval "$0" "$@")"
 
 ### Where to Look
 
-| Task                          | Location                                 |
-| ----------------------------- | ---------------------------------------- |
-| Log a decision                | `memory/decisions.md`                    |
-| Document a learning           | `knowledge/learnings/`                   |
-| Record architectural decision | `knowledge/decisions/`                   |
-| Capture reusable pattern      | `knowledge/patterns/`                    |
-| Track project status          | `projects/overview.md`                   |
-| Quick capture                 | `inbox/`                                 |
-| Create new content            | `templates/` (see `templates/CLAUDE.md`) |
+| Task                          | Location                                                   |
+| ----------------------------- | ---------------------------------------------------------- |
+| Log a decision                | `knowledge/decisions/` + index in `knowledge/DECISIONS.md` |
+| Document a lesson             | `knowledge/lessons/`                                       |
+| Record architectural decision | `knowledge/decisions/`                                     |
+| Capture reusable pattern      | `knowledge/patterns/`                                      |
+| Track project status          | `projects/overview.md`                                     |
+| Quick capture                 | `inbox/`                                                   |
+| Create new content            | `templates/` (see `templates/CLAUDE.md`)                   |
 
 ### Templates
 

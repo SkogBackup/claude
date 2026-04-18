@@ -1,8 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git -C /home/skogix/claude mv .skogai/plan/claudes-home-project-plan-todo-fixthis-please .skogai/plan/claudes-home)",
-      "Bash(rtk ls *)"
+      "Bash(rtk ls *)",
+      "Bash(git -C /home/skogix/claude add .skogai/CLAUDE.md)",
+      "Bash(git -C /home/skogix/claude commit -m ' *)",
+      "Bash(rtk git *)",
+      "Bash(rtk read *)",
+      "Bash(git -C /home/skogix/claude add .claude/settings.local.json .skogai/CLAUDE.md .skogai/state/issue-cache.json)",
+      "Bash(rm /home/skogix/claude/.git/index.lock)",
+      "Bash(git -C /home/skogix/claude diff .claude/settings.local.json)"
     ]
   }
 }
