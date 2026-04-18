@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-04-18T14:06:33.556543+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "b9001d7d-c1e9-4482-b6ff-5367beec45a0",
+      "service": "github",
+      "type": "integration"
+    },
+    "createdAt": "2026-04-18T14:06:32.810Z",
+    "data": {
+      "id": "7e4ea218-8f12-4172-ac65-2f72c54c1f71",
+      "createdAt": "2025-03-27T15:26:03.332Z",
+      "updatedAt": "2026-04-18T14:06:32.810Z",
+      "name": "Bug",
+      "color": "#EB5757",
+      "isGroup": false,
+      "lastAppliedAt": "2026-04-18T14:06:32.377Z",
+      "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c"
+    },
+    "updatedFrom": {
+      "updatedAt": "2025-03-27T15:26:03.332Z",
+      "lastAppliedAt": null
+    },
+    "url": "https://linear.app/skogai/issue-label/bug",
+    "type": "IssueLabel",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776521193408,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

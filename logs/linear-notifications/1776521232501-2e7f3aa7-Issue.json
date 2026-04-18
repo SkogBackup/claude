@@ -1,0 +1,115 @@
+{
+  "timestamp": "2026-04-18T14:07:12.501913+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-18T14:07:11.152Z",
+    "data": {
+      "id": "f4dfd285-662a-4ad0-a133-0b704745d6fe",
+      "createdAt": "2026-04-18T14:07:08.000Z",
+      "updatedAt": "2026-04-18T14:07:11.152Z",
+      "archivedAt": null,
+      "number": 181,
+      "title": "chore: remove remaining skogix-local paths from settings.json",
+      "priority": 0,
+      "estimate": null,
+      "sortOrder": -23030,
+      "prioritySortOrder": -23075,
+      "startedAt": null,
+      "completedAt": null,
+      "startedTriageAt": null,
+      "triagedAt": null,
+      "canceledAt": null,
+      "autoClosedAt": null,
+      "autoArchivedAt": null,
+      "dueDate": null,
+      "slaStartedAt": null,
+      "slaMediumRiskAt": null,
+      "slaHighRiskAt": null,
+      "slaBreachesAt": null,
+      "slaType": "all",
+      "addedToProjectAt": null,
+      "addedToCycleAt": null,
+      "addedToTeamAt": "2026-04-18T14:07:11.627Z",
+      "trashed": null,
+      "snoozedUntilAt": null,
+      "activitySummary": null,
+      "labelIds": [
+        "6f0e5457-47a2-4812-a4af-7ee6561b5772"
+      ],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "cycleId": null,
+      "projectId": null,
+      "projectMilestoneId": null,
+      "lastAppliedTemplateId": null,
+      "recurringIssueTemplateId": null,
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "externalUserCreatorId": null,
+      "assigneeId": null,
+      "delegateId": null,
+      "snoozedById": null,
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "subIssueSortOrder": null,
+      "reactionData": [],
+      "priorityLabel": "No priority",
+      "sourceCommentId": null,
+      "integrationSourceType": "github",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-181",
+      "url": "https://linear.app/skogai/issue/SKO-181/chore-remove-remaining-skogix-local-paths-from-settingsjson",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "parentId": null,
+      "state": {
+        "id": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+        "color": "#bec2c8",
+        "name": "Backlog",
+        "type": "backlog"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "syncedWith": [
+        {
+          "id": "4288212182",
+          "service": "github",
+          "metadata": {
+            "repo": "claude",
+            "owner": "SkogAI",
+            "number": 46
+          }
+        }
+      ],
+      "labels": [
+        {
+          "id": "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+          "color": "#a2eeef",
+          "name": "enhancement"
+        }
+      ],
+      "description": "## Problem\n\nTwo `/home/skogix/...` paths remain in `.claude/settings.json` after the reorg. Neither breaks this container (one is ignored, the other fails gracefully on load), but both should be cleaned up.\n\n## Remaining paths\n\n### 1\\. `autoMemoryDirectory` (line \\~152)\n\n```json\n\"autoMemoryDirectory\": \"/home/skogix/claude/.skogai/memory\"\n```\n\n* Points to the old home path\n* Per the Claude Code docs (`.skogai/docs/claude-code/memory.md:335`): **\"This setting is accepted from policy, local, and user settings. It is not accepted from project settings (**`.claude/settings.json`) to prevent a shared project from redirecting auto memory writes to sensitive locations.\"\n* So it is silently ignored \u2014 has no effect where it is\n* Should either be **removed** from `.claude/settings.json` or **moved** to `.claude/settings.local.json` / user settings, with a portable path (tilde-expanded supported, e.g. `~/.skogai/memory`)\n\n### 2\\. Worktrunk marketplace (line \\~137)\n\n```json\n\"worktrunk\": {\n  \"source\": { \"source\": \"directory\", \"path\": \"/home/skogix/.local/src/worktrunk\" }\n}\n```\n\n* Only exists on skogix's workstation\n* On any other container this marketplace just fails to resolve (non-fatal but noisy)\n* Options:\n  * Move to `settings.local.json` (user-specific override)\n  * Publish worktrunk as a git-source marketplace and swap the config to that\n  * Keep as-is and document that it's skogix-only\n\n## Already fixed in branch `claude/review-home-folder-changes-tVavu`\n\n* `CLAUDE_CODE_TMPDIR` removed (was hardcoded to `/home/skogix/claude/tmp`, caused every Bash call to fail its cwd-tracking write) \u2014 commit `b118503`\n* `additionalDirectories` array removed \u2014 commit `b118503`\n* Hook paths for `claude-md-linecheck` and `healthcheck` switched to `$CLAUDE_PROJECT_DIR` \u2014 commit `45e360a`\n\n## Related\n\nNot a duplicate of [#25](https://linear.app/skogai/issue/SKO-160/feat-document-all-binariesscripts-into-claudemd), which covers documentation rather than portability.",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"fe9b8cbe-d81f-4fac-b34e-1d59cbdac79a\"},\"content\":[{\"type\":\"text\",\"text\":\"Problem\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Two \"},{\"type\":\"text\",\"text\":\"/home/skogix/...\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" paths remain in \"},{\"type\":\"text\",\"text\":\".claude/settings.json\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" after the reorg. Neither breaks this container (one is ignored, the other fails gracefully on load), but both should be cleaned up.\"}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"69902324-1964-4c0b-9641-75fc8738c9ed\"},\"content\":[{\"type\":\"text\",\"text\":\"Remaining paths\"}]},{\"type\":\"heading\",\"attrs\":{\"level\":3,\"id\":\"10f38ebf-09ea-4b57-8b20-2c1f37e9d3ee\"},\"content\":[{\"type\":\"text\",\"text\":\"1. \"},{\"type\":\"text\",\"text\":\"autoMemoryDirectory\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (line ~152)\"}]},{\"type\":\"code_block\",\"attrs\":{\"language\":\"json\",\"id\":\"1c5e15b8-56b3-4bb6-baa8-11e8d8b02d6e\"},\"content\":[{\"type\":\"text\",\"text\":\"\\\"autoMemoryDirectory\\\": \\\"/home/skogix/claude/.skogai/memory\\\"\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Points to the old home path\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Per the Claude Code docs (\"},{\"type\":\"text\",\"text\":\".skogai/docs/claude-code/memory.md:335\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\"): \"},{\"type\":\"text\",\"text\":\"\\\"This setting is accepted from policy, local, and user settings. It is not accepted from project settings (\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\".claude/settings.json\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\") to prevent a shared project from redirecting auto memory writes to sensitive locations.\\\"\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"So it is silently ignored \u2014 has no effect where it is\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Should either be \"},{\"type\":\"text\",\"text\":\"removed\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" from \"},{\"type\":\"text\",\"text\":\".claude/settings.json\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" or \"},{\"type\":\"text\",\"text\":\"moved\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" to \"},{\"type\":\"text\",\"text\":\".claude/settings.local.json\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" / user settings, with a portable path (tilde-expanded supported, e.g. \"},{\"type\":\"text\",\"text\":\"~/.skogai/memory\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\")\"}]}]}]},{\"type\":\"heading\",\"attrs\":{\"level\":3,\"id\":\"5a4b5424-0fb1-46d2-afee-f2e3ed71851d\"},\"content\":[{\"type\":\"text\",\"text\":\"2. Worktrunk marketplace (line ~137)\"}]},{\"type\":\"code_block\",\"attrs\":{\"language\":\"json\",\"id\":\"b38711d7-a25f-470b-9baf-c1c66183f218\"},\"content\":[{\"type\":\"text\",\"text\":\"\\\"worktrunk\\\": {\\n  \\\"source\\\": { \\\"source\\\": \\\"directory\\\", \\\"path\\\": \\\"/home/skogix/.local/src/worktrunk\\\" }\\n}\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Only exists on skogix's workstation\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"On any other container this marketplace just fails to resolve (non-fatal but noisy)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Options:\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Move to \"},{\"type\":\"text\",\"text\":\"settings.local.json\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (user-specific override)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Publish worktrunk as a git-source marketplace and swap the config to that\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Keep as-is and document that it's skogix-only\"}]}]}]}]}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"c61c4b08-ac59-4dd5-ae0d-8dc45bfed8aa\"},\"content\":[{\"type\":\"text\",\"text\":\"Already fixed in branch \"},{\"type\":\"text\",\"text\":\"claude/review-home-folder-changes-tVavu\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"CLAUDE_CODE_TMPDIR\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" removed (was hardcoded to \"},{\"type\":\"text\",\"text\":\"/home/skogix/claude/tmp\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", caused every Bash call to fail its cwd-tracking write) \u2014 commit \"},{\"type\":\"text\",\"text\":\"b118503\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"additionalDirectories\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" array removed \u2014 commit \"},{\"type\":\"text\",\"text\":\"b118503\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Hook paths for \"},{\"type\":\"text\",\"text\":\"claude-md-linecheck\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" and \"},{\"type\":\"text\",\"text\":\"healthcheck\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" switched to \"},{\"type\":\"text\",\"text\":\"$CLAUDE_PROJECT_DIR\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \u2014 commit \"},{\"type\":\"text\",\"text\":\"45e360a\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"c6c53092-ff59-4fd9-871d-7868ba0178c8\"},\"content\":[{\"type\":\"text\",\"text\":\"Related\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Not a duplicate of \"},{\"type\":\"issueMention\",\"attrs\":{\"id\":\"503b0a93-db1c-4dc0-a4e5-5894e5eab5de\",\"label\":\"#25\",\"href\":\"https://linear.app/skogai/issue/SKO-160/feat-document-all-binariesscripts-into-claudemd\"}},{\"type\":\"text\",\"text\":\", which covers documentation rather than portability.\"}]}]}"
+    },
+    "updatedFrom": {
+      "updatedAt": "2026-04-18T14:07:11.152Z",
+      "description": null
+    },
+    "url": "https://linear.app/skogai/issue/SKO-181/chore-remove-remaining-skogix-local-paths-from-settingsjson",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776521232432,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

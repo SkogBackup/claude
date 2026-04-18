@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-04-18T14:06:58.300651+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-18T14:06:57.142Z",
+    "data": {
+      "id": "cb071081-bed1-44c2-b46c-a12f2ff7a36f",
+      "createdAt": "2026-04-18T14:06:57.142Z",
+      "updatedAt": "2026-04-18T14:06:57.142Z",
+      "title": "#45 chore: consolidate scripts \u2014 claude-todo/bin/ vs .skogai/scripts/ split",
+      "url": "https://github.com/SkogAI/claude/issues/45",
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "metadata": {
+        "id": 4288211466,
+        "title": "chore: consolidate scripts \u2014 claude-todo/bin/ vs .skogai/scripts/ split"
+      },
+      "source": {
+        "type": "github",
+        "syncedCommentId": "f6050319-d24b-48fd-b4be-8f68f3bbe7e8"
+      },
+      "sourceType": "github",
+      "groupBySource": false,
+      "issueId": "47865bb2-b31f-4e5c-a411-e6f3f1192e5f"
+    },
+    "type": "Attachment",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776521218232,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

@@ -1,0 +1,115 @@
+{
+  "timestamp": "2026-04-18T14:10:45.929690+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-18T14:10:45.124Z",
+    "data": {
+      "id": "47865bb2-b31f-4e5c-a411-e6f3f1192e5f",
+      "createdAt": "2026-04-18T14:06:55.000Z",
+      "updatedAt": "2026-04-18T14:10:45.110Z",
+      "archivedAt": null,
+      "number": 180,
+      "title": "chore: consolidate scripts \u2014 claude-todo/bin/ vs .skogai/scripts/ split",
+      "priority": 0,
+      "estimate": null,
+      "sortOrder": -22104,
+      "prioritySortOrder": -22050,
+      "startedAt": null,
+      "completedAt": null,
+      "startedTriageAt": null,
+      "triagedAt": null,
+      "canceledAt": null,
+      "autoClosedAt": null,
+      "autoArchivedAt": null,
+      "dueDate": null,
+      "slaStartedAt": null,
+      "slaMediumRiskAt": null,
+      "slaHighRiskAt": null,
+      "slaBreachesAt": null,
+      "slaType": "all",
+      "addedToProjectAt": null,
+      "addedToCycleAt": null,
+      "addedToTeamAt": "2026-04-18T14:06:57.591Z",
+      "trashed": null,
+      "snoozedUntilAt": null,
+      "activitySummary": null,
+      "labelIds": [
+        "6f0e5457-47a2-4812-a4af-7ee6561b5772"
+      ],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "cycleId": null,
+      "projectId": null,
+      "projectMilestoneId": null,
+      "lastAppliedTemplateId": null,
+      "recurringIssueTemplateId": null,
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "externalUserCreatorId": null,
+      "assigneeId": null,
+      "delegateId": null,
+      "snoozedById": null,
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "subIssueSortOrder": null,
+      "reactionData": [],
+      "priorityLabel": "No priority",
+      "sourceCommentId": null,
+      "integrationSourceType": "github",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-180",
+      "url": "https://linear.app/skogai/issue/SKO-180/chore-consolidate-scripts-claude-todobin-vs-skogaiscripts-split",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "parentId": null,
+      "state": {
+        "id": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+        "color": "#bec2c8",
+        "name": "Backlog",
+        "type": "backlog"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "syncedWith": [
+        {
+          "id": "4288211466",
+          "service": "github",
+          "metadata": {
+            "repo": "claude",
+            "owner": "SkogAI",
+            "number": 45
+          }
+        }
+      ],
+      "labels": [
+        {
+          "id": "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+          "color": "#a2eeef",
+          "name": "enhancement"
+        }
+      ],
+      "description": "## Problem\n\nAfter today's reorg, executable scripts live in two places with overlapping purpose:\n\n`claude-todo/bin/` (old, renamed from `bin/` via commit `f37d4ba`):\n\n* `healthcheck`\n* `claude-md-linecheck`\n* `context.sh`, `context-git.sh`, `context-journal.sh`, `context-workspace.sh`\n* `build-system-prompt.sh`\n* `fetch-docs.sh`\n* `find-agent-root.sh`\n\n`.skogai/scripts/` (new):\n\n* `bootstrap/` \u2014 `bootstrap.sh`, `consumer-init.sh`, `symlink.sh`\n* `context/` \u2014 20+ `context-*.sh` scripts (appears to be a superset of the claude-todo versions)\n* `github/` \u2014 `README.md` only so far\n* `utils/` \u2014 `migrate-journals.py`, `search.py`, `search.sh`, `state-status.py`, `wordcount.py`\n\n## Why it matters\n\n* **Hooks reference the wrong one.** `settings.json` hooks originally pointed at `/home/skogix/claude/bin/*` \u2014 I just redirected them to `claude-todo/bin/*` to stop them breaking, but that's the old tree.\n* **Unclear which is canonical.** A new agent doesn't know whether to read/extend `claude-todo/` or `.skogai/scripts/`.\n* `claude-todo/` is a strange name for what's really `bin/` \u2014 it reads like a TODO folder.\n* **Root** `CLAUDE.md` structure section is stale. The tree diagram still shows `bin/` at root plus several other paths that moved in today's reorg (`.planning/` \u2192 `.skogai/plan/claude-home-migration/`, `tasks/` \u2192 `.skogai/tasks/`, etc.). New contributors will look for paths that don't exist.\n\n## Proposal\n\n1. Pick one canonical home for scripts \u2014 probably `.skogai/scripts/` + `.skogai/bin/` per issue [#36](https://linear.app/skogai/issue/SKO-171/feat-bin-shared-executables-for-agent-home)\n2. Migrate the 9 files from `claude-todo/bin/` into the new location (most are already duplicated in `.skogai/scripts/context/`)\n3. Delete `claude-todo/` or at minimum rename it\n4. Update `settings.json` hooks to point at the canonical location\n5. Add a router `CLAUDE.md` so future agents find it on first look\n6. **Refresh the root** `CLAUDE.md` structure diagram to match the post-reorg tree (all moved paths, not just `bin/`)\n\n## Related\n\n* [#36](https://linear.app/skogai/issue/SKO-171/feat-bin-shared-executables-for-agent-home) (bin/ shared executables)\n* [#32](https://linear.app/skogai/issue/SKO-167/feat-scriptscontext-context-generation-scripts) (scripts/context/ \u2014 already partially done)\n* [#33](https://linear.app/skogai/issue/SKO-168/feat-scriptsbootstrap-init-and-symlink-setup) (scripts/bootstrap/ \u2014 already partially done)\n* [SkogAI/claude#47](https://linear.app/skogai/review/fix-drop-hardcoded-skogix-paths-from-settingsjson-647a015489c3) (PR that surfaced the stale-docs concern via review)",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"7af9b9a7-a4e5-47a6-86a4-078362952d1f\"},\"content\":[{\"type\":\"text\",\"text\":\"Problem\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"After today's reorg, executable scripts live in two places with overlapping purpose:\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"claude-todo/bin/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (old, renamed from \"},{\"type\":\"text\",\"text\":\"bin/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" via commit \"},{\"type\":\"text\",\"text\":\"f37d4ba\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\"):\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"healthcheck\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"claude-md-linecheck\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"context.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"context-git.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"context-journal.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"context-workspace.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"build-system-prompt.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"fetch-docs.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"find-agent-root.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\".skogai/scripts/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (new):\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"bootstrap/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \u2014 \"},{\"type\":\"text\",\"text\":\"bootstrap.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"consumer-init.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"symlink.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"context/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \u2014 20+ \"},{\"type\":\"text\",\"text\":\"context-*.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" scripts (appears to be a superset of the claude-todo versions)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"github/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \u2014 \"},{\"type\":\"text\",\"text\":\"README.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" only so far\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"utils/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \u2014 \"},{\"type\":\"text\",\"text\":\"migrate-journals.py\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"search.py\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"search.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"state-status.py\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"wordcount.py\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"d9d5797e-68ce-4b24-9180-ad3acaadff02\"},\"content\":[{\"type\":\"text\",\"text\":\"Why it matters\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Hooks reference the wrong one.\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \"},{\"type\":\"text\",\"text\":\"settings.json\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" hooks originally pointed at \"},{\"type\":\"text\",\"text\":\"/home/skogix/claude/bin/*\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \u2014 I just redirected them to \"},{\"type\":\"text\",\"text\":\"claude-todo/bin/*\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" to stop them breaking, but that's the old tree.\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Unclear which is canonical.\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" A new agent doesn't know whether to read/extend \"},{\"type\":\"text\",\"text\":\"claude-todo/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" or \"},{\"type\":\"text\",\"text\":\".skogai/scripts/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\".\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"claude-todo/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" is a strange name for what's really \"},{\"type\":\"text\",\"text\":\"bin/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \u2014 it reads like a TODO folder.\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Root \",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\"CLAUDE.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" structure section is stale. The tree diagram still shows \"},{\"type\":\"text\",\"text\":\"bin/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" at root plus several other paths that moved in today's reorg (\"},{\"type\":\"text\",\"text\":\".planning/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \u2192 \"},{\"type\":\"text\",\"text\":\".skogai/plan/claude-home-migration/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"tasks/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \u2192 \"},{\"type\":\"text\",\"text\":\".skogai/tasks/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", etc.). New contributors will look for paths that don't exist.\"}]}]}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"959d7e3b-43bd-4939-b823-79e16182035e\"},\"content\":[{\"type\":\"text\",\"text\":\"Proposal\"}]},{\"type\":\"ordered_list\",\"attrs\":{\"order\":1},\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Pick one canonical home for scripts \u2014 probably \"},{\"type\":\"text\",\"text\":\".skogai/scripts/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" + \"},{\"type\":\"text\",\"text\":\".skogai/bin/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" per issue \"},{\"type\":\"issueMention\",\"attrs\":{\"id\":\"0e23f0d5-f26b-4e4c-8fc6-74af07a775a2\",\"label\":\"#36\",\"href\":\"https://linear.app/skogai/issue/SKO-171/feat-bin-shared-executables-for-agent-home\"}}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Migrate the 9 files from \"},{\"type\":\"text\",\"text\":\"claude-todo/bin/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" into the new location (most are already duplicated in \"},{\"type\":\"text\",\"text\":\".skogai/scripts/context/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\")\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Delete \"},{\"type\":\"text\",\"text\":\"claude-todo/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" or at minimum rename it\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Update \"},{\"type\":\"text\",\"text\":\"settings.json\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" hooks to point at the canonical location\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Add a router \"},{\"type\":\"text\",\"text\":\"CLAUDE.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" so future agents find it on first look\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Refresh the root \",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\"CLAUDE.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" structure diagram to match the post-reorg tree (all moved paths, not just \"},{\"type\":\"text\",\"text\":\"bin/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\")\"}]}]}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"f2d8d7c6-187d-494d-aecb-3a7c05bfdf67\"},\"content\":[{\"type\":\"text\",\"text\":\"Related\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"issueMention\",\"attrs\":{\"id\":\"0e23f0d5-f26b-4e4c-8fc6-74af07a775a2\",\"label\":\"#36\",\"href\":\"https://linear.app/skogai/issue/SKO-171/feat-bin-shared-executables-for-agent-home\"}},{\"type\":\"text\",\"text\":\" (bin/ shared executables)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"issueMention\",\"attrs\":{\"id\":\"55643372-e51f-4c49-bcb1-23d79b5df787\",\"label\":\"#32\",\"href\":\"https://linear.app/skogai/issue/SKO-167/feat-scriptscontext-context-generation-scripts\"}},{\"type\":\"text\",\"text\":\" (scripts/context/ \u2014 already partially done)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"issueMention\",\"attrs\":{\"id\":\"8378e68c-7b5d-4208-8d0a-aac4a90f85dd\",\"label\":\"#33\",\"href\":\"https://linear.app/skogai/issue/SKO-168/feat-scriptsbootstrap-init-and-symlink-setup\"}},{\"type\":\"text\",\"text\":\" (scripts/bootstrap/ \u2014 already partially done)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"entityMention\",\"attrs\":{\"id\":\"14f5ebf1-0c00-4dcc-8eda-0f371cc9f641\",\"label\":\"SkogAI/claude#47\",\"href\":\"https://linear.app/skogai/review/fix-drop-hardcoded-skogix-paths-from-settingsjson-647a015489c3\"}},{\"type\":\"text\",\"text\":\" (PR that surfaced the stale-docs concern via review)\"}]}]}]}]}"
+    },
+    "updatedFrom": {
+      "updatedAt": "2026-04-18T14:10:45.110Z",
+      "description": "## Problem\n\nAfter today's reorg, executable scripts live in two places with overlapping purpose:\n\n`claude-todo/bin/` (old, renamed from `bin/` via commit `f37d4ba`):\n\n* `healthcheck`\n* `claude-md-linecheck`\n* `context.sh`, `context-git.sh`, `context-journal.sh`, `context-workspace.sh`\n* `build-system-prompt.sh`\n* `fetch-docs.sh`\n* `find-agent-root.sh`\n\n`.skogai/scripts/` (new):\n\n* `bootstrap/` \u2014 `bootstrap.sh`, `consumer-init.sh`, `symlink.sh`\n* `context/` \u2014 20+ `context-*.sh` scripts (appears to be a superset of the claude-todo versions)\n* `github/` \u2014 `README.md` only so far\n* `utils/` \u2014 `migrate-journals.py`, `search.py`, `search.sh`, `state-status.py`, `wordcount.py`\n\n## Why it matters\n\n* **Hooks reference the wrong one.** `settings.json` hooks originally pointed at `/home/skogix/claude/bin/*` \u2014 I just redirected them to `claude-todo/bin/*` to stop them breaking, but that's the old tree.\n* **Unclear which is canonical.** A new agent doesn't know whether to read/extend `claude-todo/` or `.skogai/scripts/`.\n* `claude-todo/` is a strange name for what's really `bin/` \u2014 it reads like a TODO folder.\n\n## Proposal\n\n1. Pick one canonical home for scripts \u2014 probably `.skogai/scripts/` + `.skogai/bin/` per issue [#36](https://linear.app/skogai/issue/SKO-171/feat-bin-shared-executables-for-agent-home)\n2. Migrate the 9 files from `claude-todo/bin/` into the new location (most are already duplicated in `.skogai/scripts/context/`)\n3. Delete `claude-todo/` or at minimum rename it\n4. Update `settings.json` hooks to point at the canonical location\n5. Add a router `CLAUDE.md` so future agents find it on first look\n\n## Related\n\n* [#36](https://linear.app/skogai/issue/SKO-171/feat-bin-shared-executables-for-agent-home) (bin/ shared executables)\n* [#32](https://linear.app/skogai/issue/SKO-167/feat-scriptscontext-context-generation-scripts) (scripts/context/ \u2014 already partially done)\n* [#33](https://linear.app/skogai/issue/SKO-168/feat-scriptsbootstrap-init-and-symlink-setup) (scripts/bootstrap/ \u2014 already partially done)"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-180/chore-consolidate-scripts-claude-todobin-vs-skogaiscripts-split",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776521445782,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

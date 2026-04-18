@@ -1,0 +1,115 @@
+{
+  "timestamp": "2026-04-18T14:06:47.395883+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-18T14:06:45.967Z",
+    "data": {
+      "id": "bee87fcc-ab37-4949-9972-86c8754e2d2f",
+      "createdAt": "2026-04-18T14:06:43.000Z",
+      "updatedAt": "2026-04-18T14:06:45.967Z",
+      "archivedAt": null,
+      "number": 179,
+      "title": "bug: healthcheck references identity paths that no longer exist after .skogai reorg",
+      "priority": 0,
+      "estimate": null,
+      "sortOrder": -21080,
+      "prioritySortOrder": -21048,
+      "startedAt": null,
+      "completedAt": null,
+      "startedTriageAt": null,
+      "triagedAt": null,
+      "canceledAt": null,
+      "autoClosedAt": null,
+      "autoArchivedAt": null,
+      "dueDate": null,
+      "slaStartedAt": null,
+      "slaMediumRiskAt": null,
+      "slaHighRiskAt": null,
+      "slaBreachesAt": null,
+      "slaType": "all",
+      "addedToProjectAt": null,
+      "addedToCycleAt": null,
+      "addedToTeamAt": "2026-04-18T14:06:46.430Z",
+      "trashed": null,
+      "snoozedUntilAt": null,
+      "activitySummary": null,
+      "labelIds": [
+        "7e4ea218-8f12-4172-ac65-2f72c54c1f71"
+      ],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "cycleId": null,
+      "projectId": null,
+      "projectMilestoneId": null,
+      "lastAppliedTemplateId": null,
+      "recurringIssueTemplateId": null,
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "externalUserCreatorId": null,
+      "assigneeId": null,
+      "delegateId": null,
+      "snoozedById": null,
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "subIssueSortOrder": null,
+      "reactionData": [],
+      "priorityLabel": "No priority",
+      "sourceCommentId": null,
+      "integrationSourceType": "github",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-179",
+      "url": "https://linear.app/skogai/issue/SKO-179/bug-healthcheck-references-identity-paths-that-no-longer-exist-after",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "parentId": null,
+      "state": {
+        "id": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+        "color": "#bec2c8",
+        "name": "Backlog",
+        "type": "backlog"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "syncedWith": [
+        {
+          "id": "4288210923",
+          "service": "github",
+          "metadata": {
+            "repo": "claude",
+            "owner": "SkogAI",
+            "number": 44
+          }
+        }
+      ],
+      "labels": [
+        {
+          "id": "7e4ea218-8f12-4172-ac65-2f72c54c1f71",
+          "color": "#EB5757",
+          "name": "Bug"
+        }
+      ],
+      "description": "## Problem\n\nAfter today's reorg (commits `210787c` \u2192 `db781e2` on 2026-04-18), `claude-todo/bin/healthcheck` reports 20+ `[FAIL]` entries because the paths it checks moved or were removed.\n\n## Reproduction\n\n```bash\n./claude-todo/bin/healthcheck\n```\n\n**Output excerpt:**\n\n```\nidentity paths\n------------------\n  [FAIL] personal/soul/01-equation.md\n  [FAIL] personal/soul/02-skogai-family.md\n  ... (all 10 soul sections)\n  [FAIL] personal/profile.md\n  [FAIL] personal/journal/CONVENTIONS.md\n  [FAIL] personal/core/certainty-principle.md\n  [FAIL] personal/core/placeholder-approach.md\n  [FAIL] personal/core/epistemic-frameworks.md\n  [FAIL] personal/core/context-destruction.md\n  [FAIL] personal/core/learnings.md\n\nrouting\n------------------\n  [FAIL] CLAUDE.md\n  [FAIL] personal/CLAUDE.md\n  [FAIL] personal/soul/CLAUDE.md\n```\n\nExit code is still `0`, but the Stop hook wrapper (`settings.json` line \\~100) only fires on non-zero exit \u2014 so the failures are silent.\n\n## Root cause\n\nThe reorg moved things into `.skogai/` but healthcheck was not updated. Either:\n\n* The old `personal/` tree is gone entirely (confirm), OR\n* It still exists but at a new path (`.skogai/personal/`? not visible)\n\nAlso: repo root `CLAUDE.md` is still present \u2014 so that `[FAIL]` suggests healthcheck runs with the wrong `CWD` (likely `claude-todo/`, not repo root).\n\n## Fix candidates\n\n1. Update healthcheck to `cd \"$(git rev-parse --show-toplevel)\"` before checking paths\n2. Update the path list to match the new structure\n3. Make it return non-zero so the Stop hook surfaces the failures\n4. Move healthcheck itself out of `claude-todo/` back to a canonical location (see related consolidation issue)\n\n## Related\n\n* [#25](https://linear.app/skogai/issue/SKO-160/feat-document-all-binariesscripts-into-claudemd) (document binaries)\n* The reorg commits: `210787c`, `49d3a0a`, `0e565be`, `f687f3a`, `03a9d96`, `f37d4ba`, `e0db51d`, `db781e2`",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"77015723-90b3-4117-aa41-ee124ddc4750\"},\"content\":[{\"type\":\"text\",\"text\":\"Problem\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"After today's reorg (commits \"},{\"type\":\"text\",\"text\":\"210787c\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \u2192 \"},{\"type\":\"text\",\"text\":\"db781e2\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" on 2026-04-18), \"},{\"type\":\"text\",\"text\":\"claude-todo/bin/healthcheck\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" reports 20+ \"},{\"type\":\"text\",\"text\":\"[FAIL]\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" entries because the paths it checks moved or were removed.\"}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"591ea06a-5d4f-4f7f-b038-ddbad8f00ad9\"},\"content\":[{\"type\":\"text\",\"text\":\"Reproduction\"}]},{\"type\":\"code_block\",\"attrs\":{\"language\":\"bash\",\"id\":\"d3461aa5-bb74-422a-88cd-8abdf9edafe3\"},\"content\":[{\"type\":\"text\",\"text\":\"./claude-todo/bin/healthcheck\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Output excerpt:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"code_block\",\"attrs\":{\"id\":\"e8f4f9f0-0f93-4819-8385-6ab23f9c6f4c\"},\"content\":[{\"type\":\"text\",\"text\":\"identity paths\\n------------------\\n  [FAIL] personal/soul/01-equation.md\\n  [FAIL] personal/soul/02-skogai-family.md\\n  ... (all 10 soul sections)\\n  [FAIL] personal/profile.md\\n  [FAIL] personal/journal/CONVENTIONS.md\\n  [FAIL] personal/core/certainty-principle.md\\n  [FAIL] personal/core/placeholder-approach.md\\n  [FAIL] personal/core/epistemic-frameworks.md\\n  [FAIL] personal/core/context-destruction.md\\n  [FAIL] personal/core/learnings.md\\n\\nrouting\\n------------------\\n  [FAIL] CLAUDE.md\\n  [FAIL] personal/CLAUDE.md\\n  [FAIL] personal/soul/CLAUDE.md\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Exit code is still \"},{\"type\":\"text\",\"text\":\"0\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", but the Stop hook wrapper (\"},{\"type\":\"text\",\"text\":\"settings.json\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" line ~100) only fires on non-zero exit \u2014 so the failures are silent.\"}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"d5e913ab-7056-40e0-8927-6f2cadd01018\"},\"content\":[{\"type\":\"text\",\"text\":\"Root cause\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"The reorg moved things into \"},{\"type\":\"text\",\"text\":\".skogai/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" but healthcheck was not updated. Either:\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"The old \"},{\"type\":\"text\",\"text\":\"personal/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" tree is gone entirely (confirm), OR\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"It still exists but at a new path (\"},{\"type\":\"text\",\"text\":\".skogai/personal/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\"? not visible)\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Also: repo root \"},{\"type\":\"text\",\"text\":\"CLAUDE.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" is still present \u2014 so that \"},{\"type\":\"text\",\"text\":\"[FAIL]\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" suggests healthcheck runs with the wrong \"},{\"type\":\"text\",\"text\":\"CWD\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (likely \"},{\"type\":\"text\",\"text\":\"claude-todo/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", not repo root).\"}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"0469a910-4fc6-42ef-963b-7e6d5d199f4e\"},\"content\":[{\"type\":\"text\",\"text\":\"Fix candidates\"}]},{\"type\":\"ordered_list\",\"attrs\":{\"order\":1},\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Update healthcheck to \"},{\"type\":\"text\",\"text\":\"cd \\\"$(git rev-parse --show-toplevel)\\\"\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" before checking paths\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Update the path list to match the new structure\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Make it return non-zero so the Stop hook surfaces the failures\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Move healthcheck itself out of \"},{\"type\":\"text\",\"text\":\"claude-todo/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" back to a canonical location (see related consolidation issue)\"}]}]}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"992e83b4-8958-49a0-a528-888d78a7c100\"},\"content\":[{\"type\":\"text\",\"text\":\"Related\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"issueMention\",\"attrs\":{\"id\":\"503b0a93-db1c-4dc0-a4e5-5894e5eab5de\",\"label\":\"#25\",\"href\":\"https://linear.app/skogai/issue/SKO-160/feat-document-all-binariesscripts-into-claudemd\"}},{\"type\":\"text\",\"text\":\" (document binaries)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"The reorg commits: \"},{\"type\":\"text\",\"text\":\"210787c\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"49d3a0a\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"0e565be\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"f687f3a\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"03a9d96\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"f37d4ba\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"e0db51d\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"db781e2\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]}]}]}"
+    },
+    "updatedFrom": {
+      "updatedAt": "2026-04-18T14:06:45.967Z",
+      "description": null
+    },
+    "url": "https://linear.app/skogai/issue/SKO-179/bug-healthcheck-references-identity-paths-that-no-longer-exist-after",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776521207326,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

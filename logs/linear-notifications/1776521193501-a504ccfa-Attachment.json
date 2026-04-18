@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-04-18T14:06:33.501757+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-18T14:06:31.940Z",
+    "data": {
+      "id": "f749d5ed-001e-4b65-8d29-f1e04d6d18c7",
+      "createdAt": "2026-04-18T14:06:31.940Z",
+      "updatedAt": "2026-04-18T14:06:31.940Z",
+      "title": "#43 bug: core tooling missing on non-skogix containers (staging, deployment)",
+      "url": "https://github.com/SkogAI/claude/issues/43",
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "metadata": {
+        "id": 4288210303,
+        "title": "bug: core tooling missing on non-skogix containers (staging, deployment)"
+      },
+      "source": {
+        "type": "github",
+        "syncedCommentId": "8a1c1dba-71ec-443d-add9-25b5acc884c0"
+      },
+      "sourceType": "github",
+      "groupBySource": false,
+      "issueId": "d3e35d68-1b0a-4079-86f8-1d706e064b81"
+    },
+    "type": "Attachment",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776521193401,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

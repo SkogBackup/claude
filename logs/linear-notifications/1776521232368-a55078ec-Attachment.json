@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-04-18T14:07:12.368174+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-18T14:07:11.152Z",
+    "data": {
+      "id": "bfeb8c82-787c-44e9-8aea-09395eb9656a",
+      "createdAt": "2026-04-18T14:07:11.152Z",
+      "updatedAt": "2026-04-18T14:07:11.152Z",
+      "title": "#46 chore: remove remaining skogix-local paths from settings.json",
+      "url": "https://github.com/SkogAI/claude/issues/46",
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "metadata": {
+        "id": 4288212182,
+        "title": "chore: remove remaining skogix-local paths from settings.json"
+      },
+      "source": {
+        "type": "github",
+        "syncedCommentId": "2b432e7d-37b1-4dbb-86e2-0545209b2526"
+      },
+      "sourceType": "github",
+      "groupBySource": false,
+      "issueId": "f4dfd285-662a-4ad0-a133-0b704745d6fe"
+    },
+    "type": "Attachment",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776521232285,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

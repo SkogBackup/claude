@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-04-18T14:06:47.255105+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-18T14:06:45.967Z",
+    "data": {
+      "id": "a73b9459-7df1-47a5-b358-59f3be036867",
+      "createdAt": "2026-04-18T14:06:45.967Z",
+      "updatedAt": "2026-04-18T14:06:45.967Z",
+      "title": "#44 bug: healthcheck references identity paths that no longer exist after .skogai reorg",
+      "url": "https://github.com/SkogAI/claude/issues/44",
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "metadata": {
+        "id": 4288210923,
+        "title": "bug: healthcheck references identity paths that no longer exist after .skogai reorg"
+      },
+      "source": {
+        "type": "github",
+        "syncedCommentId": "c03880cb-dbe4-4f65-9c9d-1898cff270e0"
+      },
+      "sourceType": "github",
+      "groupBySource": false,
+      "issueId": "bee87fcc-ab37-4949-9972-86c8754e2d2f"
+    },
+    "type": "Attachment",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776521207181,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}
