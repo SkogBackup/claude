@@ -36,7 +36,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/home/skogix/claude/bin/claude-md-linecheck",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/claude-todo/bin/claude-md-linecheck",
             "timeout": 10
           },
           {
@@ -97,7 +97,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "out=$(/home/skogix/claude/bin/healthcheck 2>&1); code=$?; if [ \"$code\" -ne 0 ]; then jq -nc --arg m \"$out\" '{\"systemMessage\":\"⚠ healthcheck failed\\n\\($m)\"}'; fi",
+            "command": "out=$(\"$CLAUDE_PROJECT_DIR\"/claude-todo/bin/healthcheck 2>&1); code=$?; if [ \"$code\" -ne 0 ]; then jq -nc --arg m \"$out\" '{\"systemMessage\":\"⚠ healthcheck failed\\n\\($m)\"}'; fi",
             "timeout": 30
           }
         ]
