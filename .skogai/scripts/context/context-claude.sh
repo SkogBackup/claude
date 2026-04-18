@@ -3,31 +3,41 @@
 # Output Claude's guidelines and preferences for the context
 # Usage: ./scripts/context/context-claude.sh
 
-set -e  # Exit on error
+set -e # Exit on error
 
 # Force UTF-8 encoding
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Check if CLAUDE.md exists
-if [ ! -f "CLAUDE.md" ]; then
-    echo "CLAUDE.md not found, skipping section."
-    exit 0
-fi
-
-# Add Claude section header
-echo "# Claude's Guidelines and Preferences"
-echo
-
-# Output Claude.md content
-echo "\`\`\`CLAUDE.md"
-cat "CLAUDE.md"
-echo "\`\`\`"
-echo
-
-# Add SkogAI specific information
-echo "# SkogAI Integration Notes"
-echo "- Claude is fully integrated with the SkogAI ecosystem"
-echo "- Uses SkogAI MCP protocols for cross-agent communication"
-echo "- Follows SkogAI documentation standards"
-echo "- Leverages SkogAI tools for enhanced capabilities"
+./scripts/context/context-start.sh
+./scripts/context/context-workspace.sh
+./scripts/context/context-git-diff.sh
+./scripts/context/context-git-log.sh
+./scripts/context/context-git.sh
+./scripts/context/context-git-status.sh
+./scripts/context/context-git-status-verbose.sh
+./scripts/context/context-end.sh
+./scripts/context/context-interaction.sh
+./scripts/context/context-journal.sh
+./scripts/context/context-claude-enhanced.sh
+./scripts/context/context-claude.sh
+./scripts/context/context-end.sh
+./scripts/context/context-enhanced.sh
+./scripts/context/context-env.sh
+./scripts/context/context-git-diff.sh
+./scripts/context/context-git-log.sh
+./scripts/context/context-git-status-verbose.sh
+./scripts/context/context-git-status.sh
+./scripts/context/context-git.sh
+./scripts/context/context-interaction.sh
+./scripts/context/context-journal.sh
+./scripts/context/context-memory.sh
+./scripts/context/context-message.sh
+./scripts/context/context-model.sh
+./scripts/context/context-path.sh
+./scripts/context/context-persona.sh
+./scripts/context/context-regular-git-diff.sh
+./scripts/context/context-start.sh
+./scripts/context/context-todo.sh
+./scripts/context/context-workspace.sh
+./scripts/context/context.sh

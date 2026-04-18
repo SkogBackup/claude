@@ -5,4 +5,3 @@
 /.worktrees/claude
 scripts/linear/.env
 scripts/linear/.tokens.json
-/.skogai/CONTEXT.md
