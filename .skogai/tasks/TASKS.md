@@ -8,6 +8,7 @@ permalink: claude/tasks/tasks
 
 ## Active
 
+- [ ] **SKO-184: review AI bot player integration and game polish issues** - [Linear SKO-184](https://linear.app/skogai/issue/SKO-184) · [GitHub #96](https://github.com/small-hours-games/small-hours/issues/96)
 - [ ] **Epic: Claude's Home v2.0 — SkogAI Integration & Home Improvements** - [#9](https://github.com/SkogAI/claude/issues/9)
 - [ ] **feat: phase 5 plan 1 — chat-io contract, routing script, bats tests** - [#11](https://github.com/SkogAI/claude/issues/11)
 - [ ] **feat: phase 5 plan 2 — routing skill, hook fallback, settings wiring** - [#12](https://github.com/SkogAI/claude/issues/12)
