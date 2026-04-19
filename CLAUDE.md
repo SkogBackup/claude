@@ -47,14 +47,12 @@ Staged at `/home/user/claude` (formerly `/home/skogix/claude`), deploying to `/h
 │   └── research/        — research artifacts
 ├── .config/
 │   └── wt.toml          — worktrunk config template
-├── bin/                 — scripts and tools
-│   ├── healthcheck      — environment sanity + identity integrity check
-│   ├── context.sh       — main context orchestrator
-│   ├── context-git.sh   — git status context
-│   ├── context-journal.sh — journal entries context
-│   ├── context-workspace.sh — workspace tree context
-│   ├── build-system-prompt.sh — builds system prompt from config
-│   └── find-agent-root.sh — agent root detection
+├── .skogai/tools/       — canonical executable tool location
+│   ├── CLAUDE.md        — tooling inventory (purpose/usage/args)
+│   ├── healthcheck      — environment + identity checks
+│   ├── context*.sh      — context generation scripts
+│   └── find-agent-root.sh — workspace root detection
+├── claude-todo/bin/     — compatibility wrappers to .skogai/tools
 ├── commands/            — slash command definitions (skogai/*)
 ├── docs/                — reference docs
 │   ├── deployment-gate.md — checklist before migrating to /home/claude
@@ -92,7 +90,8 @@ Staged at `/home/user/claude` (formerly `/home/skogix/claude`), deploying to `/h
 
 Each directory has its own CLAUDE.md router. Load lazily:
 
-- @bin/CLAUDE.md — scripts and tools
+- @claude-todo/bin/CLAUDE.md — wrapper router for legacy bin paths
+- @.skogai/tools/CLAUDE.md — canonical scripts/tools inventory
 - @docs/CLAUDE.md — reference documentation
 - @guestbook/CLAUDE.md — visitor notes
 - @lab/CLAUDE.md — experiments and WIP

@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
-# PostToolUse hook: warn when a CLAUDE.md file exceeds 80 lines after Write/Edit
-f=$(jq -r '.tool_input.file_path // ""')
-[[ "$f" != *CLAUDE.md ]] && exit 0
-[ ! -f "$f" ] && exit 0
-lines=$(wc -l < "$f")
-[ "$lines" -le 80 ] && exit 0
-jq -nc --arg f "$f" --argjson l "$lines" \
-  '{"systemMessage":"⚠ \($f) has \($l) lines (>80). CLAUDE.md router files should stay thin."}'
+set -euo pipefail
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec "$SCRIPT_DIR/../../.skogai/tools/$(basename "$0")" "$@"
