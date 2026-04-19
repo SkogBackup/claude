@@ -140,6 +140,7 @@
   "syntaxHighlightingDisabled": false,
   "alwaysThinkingEnabled": true,
   "advisorModel": "opus",
+  "autoMemoryDirectory": "~/claude/.skogai/memory",
   "autoMemoryEnabled": true,
   "autoDreamEnabled": true,
   "showThinkingSummaries": true,
