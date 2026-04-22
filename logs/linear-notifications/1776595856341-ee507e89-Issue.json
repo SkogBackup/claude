@@ -1,0 +1,91 @@
+{
+  "timestamp": "2026-04-19T10:50:56.341768+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-19T09:47:47.056Z",
+    "data": {
+      "id": "415ba0fb-d091-45d0-8d63-c9189de7f7be",
+      "createdAt": "2025-11-14T09:17:29.000Z",
+      "updatedAt": "2026-04-19T09:47:47.056Z",
+      "number": 36,
+      "title": "Add streaming response animation",
+      "priority": 0,
+      "sortOrder": -93326.89,
+      "prioritySortOrder": 0,
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-17T13:46:12.474Z",
+      "labelIds": [
+        "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+        "5544c52f-2c6b-4b47-9b97-d72473a47b76",
+        "2cddbecf-aadb-46d8-a5f6-7a29727adf55",
+        "28b300cc-462c-4f2f-8fda-b92979fb9f29"
+      ],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+      "reactionData": [],
+      "priorityLabel": "No priority",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-36",
+      "url": "https://linear.app/skogai/issue/SKO-36/add-streaming-response-animation",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+        "color": "#e2e2e2",
+        "name": "Todo",
+        "type": "unstarted"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [
+        {
+          "id": "28b300cc-462c-4f2f-8fda-b92979fb9f29",
+          "color": "#4EA7FC",
+          "name": "Migrated"
+        },
+        {
+          "id": "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+          "color": "#a2eeef",
+          "name": "enhancement"
+        },
+        {
+          "id": "5544c52f-2c6b-4b47-9b97-d72473a47b76",
+          "color": "#1D76DB",
+          "name": "frontend"
+        },
+        {
+          "id": "2cddbecf-aadb-46d8-a5f6-7a29727adf55",
+          "color": "#D4C5F9",
+          "name": "ui/ux"
+        }
+      ],
+      "description": "**Labels:** `enhancement`, `frontend`, `ui/ux`\n\n**Description:**\nImprove the typing indicator and add smooth streaming animations for better UX.\n\n**Proposed Solution:**\nEnhanced streaming experience with visual feedback.\n\n**Features:**\n\n* Cursor/typing animation during streaming\n* Smooth text appearance (typewriter effect optional)\n* Token-by-token rendering\n* Progress indicator for long responses\n* Pulse animation on thinking indicator\n\n**Acceptance Criteria:**\n\n- [ ] Visual feedback during AI response generation\n- [ ] Smooth text rendering\n- [ ] No flickering or layout jumps\n- [ ] Works with both streaming and non-streaming modes\n- [ ] Configurable animation speed\n\n**Technical Considerations:**\n\n* CSS animations for typing indicator\n* Optimize DOM updates for smooth rendering\n* Handle rapid token updates efficiently\n* Test on mobile devices\n\n**Effort & Value Ranking:**\n\n* \u23f1\ufe0f Time: **Low** (CSS animations, DOM optimization)\n* \ud83e\udde9 Complexity: **Low-Medium** (performance considerations, smooth rendering)\n* \ud83d\udc8e Value: **Medium** (polish/UX improvement, makes app feel more responsive)",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Labels:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \"},{\"type\":\"text\",\"text\":\"enhancement\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"frontend\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"ui/ux\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Description:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"hard_break\"},{\"type\":\"text\",\"text\":\"Improve the typing indicator and add smooth streaming animations for better UX.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Proposed Solution:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"hard_break\"},{\"type\":\"text\",\"text\":\"Enhanced streaming experience with visual feedback.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Features:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Cursor/typing animation during streaming\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Smooth text appearance (typewriter effect optional)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Token-by-token rendering\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Progress indicator for long responses\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Pulse animation on thinking indicator\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Acceptance Criteria:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"todo_list\",\"content\":[{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Visual feedback during AI response generation\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Smooth text rendering\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"No flickering or layout jumps\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Works with both streaming and non-streaming modes\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Configurable animation speed\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Technical Considerations:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"CSS animations for typing indicator\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Optimize DOM updates for smooth rendering\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Handle rapid token updates efficiently\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Test on mobile devices\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Effort & Value Ranking:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\u23f1\ufe0f Time: \"},{\"type\":\"text\",\"text\":\"Low\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (CSS animations, DOM optimization)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\ud83e\udde9 Complexity: \"},{\"type\":\"text\",\"text\":\"Low-Medium\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (performance considerations, smooth rendering)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\ud83d\udc8e Value: \"},{\"type\":\"text\",\"text\":\"Medium\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (polish/UX improvement, makes app feel more responsive)\"}]}]}]}]}"
+    },
+    "updatedFrom": {
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "sortOrder": 0,
+      "updatedAt": "2025-11-14T09:17:29.000Z"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-36/add-streaming-response-animation",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776595856259,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

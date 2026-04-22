@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-04-19T12:11:02.919627+00:00",
+  "payload": {
+    "action": "update",
+    "actor": null,
+    "createdAt": "2026-04-19T12:11:01.993Z",
+    "data": {
+      "id": "fb26cb13-47ce-42af-a8e5-121331527dcd",
+      "createdAt": "2026-04-19T12:10:16.299Z",
+      "updatedAt": "2026-04-19T12:11:01.992Z",
+      "name": "area/agent-home",
+      "description": "SkogAI agent home, .skogai structure, CLAUDE.md, shared scripts, skills, and workflow wiring.",
+      "color": "#0E8A16",
+      "isGroup": false,
+      "lastAppliedAt": "2026-04-19T12:11:01.910Z",
+      "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+    },
+    "updatedFrom": {
+      "updatedAt": "2026-04-19T12:10:16.299Z",
+      "lastAppliedAt": null
+    },
+    "url": "https://linear.app/skogai/team/SKO/issue-label/area%2Fagent-home",
+    "type": "IssueLabel",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776600662859,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

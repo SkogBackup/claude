@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-04-19T12:10:11.632321+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-19T12:10:11.191Z",
+    "data": {
+      "id": "dbd80443-71c5-4b12-a6ee-a81e581792d9",
+      "createdAt": "2026-04-19T12:10:11.191Z",
+      "updatedAt": "2026-04-19T12:10:11.191Z",
+      "name": "triage/needs-revalidation",
+      "description": "Imported issue may be stale; verify against current repo/code before implementing.",
+      "color": "#FBCA04",
+      "isGroup": false,
+      "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+    },
+    "url": "https://linear.app/skogai/team/SKO/issue-label/triage%2Fneeds-revalidation",
+    "type": "IssueLabel",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776600611546,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

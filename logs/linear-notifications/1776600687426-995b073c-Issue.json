@@ -1,0 +1,109 @@
+{
+  "timestamp": "2026-04-19T12:11:27.426810+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-19T12:11:26.379Z",
+    "data": {
+      "id": "503b0a93-db1c-4dc0-a4e5-5894e5eab5de",
+      "createdAt": "2026-04-17T13:50:05.566Z",
+      "updatedAt": "2026-04-19T12:11:26.379Z",
+      "number": 160,
+      "title": "feat: document all binaries/scripts into CLAUDE.md",
+      "priority": 3,
+      "sortOrder": -3139.15,
+      "prioritySortOrder": -4861,
+      "startedAt": "2026-04-19T09:51:23.522Z",
+      "slaType": "all",
+      "addedToProjectAt": "2026-04-17T13:50:05.654Z",
+      "addedToTeamAt": "2026-04-17T13:50:05.654Z",
+      "labelIds": [
+        "fb26cb13-47ce-42af-a8e5-121331527dcd"
+      ],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "projectId": "7e941c1b-5b57-4c97-af87-8cc08fdea539",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "assigneeId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "delegateId": "cd01fa9b-9f99-4e9c-b038-b78094abb9d4",
+      "stateId": "7fc69ea2-a40a-4b22-8972-9c83883baa4e",
+      "subIssueSortOrder": 3051,
+      "reactionData": [],
+      "priorityLabel": "Medium",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-160",
+      "url": "https://linear.app/skogai/issue/SKO-160/feat-document-all-binariesscripts-into-claudemd",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+        "cd01fa9b-9f99-4e9c-b038-b78094abb9d4"
+      ],
+      "parentId": "c6b19cf1-9eaf-44a3-8fea-b186f3ca7c14",
+      "assignee": {
+        "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+        "name": "Emil Skogsund",
+        "email": "emil.skogsund@gmail.com",
+        "url": "https://linear.app/skogai/profiles/skogix"
+      },
+      "delegate": {
+        "id": "cd01fa9b-9f99-4e9c-b038-b78094abb9d4",
+        "name": "Codex",
+        "email": "a4bc02c9-24f5-44c3-a1d1-03a2e3042a99@oauthapp.linear.app",
+        "avatarUrl": "https://public.linear.app/a7929e46-07ed-49ae-a46d-dd6c052e08e1/0f912afe-b125-4df1-a206-a3382ebb8d14/256x256/316e7aed-54d5-4841-abf5-fbae0e806bb9",
+        "url": "https://linear.app/skogai/profiles/codex"
+      },
+      "project": {
+        "id": "7e941c1b-5b57-4c97-af87-8cc08fdea539",
+        "name": "SkogAI",
+        "url": "https://linear.app/skogai/project/skogai-08eb8e1f4091"
+      },
+      "state": {
+        "id": "7fc69ea2-a40a-4b22-8972-9c83883baa4e",
+        "color": "#f2c94c",
+        "name": "In Progress",
+        "type": "started"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "syncedWith": [
+        {
+          "id": "4283090865",
+          "service": "github",
+          "metadata": {
+            "repo": "claude",
+            "owner": "SkogAI",
+            "number": 25
+          }
+        }
+      ],
+      "labels": [
+        {
+          "id": "fb26cb13-47ce-42af-a8e5-121331527dcd",
+          "color": "#0E8A16",
+          "name": "area/agent-home"
+        }
+      ],
+      "description": "Inventory all binaries/scripts/executables in the environment and make them discoverable via [CLAUDE.md](<http://CLAUDE.md>) routing.\n\n## Acceptance criteria\n\n* All binaries/scripts/executables documented in `bin/CLAUDE.md`\n* Each script has: purpose, usage, arguments\n\n## Context\n\nCurrently `bin/healthcheck` and the context scripts are documented. The environment likely has more executables (gptodo, wt, gita, skogai, skogcli, argc) that should be surfaced.",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Inventory all binaries/scripts/executables in the environment and make them discoverable via \"},{\"type\":\"text\",\"text\":\"CLAUDE.md\",\"marks\":[{\"type\":\"link\",\"attrs\":{\"href\":\"http://CLAUDE.md\"}}]},{\"type\":\"text\",\"text\":\" routing.\"}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"60ae7df9-6244-4ee5-b84d-3efdaac374ad\"},\"content\":[{\"type\":\"text\",\"text\":\"Acceptance criteria\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"All binaries/scripts/executables documented in \"},{\"type\":\"text\",\"text\":\"bin/CLAUDE.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Each script has: purpose, usage, arguments\"}]}]}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"7e32064a-5b23-4ab2-a9f6-8ef49a7188e6\"},\"content\":[{\"type\":\"text\",\"text\":\"Context\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Currently \"},{\"type\":\"text\",\"text\":\"bin/healthcheck\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" and the context scripts are documented. The environment likely has more executables (gptodo, wt, gita, skogai, skogcli, argc) that should be surfaced.\"}]}]}"
+    },
+    "updatedFrom": {
+      "labelIds": [],
+      "updatedAt": "2026-04-19T12:11:14.519Z"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-160/feat-document-all-binariesscripts-into-claudemd",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776600687345,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

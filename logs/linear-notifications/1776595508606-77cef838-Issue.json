@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-04-19T10:45:08.606120+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-19T09:47:48.657Z",
+    "data": {
+      "id": "03f86bc4-6828-4904-b8bb-52ee55f5fcf5",
+      "createdAt": "2025-10-20T04:06:26.000Z",
+      "updatedAt": "2026-04-19T09:47:48.657Z",
+      "number": 12,
+      "title": "Documentation and linting improvements completed",
+      "priority": 0,
+      "sortOrder": -122612.26,
+      "prioritySortOrder": 0,
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-17T13:46:11.043Z",
+      "labelIds": [
+        "bc676dcb-abeb-477a-a340-15c515855557",
+        "28b300cc-462c-4f2f-8fda-b92979fb9f29"
+      ],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+      "reactionData": [],
+      "priorityLabel": "No priority",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-12",
+      "url": "https://linear.app/skogai/issue/SKO-12/documentation-and-linting-improvements-completed",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+        "color": "#e2e2e2",
+        "name": "Todo",
+        "type": "unstarted"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [
+        {
+          "id": "28b300cc-462c-4f2f-8fda-b92979fb9f29",
+          "color": "#4EA7FC",
+          "name": "Migrated"
+        },
+        {
+          "id": "bc676dcb-abeb-477a-a340-15c515855557",
+          "color": "#0075ca",
+          "name": "documentation"
+        }
+      ],
+      "description": "## Summary\n\nSuccessfully fixed all linting errors and completed missing documentation requirements.\n\n## Changes Made\n\n### Linting Fixes\n\n* Removed 7 unused imports from test files\n  * `pathlib.Path` removed from 6 test files\n  * `tempfile` removed from `test_dashboard_build.py`\n* Applied code formatting fixes to ensure consistency\n\n### Documentation Additions\n\n* [**CLAUDE.md**](<http://CLAUDE.md>): Added two new sections\n  * Project Status: Describes the active migration/rebuild from beta to stable\n  * Workflow: Documents all Makefile targets for development workflow\n* **docs/installation.md**: Created comprehensive installation guide\n  * Prerequisites (Go 1.21+, Make, Git)\n  * Quick Installation instructions\n  * Build process documentation\n  * Installation options including `--build-only` flag\n  * Output location and verification steps\n  * Troubleshooting guide\n\n### File Permissions\n\n* Fixed permissions for `.claude/` configuration files (755 \u2192 644)\n\n## Validation Results\n\n\u2705 **All checks passing:**\n\n* Linting: 0 errors\n* Validation: All configs valid\n* Tests: 41/41 passing (100%)\n* Build: Dashboard binary builds successfully\n\n## Commit\n\nCommit: 4821550\nBranch: develop",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"81ef5d75-dde6-4b26-9881-0d0684586170\"},\"content\":[{\"type\":\"text\",\"text\":\"Summary\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Successfully fixed all linting errors and completed missing documentation requirements.\"}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"c61e1e50-7152-41b1-8add-3552d0f4c509\"},\"content\":[{\"type\":\"text\",\"text\":\"Changes Made\"}]},{\"type\":\"heading\",\"attrs\":{\"level\":3,\"id\":\"196456e1-72f5-45a2-bef1-e8a14d66932b\"},\"content\":[{\"type\":\"text\",\"text\":\"Linting Fixes\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Removed 7 unused imports from test files\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"pathlib.Path\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" removed from 6 test files\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"tempfile\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" removed from \"},{\"type\":\"text\",\"text\":\"test_dashboard_build.py\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Applied code formatting fixes to ensure consistency\"}]}]}]},{\"type\":\"heading\",\"attrs\":{\"level\":3,\"id\":\"53e21609-7995-4ec8-b431-2215a628f5d2\"},\"content\":[{\"type\":\"text\",\"text\":\"Documentation Additions\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"CLAUDE.md\",\"marks\":[{\"type\":\"link\",\"attrs\":{\"href\":\"http://CLAUDE.md\"}},{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\": Added two new sections\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Project Status: Describes the active migration/rebuild from beta to stable\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Workflow: Documents all Makefile targets for development workflow\"}]}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"docs/installation.md\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\": Created comprehensive installation guide\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Prerequisites (Go 1.21+, Make, Git)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Quick Installation instructions\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Build process documentation\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Installation options including \"},{\"type\":\"text\",\"text\":\"--build-only\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" flag\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Output location and verification steps\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Troubleshooting guide\"}]}]}]}]}]},{\"type\":\"heading\",\"attrs\":{\"level\":3,\"id\":\"5f236703-b48c-4a32-a3ce-822a2326f9ff\"},\"content\":[{\"type\":\"text\",\"text\":\"File Permissions\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Fixed permissions for \"},{\"type\":\"text\",\"text\":\".claude/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" configuration files (755 \u2192 644)\"}]}]}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"85bdcb3b-0471-4e6c-b1b7-9e6dda597dbe\"},\"content\":[{\"type\":\"text\",\"text\":\"Validation Results\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\u2705 \"},{\"type\":\"text\",\"text\":\"All checks passing:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Linting: 0 errors\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Validation: All configs valid\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Tests: 41/41 passing (100%)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Build: Dashboard binary builds successfully\"}]}]}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"363f8cd3-e951-4f7c-8565-68e03d668e89\"},\"content\":[{\"type\":\"text\",\"text\":\"Commit\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Commit: 4821550\"},{\"type\":\"hard_break\"},{\"type\":\"text\",\"text\":\"Branch: develop\"}]}]}"
+    },
+    "updatedFrom": {
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "sortOrder": 0,
+      "updatedAt": "2025-10-20T04:06:26.000Z"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-12/documentation-and-linting-improvements-completed",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776595508546,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

@@ -1,0 +1,111 @@
+{
+  "timestamp": "2026-04-19T12:11:48.096836+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-19T12:11:47.602Z",
+    "data": {
+      "id": "2a9110d4-eeb5-44e5-9a26-8a33ceab37cc",
+      "createdAt": "2025-11-16T04:11:09.000Z",
+      "updatedAt": "2026-04-19T12:11:47.601Z",
+      "number": 46,
+      "title": "Add markdown rendering for AI responses",
+      "priority": 0,
+      "sortOrder": -10195,
+      "prioritySortOrder": 0.5660176485235544,
+      "canceledAt": "2026-04-19T12:11:47.587Z",
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-17T13:46:13.373Z",
+      "labelIds": [
+        "7182e899-7e78-4cc3-904b-91d31ccfc14d",
+        "7495c792-adf0-4878-87ab-b50e3d6be0db",
+        "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+        "5544c52f-2c6b-4b47-9b97-d72473a47b76",
+        "2cddbecf-aadb-46d8-a5f6-7a29727adf55",
+        "28b300cc-462c-4f2f-8fda-b92979fb9f29"
+      ],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "604d0805-43ec-4e33-93ee-48994510987c",
+      "reactionData": [],
+      "priorityLabel": "No priority",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-46",
+      "url": "https://linear.app/skogai/issue/SKO-46/add-markdown-rendering-for-ai-responses",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "604d0805-43ec-4e33-93ee-48994510987c",
+        "color": "#95a2b3",
+        "name": "Duplicate",
+        "type": "canceled"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [
+        {
+          "id": "28b300cc-462c-4f2f-8fda-b92979fb9f29",
+          "color": "#4EA7FC",
+          "name": "Migrated"
+        },
+        {
+          "id": "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+          "color": "#a2eeef",
+          "name": "enhancement"
+        },
+        {
+          "id": "5544c52f-2c6b-4b47-9b97-d72473a47b76",
+          "color": "#1D76DB",
+          "name": "frontend"
+        },
+        {
+          "id": "2cddbecf-aadb-46d8-a5f6-7a29727adf55",
+          "color": "#D4C5F9",
+          "name": "ui/ux"
+        },
+        {
+          "id": "7182e899-7e78-4cc3-904b-91d31ccfc14d",
+          "color": "#1D76DB",
+          "name": "area/web-chat"
+        },
+        {
+          "id": "7495c792-adf0-4878-87ab-b50e3d6be0db",
+          "color": "#BFD4F2",
+          "name": "triage/duplicate"
+        }
+      ],
+      "description": "**Labels:** `enhancement`, `frontend`, `ui/ux`\n\n**Description:**\nAI responses often include markdown formatting (code blocks, lists, bold, etc.) that currently displays as plain text.\n\n**Proposed Solution:**\nIntegrate a markdown renderer (marked.js or markdown-it) to properly display formatted responses.\n\n**Features:**\n\n* Render markdown syntax (headers, lists, bold, italic, links)\n* Syntax highlighting for code blocks (highlight.js or Prism)\n* Support for tables\n* LaTeX math rendering (optional, KaTeX)\n\n**Acceptance Criteria:**\n\n- [ ] Markdown syntax renders correctly\n- [ ] Code blocks have syntax highlighting\n- [ ] Copy button for code blocks\n- [ ] Security: Sanitize HTML to prevent XSS\n- [ ] Responsive rendering on mobile\n\n**Technical Considerations:**\n\n* Add markdown parser library (minimal bundle size)\n* Add syntax highlighting library\n* Sanitize output to prevent XSS attacks\n* Add CSS for code block styling\n\n**Effort & Value Ranking:**\n\n* \u23f1\ufe0f Time: **Low-Medium** (library integration, styling, security sanitization)\n* \ud83e\udde9 Complexity: **Low-Medium** (mostly frontend work, critical XSS prevention needed)\n* \ud83d\udc8e Value: **Very High** (essential for good UX, AI responses without markdown are poor experience)",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Labels:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \"},{\"type\":\"text\",\"text\":\"enhancement\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"frontend\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"ui/ux\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Description:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"hard_break\"},{\"type\":\"text\",\"text\":\"AI responses often include markdown formatting (code blocks, lists, bold, etc.) that currently displays as plain text.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Proposed Solution:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"hard_break\"},{\"type\":\"text\",\"text\":\"Integrate a markdown renderer (marked.js or markdown-it) to properly display formatted responses.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Features:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Render markdown syntax (headers, lists, bold, italic, links)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Syntax highlighting for code blocks (highlight.js or Prism)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Support for tables\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"LaTeX math rendering (optional, KaTeX)\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Acceptance Criteria:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"todo_list\",\"content\":[{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Markdown syntax renders correctly\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Code blocks have syntax highlighting\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Copy button for code blocks\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Security: Sanitize HTML to prevent XSS\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Responsive rendering on mobile\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Technical Considerations:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Add markdown parser library (minimal bundle size)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Add syntax highlighting library\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Sanitize output to prevent XSS attacks\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Add CSS for code block styling\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Effort & Value Ranking:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\u23f1\ufe0f Time: \"},{\"type\":\"text\",\"text\":\"Low-Medium\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (library integration, styling, security sanitization)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\ud83e\udde9 Complexity: \"},{\"type\":\"text\",\"text\":\"Low-Medium\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (mostly frontend work, critical XSS prevention needed)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\ud83d\udc8e Value: \"},{\"type\":\"text\",\"text\":\"Very High\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (essential for good UX, AI responses without markdown are poor experience)\"}]}]}]}]}"
+    },
+    "updatedFrom": {
+      "stateId": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+      "labelIds": [
+        "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+        "5544c52f-2c6b-4b47-9b97-d72473a47b76",
+        "2cddbecf-aadb-46d8-a5f6-7a29727adf55",
+        "28b300cc-462c-4f2f-8fda-b92979fb9f29"
+      ],
+      "sortOrder": -100245.56,
+      "updatedAt": "2026-04-19T09:52:19.338Z",
+      "canceledAt": null
+    },
+    "url": "https://linear.app/skogai/issue/SKO-46/add-markdown-rendering-for-ai-responses",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776600708011,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

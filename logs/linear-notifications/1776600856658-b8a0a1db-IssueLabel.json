@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-04-19T12:14:16.658859+00:00",
+  "payload": {
+    "action": "update",
+    "actor": null,
+    "createdAt": "2026-04-19T12:14:16.375Z",
+    "data": {
+      "id": "1bb2ce8b-d80c-401c-ba70-3224d17e25f6",
+      "createdAt": "2026-04-19T12:10:39.393Z",
+      "updatedAt": "2026-04-19T12:14:16.374Z",
+      "name": "area/plugins",
+      "description": "Plugin marketplace cleanup and audit tasks.",
+      "color": "#5319E7",
+      "isGroup": false,
+      "lastAppliedAt": "2026-04-19T12:14:16.321Z",
+      "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+    },
+    "updatedFrom": {
+      "updatedAt": "2026-04-19T12:10:39.393Z",
+      "lastAppliedAt": null
+    },
+    "url": "https://linear.app/skogai/team/SKO/issue-label/area%2Fplugins",
+    "type": "IssueLabel",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776600856584,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

@@ -1,0 +1,111 @@
+{
+  "timestamp": "2026-04-19T12:13:31.809567+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-19T12:13:30.718Z",
+    "data": {
+      "id": "b4ad76e1-a50e-419b-8a50-7ae882418a36",
+      "createdAt": "2025-11-16T04:11:21.000Z",
+      "updatedAt": "2026-04-19T12:13:30.718Z",
+      "number": 49,
+      "title": "Add dark mode theme",
+      "priority": 0,
+      "sortOrder": -16999,
+      "prioritySortOrder": 0.2353736756236563,
+      "canceledAt": "2026-04-19T12:13:30.693Z",
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-17T13:46:13.584Z",
+      "labelIds": [
+        "7182e899-7e78-4cc3-904b-91d31ccfc14d",
+        "7495c792-adf0-4878-87ab-b50e3d6be0db",
+        "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+        "5544c52f-2c6b-4b47-9b97-d72473a47b76",
+        "2cddbecf-aadb-46d8-a5f6-7a29727adf55",
+        "28b300cc-462c-4f2f-8fda-b92979fb9f29"
+      ],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "604d0805-43ec-4e33-93ee-48994510987c",
+      "reactionData": [],
+      "priorityLabel": "No priority",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-49",
+      "url": "https://linear.app/skogai/issue/SKO-49/add-dark-mode-theme",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "604d0805-43ec-4e33-93ee-48994510987c",
+        "color": "#95a2b3",
+        "name": "Duplicate",
+        "type": "canceled"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [
+        {
+          "id": "28b300cc-462c-4f2f-8fda-b92979fb9f29",
+          "color": "#4EA7FC",
+          "name": "Migrated"
+        },
+        {
+          "id": "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+          "color": "#a2eeef",
+          "name": "enhancement"
+        },
+        {
+          "id": "5544c52f-2c6b-4b47-9b97-d72473a47b76",
+          "color": "#1D76DB",
+          "name": "frontend"
+        },
+        {
+          "id": "2cddbecf-aadb-46d8-a5f6-7a29727adf55",
+          "color": "#D4C5F9",
+          "name": "ui/ux"
+        },
+        {
+          "id": "7182e899-7e78-4cc3-904b-91d31ccfc14d",
+          "color": "#1D76DB",
+          "name": "area/web-chat"
+        },
+        {
+          "id": "7495c792-adf0-4878-87ab-b50e3d6be0db",
+          "color": "#BFD4F2",
+          "name": "triage/duplicate"
+        }
+      ],
+      "description": "**Labels:** `enhancement`, `frontend`, `ui/ux`\n\n**Description:**\nAdd dark mode support for better accessibility and user preference.\n\n**Proposed Solution:**\nImplement dark mode with system preference detection and manual toggle.\n\n**Features:**\n\n* Auto-detect system dark mode preference\n* Manual toggle switch in UI\n* Smooth theme transition\n* Persist user preference\n* Update CSS variables for dark theme\n\n**Acceptance Criteria:**\n\n- [ ] Dark mode CSS theme implemented\n- [ ] Toggle switch in UI\n- [ ] Respects system preference\n- [ ] Preference persists in localStorage\n- [ ] All UI elements properly themed\n- [ ] Accessible color contrast ratios\n\n**Technical Considerations:**\n\n* Add dark mode CSS variables\n* Use prefers-color-scheme media query\n* Add theme toggle component\n* Update all colors for dark mode\n* Test accessibility (WCAG contrast ratios)\n\n**Effort & Value Ranking:**\n\n* \u23f1\ufe0f Time: **Low-Medium** (CSS variables, toggle component, color palette)\n* \ud83e\udde9 Complexity: **Low** (primarily CSS work, straightforward implementation)\n* \ud83d\udc8e Value: **Medium** (nice-to-have UX enhancement, accessibility benefit, user preference)",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Labels:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \"},{\"type\":\"text\",\"text\":\"enhancement\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"frontend\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"ui/ux\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Description:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"hard_break\"},{\"type\":\"text\",\"text\":\"Add dark mode support for better accessibility and user preference.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Proposed Solution:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"hard_break\"},{\"type\":\"text\",\"text\":\"Implement dark mode with system preference detection and manual toggle.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Features:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Auto-detect system dark mode preference\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Manual toggle switch in UI\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Smooth theme transition\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Persist user preference\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Update CSS variables for dark theme\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Acceptance Criteria:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"todo_list\",\"content\":[{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Dark mode CSS theme implemented\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Toggle switch in UI\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Respects system preference\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Preference persists in localStorage\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"All UI elements properly themed\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Accessible color contrast ratios\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Technical Considerations:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Add dark mode CSS variables\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Use prefers-color-scheme media query\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Add theme toggle component\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Update all colors for dark mode\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Test accessibility (WCAG contrast ratios)\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Effort & Value Ranking:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\u23f1\ufe0f Time: \"},{\"type\":\"text\",\"text\":\"Low-Medium\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (CSS variables, toggle component, color palette)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\ud83e\udde9 Complexity: \"},{\"type\":\"text\",\"text\":\"Low\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (primarily CSS work, straightforward implementation)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\ud83d\udc8e Value: \"},{\"type\":\"text\",\"text\":\"Medium\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (nice-to-have UX enhancement, accessibility benefit, user preference)\"}]}]}]}]}"
+    },
+    "updatedFrom": {
+      "stateId": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+      "labelIds": [
+        "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+        "5544c52f-2c6b-4b47-9b97-d72473a47b76",
+        "2cddbecf-aadb-46d8-a5f6-7a29727adf55",
+        "28b300cc-462c-4f2f-8fda-b92979fb9f29"
+      ],
+      "sortOrder": -41362.8,
+      "updatedAt": "2026-04-19T09:52:17.417Z",
+      "canceledAt": null
+    },
+    "url": "https://linear.app/skogai/issue/SKO-49/add-dark-mode-theme",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776600811746,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

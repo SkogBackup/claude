@@ -1,0 +1,111 @@
+{
+  "timestamp": "2026-04-19T12:12:53.356903+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-19T12:12:52.473Z",
+    "data": {
+      "id": "17b46905-b26b-4e79-9760-2fa5bd16fe90",
+      "createdAt": "2025-11-14T09:17:14.000Z",
+      "updatedAt": "2026-04-19T12:12:52.472Z",
+      "number": 32,
+      "title": "Add authentication and rate limiting",
+      "priority": 0,
+      "sortOrder": -14121,
+      "prioritySortOrder": 0.6276631349964168,
+      "canceledAt": "2026-04-19T12:12:52.463Z",
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-17T13:46:12.235Z",
+      "labelIds": [
+        "7182e899-7e78-4cc3-904b-91d31ccfc14d",
+        "7495c792-adf0-4878-87ab-b50e3d6be0db",
+        "ed3f1cb5-e6df-4c66-b741-48112e47f63f",
+        "938604eb-323b-4387-91bb-5399270c26d1",
+        "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+        "28b300cc-462c-4f2f-8fda-b92979fb9f29"
+      ],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "604d0805-43ec-4e33-93ee-48994510987c",
+      "reactionData": [],
+      "priorityLabel": "No priority",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-32",
+      "url": "https://linear.app/skogai/issue/SKO-32/add-authentication-and-rate-limiting",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "604d0805-43ec-4e33-93ee-48994510987c",
+        "color": "#95a2b3",
+        "name": "Duplicate",
+        "type": "canceled"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [
+        {
+          "id": "28b300cc-462c-4f2f-8fda-b92979fb9f29",
+          "color": "#4EA7FC",
+          "name": "Migrated"
+        },
+        {
+          "id": "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+          "color": "#a2eeef",
+          "name": "enhancement"
+        },
+        {
+          "id": "ed3f1cb5-e6df-4c66-b741-48112e47f63f",
+          "color": "#0E8A16",
+          "name": "backend"
+        },
+        {
+          "id": "938604eb-323b-4387-91bb-5399270c26d1",
+          "color": "#D93F0B",
+          "name": "security"
+        },
+        {
+          "id": "7182e899-7e78-4cc3-904b-91d31ccfc14d",
+          "color": "#1D76DB",
+          "name": "area/web-chat"
+        },
+        {
+          "id": "7495c792-adf0-4878-87ab-b50e3d6be0db",
+          "color": "#BFD4F2",
+          "name": "triage/duplicate"
+        }
+      ],
+      "description": "**Labels:** `enhancement`, `security`, `backend`\n\n**Description:**\nPublic deployments need authentication and rate limiting to prevent abuse and control costs.\n\n**Proposed Solution:**\nImplement multiple authentication strategies:\n\n**Authentication Options:**\n\n1. Simple API key validation\n2. Cloudflare Access integration\n3. JWT token authentication\n4. OAuth providers (Google, GitHub)\n\n**Rate Limiting:**\n\n* Per-user request limits\n* IP-based rate limiting\n* Token bucket algorithm\n* Cloudflare Rate Limiting API integration\n\n**Acceptance Criteria:**\n\n- [ ] Users can authenticate via chosen method\n- [ ] Rate limiting prevents abuse\n- [ ] Clear error messages for rate limit exceeded\n- [ ] Admin dashboard for usage monitoring\n- [ ] Configuration via environment variables\n\n**Technical Considerations:**\n\n* Add authentication middleware to Worker\n* Store rate limit state in KV or Durable Objects\n* Add user management endpoints\n* Update frontend with login UI\n* Document authentication setup\n\n**Effort & Value Ranking:**\n\n* \u23f1\ufe0f Time: **High** (multiple auth options, rate limiting, admin dashboard, comprehensive solution)\n* \ud83e\udde9 Complexity: **High** (security-critical, multiple integration points, state management)\n* \ud83d\udc8e Value: **High** (critical for production deployment, prevents abuse and controls costs)",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Labels:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \"},{\"type\":\"text\",\"text\":\"enhancement\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"security\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"backend\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Description:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"hard_break\"},{\"type\":\"text\",\"text\":\"Public deployments need authentication and rate limiting to prevent abuse and control costs.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Proposed Solution:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"hard_break\"},{\"type\":\"text\",\"text\":\"Implement multiple authentication strategies:\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Authentication Options:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"ordered_list\",\"attrs\":{\"order\":1},\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Simple API key validation\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Cloudflare Access integration\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"JWT token authentication\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"OAuth providers (Google, GitHub)\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Rate Limiting:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Per-user request limits\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"IP-based rate limiting\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Token bucket algorithm\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Cloudflare Rate Limiting API integration\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Acceptance Criteria:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"todo_list\",\"content\":[{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Users can authenticate via chosen method\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Rate limiting prevents abuse\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Clear error messages for rate limit exceeded\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Admin dashboard for usage monitoring\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Configuration via environment variables\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Technical Considerations:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Add authentication middleware to Worker\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Store rate limit state in KV or Durable Objects\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Add user management endpoints\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Update frontend with login UI\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Document authentication setup\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Effort & Value Ranking:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\u23f1\ufe0f Time: \"},{\"type\":\"text\",\"text\":\"High\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (multiple auth options, rate limiting, admin dashboard, comprehensive solution)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\ud83e\udde9 Complexity: \"},{\"type\":\"text\",\"text\":\"High\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (security-critical, multiple integration points, state management)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\ud83d\udc8e Value: \"},{\"type\":\"text\",\"text\":\"High\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (critical for production deployment, prevents abuse and controls costs)\"}]}]}]}]}"
+    },
+    "updatedFrom": {
+      "stateId": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+      "labelIds": [
+        "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+        "ed3f1cb5-e6df-4c66-b741-48112e47f63f",
+        "938604eb-323b-4387-91bb-5399270c26d1",
+        "28b300cc-462c-4f2f-8fda-b92979fb9f29"
+      ],
+      "sortOrder": -110850.33,
+      "updatedAt": "2026-04-19T09:52:19.544Z",
+      "canceledAt": null
+    },
+    "url": "https://linear.app/skogai/issue/SKO-32/add-authentication-and-rate-limiting",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776600773230,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

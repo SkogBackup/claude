@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-04-19T12:13:51.030082+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-17T13:46:08.685Z",
+    "data": {
+      "id": "e7d13a80-5133-4720-ab92-3cd2f3f6aa4c",
+      "createdAt": "2026-04-17T13:46:08.685Z",
+      "updatedAt": "2026-04-17T13:46:08.685Z",
+      "title": "#36 Add comprehensive testing suite",
+      "url": "https://github.com/SkogAI/llm-chat/issues/36",
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "metadata": {
+        "id": "3629840609",
+        "title": "Add comprehensive testing suite"
+      },
+      "source": {
+        "type": "github"
+      },
+      "sourceType": "github",
+      "groupBySource": false,
+      "issueId": "5207079f-695d-4a45-b7be-a64d16a39446"
+    },
+    "type": "Attachment",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776600830955,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

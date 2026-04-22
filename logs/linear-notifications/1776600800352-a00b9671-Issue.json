@@ -1,0 +1,104 @@
+{
+  "timestamp": "2026-04-19T12:13:20.352826+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-19T12:13:19.642Z",
+    "data": {
+      "id": "77be79bb-3ca2-4f3a-b316-c86b819341cb",
+      "createdAt": "2025-11-14T09:17:25.000Z",
+      "updatedAt": "2026-04-19T12:13:19.642Z",
+      "number": 35,
+      "title": "Add conversation export/import",
+      "priority": 0,
+      "sortOrder": -16083,
+      "prioritySortOrder": 0.3866853242388639,
+      "canceledAt": "2026-04-19T12:13:19.606Z",
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-17T13:46:12.413Z",
+      "labelIds": [
+        "7182e899-7e78-4cc3-904b-91d31ccfc14d",
+        "7495c792-adf0-4878-87ab-b50e3d6be0db",
+        "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+        "5544c52f-2c6b-4b47-9b97-d72473a47b76",
+        "28b300cc-462c-4f2f-8fda-b92979fb9f29"
+      ],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "604d0805-43ec-4e33-93ee-48994510987c",
+      "reactionData": [],
+      "priorityLabel": "No priority",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-35",
+      "url": "https://linear.app/skogai/issue/SKO-35/add-conversation-exportimport",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "604d0805-43ec-4e33-93ee-48994510987c",
+        "color": "#95a2b3",
+        "name": "Duplicate",
+        "type": "canceled"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [
+        {
+          "id": "28b300cc-462c-4f2f-8fda-b92979fb9f29",
+          "color": "#4EA7FC",
+          "name": "Migrated"
+        },
+        {
+          "id": "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+          "color": "#a2eeef",
+          "name": "enhancement"
+        },
+        {
+          "id": "5544c52f-2c6b-4b47-9b97-d72473a47b76",
+          "color": "#1D76DB",
+          "name": "frontend"
+        },
+        {
+          "id": "7182e899-7e78-4cc3-904b-91d31ccfc14d",
+          "color": "#1D76DB",
+          "name": "area/web-chat"
+        },
+        {
+          "id": "7495c792-adf0-4878-87ab-b50e3d6be0db",
+          "color": "#BFD4F2",
+          "name": "triage/duplicate"
+        }
+      ],
+      "description": "**Labels:** `enhancement`, `frontend`\n\n**Description:**\nAllow users to export conversations for backup or sharing, and import previous conversations.\n\n**Proposed Solution:**\nAdd export/import functionality with multiple format support.\n\n**Export Formats:**\n\n* JSON (full conversation data)\n* Markdown (readable format)\n* Plain text\n* HTML (styled output)\n\n**Features:**\n\n* Export current conversation\n* Export all conversations (batch)\n* Import from JSON file\n* Share conversation via URL\n\n**Acceptance Criteria:**\n\n- [ ] Export to JSON, Markdown, and text\n- [ ] Import from JSON file\n- [ ] Download triggers properly\n- [ ] Imported conversations validate correctly\n- [ ] Option to share conversation (unique URL)\n\n**Technical Considerations:**\n\n* Add export/import UI buttons\n* Generate downloadable files\n* Validate imported data\n* Optional: Store shared conversations in KV\n* Privacy: Add expiry for shared links\n\n**Effort & Value Ranking:**\n\n* \u23f1\ufe0f Time: **Low-Medium** (file generation logic, validation, UI components)\n* \ud83e\udde9 Complexity: **Low-Medium** (mainly frontend, validation logic, format conversion)\n* \ud83d\udc8e Value: **Medium** (useful for backup/portability, sharing use cases)",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Labels:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \"},{\"type\":\"text\",\"text\":\"enhancement\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"frontend\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Description:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"hard_break\"},{\"type\":\"text\",\"text\":\"Allow users to export conversations for backup or sharing, and import previous conversations.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Proposed Solution:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"hard_break\"},{\"type\":\"text\",\"text\":\"Add export/import functionality with multiple format support.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Export Formats:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"JSON (full conversation data)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Markdown (readable format)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Plain text\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"HTML (styled output)\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Features:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Export current conversation\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Export all conversations (batch)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Import from JSON file\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Share conversation via URL\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Acceptance Criteria:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"todo_list\",\"content\":[{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Export to JSON, Markdown, and text\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Import from JSON file\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Download triggers properly\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Imported conversations validate correctly\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Option to share conversation (unique URL)\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Technical Considerations:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Add export/import UI buttons\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Generate downloadable files\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Validate imported data\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Optional: Store shared conversations in KV\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Privacy: Add expiry for shared links\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Effort & Value Ranking:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\u23f1\ufe0f Time: \"},{\"type\":\"text\",\"text\":\"Low-Medium\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (file generation logic, validation, UI components)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\ud83e\udde9 Complexity: \"},{\"type\":\"text\",\"text\":\"Low-Medium\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (mainly frontend, validation logic, format conversion)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\ud83d\udc8e Value: \"},{\"type\":\"text\",\"text\":\"Medium\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (useful for backup/portability, sharing use cases)\"}]}]}]}]}"
+    },
+    "updatedFrom": {
+      "stateId": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+      "labelIds": [
+        "6f0e5457-47a2-4812-a4af-7ee6561b5772",
+        "5544c52f-2c6b-4b47-9b97-d72473a47b76",
+        "28b300cc-462c-4f2f-8fda-b92979fb9f29"
+      ],
+      "sortOrder": -68431.89,
+      "updatedAt": "2026-04-19T09:52:18.110Z",
+      "canceledAt": null
+    },
+    "url": "https://linear.app/skogai/issue/SKO-35/add-conversation-exportimport",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776600800246,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

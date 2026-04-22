@@ -1,0 +1,85 @@
+{
+  "timestamp": "2026-04-19T10:46:57.490092+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-19T09:47:49.190Z",
+    "data": {
+      "id": "8378e68c-7b5d-4208-8d0a-aac4a90f85dd",
+      "createdAt": "2026-04-17T13:50:49.014Z",
+      "updatedAt": "2026-04-19T09:47:49.190Z",
+      "number": 168,
+      "title": "feat: scripts/bootstrap/ \u2014 init and symlink setup",
+      "priority": 3,
+      "sortOrder": -137226.38,
+      "prioritySortOrder": -12225,
+      "slaType": "all",
+      "addedToProjectAt": "2026-04-17T13:50:49.046Z",
+      "addedToTeamAt": "2026-04-17T13:50:49.046Z",
+      "labelIds": [],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "projectId": "7e941c1b-5b57-4c97-af87-8cc08fdea539",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+      "subIssueSortOrder": 7139,
+      "reactionData": [],
+      "priorityLabel": "Medium",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-168",
+      "url": "https://linear.app/skogai/issue/SKO-168/feat-scriptsbootstrap-init-and-symlink-setup",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "parentId": "94dc5a97-10ae-43de-95af-cc99f98741bd",
+      "project": {
+        "id": "7e941c1b-5b57-4c97-af87-8cc08fdea539",
+        "name": "SkogAI",
+        "url": "https://linear.app/skogai/project/skogai-08eb8e1f4091"
+      },
+      "state": {
+        "id": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+        "color": "#e2e2e2",
+        "name": "Todo",
+        "type": "unstarted"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "syncedWith": [
+        {
+          "id": "4283095286",
+          "service": "github",
+          "metadata": {
+            "repo": "claude",
+            "owner": "SkogAI",
+            "number": 33
+          }
+        }
+      ],
+      "labels": [],
+      "description": "Bootstrap scripts for initializing `.skogai/` in a new consumer project and for the dogfooding symlink mode.\n\n## What\n\n* `bootstrap.sh` \u2014 one-shot init: creates missing dirs, `.gitkeep` files, runs `symlink.sh`\n* `consumer-init.sh` \u2014 post-submodule-add setup for consumer projects\n* `symlink.sh` \u2014 wires up symlinks (e.g. `~/.skogai \u2192 /path/to/.skogai` for dogfooding)\n\n## Notes\n\n* Must be idempotent (safe to run multiple times)\n* No absolute paths \u2014 derive from script location",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Bootstrap scripts for initializing \"},{\"type\":\"text\",\"text\":\".skogai/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" in a new consumer project and for the dogfooding symlink mode.\"}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"d385ebc6-b9c0-4443-b3c8-cd5dc8d9af6d\"},\"content\":[{\"type\":\"text\",\"text\":\"What\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"bootstrap.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \u2014 one-shot init: creates missing dirs, \"},{\"type\":\"text\",\"text\":\".gitkeep\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" files, runs \"},{\"type\":\"text\",\"text\":\"symlink.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"consumer-init.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \u2014 post-submodule-add setup for consumer projects\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"symlink.sh\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \u2014 wires up symlinks (e.g. \"},{\"type\":\"text\",\"text\":\"~/.skogai \u2192 /path/to/.skogai\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" for dogfooding)\"}]}]}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"6a30339a-a47d-4635-ac2f-ec87c7663411\"},\"content\":[{\"type\":\"text\",\"text\":\"Notes\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Must be idempotent (safe to run multiple times)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"No absolute paths \u2014 derive from script location\"}]}]}]}]}"
+    },
+    "updatedFrom": {
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "sortOrder": -12166,
+      "updatedAt": "2026-04-18T14:06:57.142Z"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-168/feat-scriptsbootstrap-init-and-symlink-setup",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776595617412,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

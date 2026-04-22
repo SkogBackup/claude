@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-04-19T10:54:26.592751+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-19T09:47:48.596Z",
+    "data": {
+      "id": "04c23d0a-4e1d-4365-ab03-b8741ff6a328",
+      "createdAt": "2026-02-06T10:51:40.000Z",
+      "updatedAt": "2026-04-19T09:47:48.595Z",
+      "number": 135,
+      "title": "Set up .skogai symlinks and integrations",
+      "priority": 0,
+      "sortOrder": -120630.01,
+      "prioritySortOrder": 0,
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-17T13:46:21.147Z",
+      "labelIds": [
+        "5a4f1c12-cb7e-4e00-848f-deb65f7dbb16",
+        "28b300cc-462c-4f2f-8fda-b92979fb9f29"
+      ],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+      "reactionData": [],
+      "priorityLabel": "No priority",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-135",
+      "url": "https://linear.app/skogai/issue/SKO-135/set-up-skogai-symlinks-and-integrations",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+        "color": "#e2e2e2",
+        "name": "Todo",
+        "type": "unstarted"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [
+        {
+          "id": "28b300cc-462c-4f2f-8fda-b92979fb9f29",
+          "color": "#4EA7FC",
+          "name": "Migrated"
+        },
+        {
+          "id": "5a4f1c12-cb7e-4e00-848f-deb65f7dbb16",
+          "color": "#0E8A16",
+          "name": "setup"
+        }
+      ],
+      "description": "Connect .skogai directories to where they need to be accessible.\n\nDone:\n\n- [X] .skogai/skills \u2192 .claude/skills\n- [X] .skogai/.envrc \u2192 .envrc (direnv, adds .skogai/bin to PATH)\n- [X] bin/ symlink (skogai-todo accessible)\n- [X] tasks/ symlink\n\nRemaining (depends on audit findings):\n\n- [ ] Identify which other .skogai directories need symlinks\n- [ ] Determine correct symlink targets for each\n- [ ] Verify all symlinks resolve correctly (relative path gotcha)",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Connect .skogai directories to where they need to be accessible.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Done:\"}]},{\"type\":\"todo_list\",\"content\":[{\"type\":\"todo_item\",\"attrs\":{\"done\":true},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\".skogai/skills \u2192 .claude/skills\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":true},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\".skogai/.envrc \u2192 .envrc (direnv, adds .skogai/bin to PATH)\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":true},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"bin/ symlink (skogai-todo accessible)\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":true},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"tasks/ symlink\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Remaining (depends on audit findings):\"}]},{\"type\":\"todo_list\",\"content\":[{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Identify which other .skogai directories need symlinks\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Determine correct symlink targets for each\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Verify all symlinks resolve correctly (relative path gotcha)\"}]}]}]}]}"
+    },
+    "updatedFrom": {
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "sortOrder": 0,
+      "updatedAt": "2026-02-06T10:51:40.000Z"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-135/set-up-skogai-symlinks-and-integrations",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776596066523,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-04-19T12:12:40.277053+00:00",
+  "payload": {
+    "action": "update",
+    "actor": null,
+    "createdAt": "2026-04-19T12:12:39.591Z",
+    "data": {
+      "id": "7182e899-7e78-4cc3-904b-91d31ccfc14d",
+      "createdAt": "2026-04-19T12:10:19.955Z",
+      "updatedAt": "2026-04-19T12:12:39.590Z",
+      "name": "area/web-chat",
+      "description": "Old web/chat application feature backlog imported from markdown todos.",
+      "color": "#1D76DB",
+      "isGroup": false,
+      "lastAppliedAt": "2026-04-19T12:12:39.341Z",
+      "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+    },
+    "updatedFrom": {
+      "updatedAt": "2026-04-19T12:12:27.723Z",
+      "lastAppliedAt": "2026-04-19T12:11:37.412Z"
+    },
+    "url": "https://linear.app/skogai/team/SKO/issue-label/area%2Fweb-chat",
+    "type": "IssueLabel",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776600760213,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

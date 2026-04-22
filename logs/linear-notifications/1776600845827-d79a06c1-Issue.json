@@ -1,0 +1,104 @@
+{
+  "timestamp": "2026-04-19T12:14:05.827924+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-19T12:14:05.486Z",
+    "data": {
+      "id": "073f2816-9ff3-4131-90d6-57cbf76f9380",
+      "createdAt": "2025-11-16T04:11:59.000Z",
+      "updatedAt": "2026-04-19T12:14:05.486Z",
+      "number": 58,
+      "title": "Add CI/CD pipeline",
+      "priority": 0,
+      "sortOrder": -20018,
+      "prioritySortOrder": 0.6668920809336928,
+      "canceledAt": "2026-04-19T12:14:05.476Z",
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-17T13:46:14.125Z",
+      "labelIds": [
+        "7182e899-7e78-4cc3-904b-91d31ccfc14d",
+        "7495c792-adf0-4878-87ab-b50e3d6be0db",
+        "f17da3a6-f717-4d22-b88e-06a0f76bedc2",
+        "e5956c43-1a9b-4bb9-b1f4-4937386edca7",
+        "28b300cc-462c-4f2f-8fda-b92979fb9f29"
+      ],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "604d0805-43ec-4e33-93ee-48994510987c",
+      "reactionData": [],
+      "priorityLabel": "No priority",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-58",
+      "url": "https://linear.app/skogai/issue/SKO-58/add-cicd-pipeline",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "604d0805-43ec-4e33-93ee-48994510987c",
+        "color": "#95a2b3",
+        "name": "Duplicate",
+        "type": "canceled"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [
+        {
+          "id": "28b300cc-462c-4f2f-8fda-b92979fb9f29",
+          "color": "#4EA7FC",
+          "name": "Migrated"
+        },
+        {
+          "id": "f17da3a6-f717-4d22-b88e-06a0f76bedc2",
+          "color": "#5319E7",
+          "name": "ci/cd"
+        },
+        {
+          "id": "e5956c43-1a9b-4bb9-b1f4-4937386edca7",
+          "color": "#006B75",
+          "name": "devops"
+        },
+        {
+          "id": "7182e899-7e78-4cc3-904b-91d31ccfc14d",
+          "color": "#1D76DB",
+          "name": "area/web-chat"
+        },
+        {
+          "id": "7495c792-adf0-4878-87ab-b50e3d6be0db",
+          "color": "#BFD4F2",
+          "name": "triage/duplicate"
+        }
+      ],
+      "description": "**Labels:** `ci/cd`, `devops`\n\n**Description:**\nSet up automated testing and deployment pipeline with GitHub Actions.\n\n**Proposed Solution:**\nCreate GitHub Actions workflows for testing, building, and deployment.\n\n**Workflows:**\n\n1. **Test** - Run on all PRs\n2. **Deploy Preview** - Deploy preview on PR\n3. **Deploy Production** - Deploy on merge to main\n4. **Security Scan** - Weekly dependency audit\n\n**Acceptance Criteria:**\n\n- [ ] Tests run automatically on PR\n- [ ] Preview deployments created for PRs\n- [ ] Auto-deploy to production on merge\n- [ ] Security scanning enabled\n- [ ] Deploy notifications (Slack/Discord)\n\n**Technical Considerations:**\n\n* Create .github/workflows/ directory\n* Use wrangler GitHub Action\n* Set up Cloudflare secrets in GitHub\n* Add status badges to README\n* Configure branch protection rules\n\n**Effort & Value Ranking:**\n\n* \u23f1\ufe0f Time: **Medium** (GitHub Actions setup, workflow configuration, secrets management)\n* \ud83e\udde9 Complexity: **Medium** (workflow orchestration, deployment automation, secret management)\n* \ud83d\udc8e Value: **High** (essential for professional development workflow, enables automation and confidence)",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Labels:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \"},{\"type\":\"text\",\"text\":\"ci/cd\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", \"},{\"type\":\"text\",\"text\":\"devops\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Description:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"hard_break\"},{\"type\":\"text\",\"text\":\"Set up automated testing and deployment pipeline with GitHub Actions.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Proposed Solution:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"hard_break\"},{\"type\":\"text\",\"text\":\"Create GitHub Actions workflows for testing, building, and deployment.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Workflows:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"ordered_list\",\"attrs\":{\"order\":1},\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Test\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" - Run on all PRs\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Deploy Preview\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" - Deploy preview on PR\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Deploy Production\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" - Deploy on merge to main\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Security Scan\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" - Weekly dependency audit\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Acceptance Criteria:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"todo_list\",\"content\":[{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Tests run automatically on PR\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Preview deployments created for PRs\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Auto-deploy to production on merge\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Security scanning enabled\"}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Deploy notifications (Slack/Discord)\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Technical Considerations:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Create .github/workflows/ directory\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Use wrangler GitHub Action\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Set up Cloudflare secrets in GitHub\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Add status badges to README\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Configure branch protection rules\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Effort & Value Ranking:\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\u23f1\ufe0f Time: \"},{\"type\":\"text\",\"text\":\"Medium\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (GitHub Actions setup, workflow configuration, secrets management)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\ud83e\udde9 Complexity: \"},{\"type\":\"text\",\"text\":\"Medium\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (workflow orchestration, deployment automation, secret management)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"\ud83d\udc8e Value: \"},{\"type\":\"text\",\"text\":\"High\",\"marks\":[{\"type\":\"strong\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" (essential for professional development workflow, enables automation and confidence)\"}]}]}]}]}"
+    },
+    "updatedFrom": {
+      "stateId": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+      "labelIds": [
+        "f17da3a6-f717-4d22-b88e-06a0f76bedc2",
+        "e5956c43-1a9b-4bb9-b1f4-4937386edca7",
+        "28b300cc-462c-4f2f-8fda-b92979fb9f29"
+      ],
+      "sortOrder": -117758.29,
+      "updatedAt": "2026-04-19T09:52:19.670Z",
+      "canceledAt": null
+    },
+    "url": "https://linear.app/skogai/issue/SKO-58/add-cicd-pipeline",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776600845767,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

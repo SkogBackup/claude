@@ -1,0 +1,85 @@
+{
+  "timestamp": "2026-04-19T10:50:09.622220+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-19T09:47:49.107Z",
+    "data": {
+      "id": "b9198330-0fb6-43fd-b8e0-a429c7867f68",
+      "createdAt": "2026-04-17T13:50:17.016Z",
+      "updatedAt": "2026-04-19T09:47:49.107Z",
+      "number": 163,
+      "title": "feat: memory/ \u2014 session context and decision log",
+      "priority": 3,
+      "sortOrder": -135291.02,
+      "prioritySortOrder": -7004,
+      "slaType": "all",
+      "addedToProjectAt": "2026-04-17T13:50:17.050Z",
+      "addedToTeamAt": "2026-04-17T13:50:17.050Z",
+      "labelIds": [],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "projectId": "7e941c1b-5b57-4c97-af87-8cc08fdea539",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+      "subIssueSortOrder": 2120,
+      "reactionData": [],
+      "priorityLabel": "Medium",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-163",
+      "url": "https://linear.app/skogai/issue/SKO-163/feat-memory-session-context-and-decision-log",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "parentId": "94dc5a97-10ae-43de-95af-cc99f98741bd",
+      "project": {
+        "id": "7e941c1b-5b57-4c97-af87-8cc08fdea539",
+        "name": "SkogAI",
+        "url": "https://linear.app/skogai/project/skogai-08eb8e1f4091"
+      },
+      "state": {
+        "id": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+        "color": "#e2e2e2",
+        "name": "Todo",
+        "type": "unstarted"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "syncedWith": [
+        {
+          "id": "4283091962",
+          "service": "github",
+          "metadata": {
+            "repo": "claude",
+            "owner": "SkogAI",
+            "number": 28
+          }
+        }
+      ],
+      "labels": [],
+      "description": "Live project memory: what we're working on right now and a running log of decisions made.\n\n## Structure\n\n```\n.skogai/memory/\n\u251c\u2500\u2500 context/\n\u2502   \u2514\u2500\u2500 current.md   # always-loaded: current focus, active thread, blockers\n\u2514\u2500\u2500 decisions.md     # append-only log of decisions (quick, informal)\n```\n\n* `current.md` \u2014 the one file always injected into context. Short: what we're doing, what's next, what's blocked.\n* `decisions.md` \u2014 lightweight decision log (not full ADRs, just \"decided X because Y\")",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Live project memory: what we're working on right now and a running log of decisions made.\"}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"1596dccb-826b-4380-bc4d-a73199802a36\"},\"content\":[{\"type\":\"text\",\"text\":\"Structure\"}]},{\"type\":\"code_block\",\"attrs\":{\"id\":\"cc83e1bc-3f7e-4300-9e57-1f08e38e2675\"},\"content\":[{\"type\":\"text\",\"text\":\".skogai/memory/\\n\u251c\u2500\u2500 context/\\n\u2502   \u2514\u2500\u2500 current.md   # always-loaded: current focus, active thread, blockers\\n\u2514\u2500\u2500 decisions.md     # append-only log of decisions (quick, informal)\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"current.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \u2014 the one file always injected into context. Short: what we're doing, what's next, what's blocked.\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"decisions.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" \u2014 lightweight decision log (not full ADRs, just \\\"decided X because Y\\\")\"}]}]}]}]}"
+    },
+    "updatedFrom": {
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "sortOrder": -7094,
+      "updatedAt": "2026-04-19T04:57:26.789Z"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-163/feat-memory-session-context-and-decision-log",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776595809527,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

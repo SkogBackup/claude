@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-04-19T12:11:03.158651+00:00",
+  "payload": {
+    "action": "update",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-19T12:11:01.935Z",
+    "data": {
+      "id": "0fcf8926-aa0f-4a79-8b15-5139f17a2754",
+      "createdAt": "2026-03-20T12:54:59.000Z",
+      "updatedAt": "2026-04-19T12:11:01.934Z",
+      "number": 141,
+      "title": "Document and integrate all binary/script/executables into CLAUDE.md",
+      "priority": 0,
+      "sortOrder": -7050,
+      "prioritySortOrder": 0.6500796755320031,
+      "canceledAt": "2026-04-19T12:11:01.915Z",
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-17T13:46:21.482Z",
+      "labelIds": [
+        "fb26cb13-47ce-42af-a8e5-121331527dcd",
+        "7495c792-adf0-4878-87ab-b50e3d6be0db",
+        "28b300cc-462c-4f2f-8fda-b92979fb9f29"
+      ],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "604d0805-43ec-4e33-93ee-48994510987c",
+      "reactionData": [],
+      "priorityLabel": "No priority",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-141",
+      "url": "https://linear.app/skogai/issue/SKO-141/document-and-integrate-all-binaryscriptexecutables-into-claudemd",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "604d0805-43ec-4e33-93ee-48994510987c",
+        "color": "#95a2b3",
+        "name": "Duplicate",
+        "type": "canceled"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [
+        {
+          "id": "28b300cc-462c-4f2f-8fda-b92979fb9f29",
+          "color": "#4EA7FC",
+          "name": "Migrated"
+        },
+        {
+          "id": "fb26cb13-47ce-42af-a8e5-121331527dcd",
+          "color": "#0E8A16",
+          "name": "area/agent-home"
+        },
+        {
+          "id": "7495c792-adf0-4878-87ab-b50e3d6be0db",
+          "color": "#BFD4F2",
+          "name": "triage/duplicate"
+        }
+      ],
+      "description": "## Goal\n\nInform and add all binary/script/executables to [CLAUDE.md](<http://CLAUDE.md>) and create a milestone for implementation of each via GSD.\n\n## Context\n\nPromoted from GSD note (2026-03-20). Currently `bin/healthcheck` is the only documented script. The environment likely has more executables that should be discoverable.\n\n## Acceptance Criteria\n\n- [ ] All binary/script/executables in the environment are documented in [CLAUDE.md](<http://CLAUDE.md>)\n- [ ] A milestone is created via GSD for implementing each executable\n\n## Source\n\nGSD todo: `001-inform-add-binaries-executables`",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"02df1351-dc26-4a65-b6ee-f0356185c244\"},\"content\":[{\"type\":\"text\",\"text\":\"Goal\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Inform and add all binary/script/executables to \"},{\"type\":\"text\",\"text\":\"CLAUDE.md\",\"marks\":[{\"type\":\"link\",\"attrs\":{\"href\":\"http://CLAUDE.md\"}}]},{\"type\":\"text\",\"text\":\" and create a milestone for implementation of each via GSD.\"}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"3d117c10-1cf6-419b-ba5e-62ad212821e1\"},\"content\":[{\"type\":\"text\",\"text\":\"Context\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Promoted from GSD note (2026-03-20). Currently \"},{\"type\":\"text\",\"text\":\"bin/healthcheck\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" is the only documented script. The environment likely has more executables that should be discoverable.\"}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"af3c3ada-609a-4897-ac64-6dac4da55e0f\"},\"content\":[{\"type\":\"text\",\"text\":\"Acceptance Criteria\"}]},{\"type\":\"todo_list\",\"content\":[{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"All binary/script/executables in the environment are documented in \"},{\"type\":\"text\",\"text\":\"CLAUDE.md\",\"marks\":[{\"type\":\"link\",\"attrs\":{\"href\":\"http://CLAUDE.md\"}}]}]}]},{\"type\":\"todo_item\",\"attrs\":{\"done\":false},\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"A milestone is created via GSD for implementing each executable\"}]}]}]},{\"type\":\"heading\",\"attrs\":{\"level\":2,\"id\":\"d5d5986d-5c1d-4794-9f26-97bab884ed8a\"},\"content\":[{\"type\":\"text\",\"text\":\"Source\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"GSD todo: \"},{\"type\":\"text\",\"text\":\"001-inform-add-binaries-executables\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]}"
+    },
+    "updatedFrom": {
+      "stateId": "aabc7e7e-aeb7-4de6-9a43-92eaf5c1e263",
+      "labelIds": [
+        "28b300cc-462c-4f2f-8fda-b92979fb9f29"
+      ],
+      "sortOrder": -114728.66,
+      "updatedAt": "2026-04-19T09:52:19.620Z",
+      "canceledAt": null
+    },
+    "url": "https://linear.app/skogai/issue/SKO-141/document-and-integrate-all-binaryscriptexecutables-into-claudemd",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776600663095,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}
