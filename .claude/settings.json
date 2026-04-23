@@ -91,22 +91,15 @@
     "command": "command -v wt >/dev/null 2>&1 && wt list statusline --format=claude-code || git rev-parse --abbrev-ref HEAD 2>/dev/null || true"
   },
   "enabledPlugins": {
-    "frontend-design@claude-plugins-official": false,
-    "codex@openai-codex": false,
     "skogai-caveman@skogai-marketplace": true
   },
   "extraKnownMarketplaces": {
-    "claude-plugins-official": {
+    "skogai-marketplace": {
       "source": {
-        "source": "github",
-        "repo": "anthropics/claude-plugins-official"
-      }
-    },
-    "openai-codex": {
-      "source": {
-        "source": "github",
-        "repo": "openai/codex-plugin-cc"
-      }
+        "source": "git",
+        "url": "git@github.com:SkogAI/marketplace.git"
+      },
+      "autoUpdate": true
     }
   },
   "spinnerTipsEnabled": true,
@@ -124,8 +117,10 @@
   },
   "syntaxHighlightingDisabled": false,
   "alwaysThinkingEnabled": true,
+  "effortLevel": "medium",
   "advisorModel": "opus",
   "plansDirectory": "~/claude/.skogai/plans",
+  "tui": "fullscreen",
   "autoMemoryEnabled": true,
   "autoMemoryDirectory": "~/claude/.skogai/memory",
   "autoDreamEnabled": true,
