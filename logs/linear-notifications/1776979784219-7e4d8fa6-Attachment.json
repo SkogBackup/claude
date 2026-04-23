@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-04-23T21:29:44.219193+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "b9001d7d-c1e9-4482-b6ff-5367beec45a0",
+      "service": "github",
+      "type": "integration"
+    },
+    "createdAt": "2026-04-23T21:29:43.827Z",
+    "data": {
+      "id": "449e7480-13e0-4607-87c2-b52ea86be9e2",
+      "createdAt": "2026-04-23T21:29:43.827Z",
+      "updatedAt": "2026-04-23T21:29:43.827Z",
+      "title": "#65 audit: normalize skogai-caveman `project-planning` skill",
+      "url": "https://github.com/SkogAI/claude/issues/65",
+      "metadata": {
+        "id": 4319001664,
+        "title": "audit: normalize skogai-caveman `project-planning` skill"
+      },
+      "source": {
+        "type": "github",
+        "syncedCommentId": "2a2ceff2-df13-4886-815f-3702b1df18fe"
+      },
+      "sourceType": "github",
+      "groupBySource": false,
+      "issueId": "dc856538-56e9-4597-ac88-1608854f77c4"
+    },
+    "type": "Attachment",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979784146,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

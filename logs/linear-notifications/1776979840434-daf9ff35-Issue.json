@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-04-23T21:30:40.434181+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-23T21:30:39.360Z",
+    "data": {
+      "id": "9d67cb63-ea6e-40e7-8b56-dc9879881a38",
+      "createdAt": "2026-04-23T21:30:39.360Z",
+      "updatedAt": "2026-04-23T21:30:39.360Z",
+      "number": 205,
+      "title": "audit: refresh `CLAUDE.md` routing for skogai-caveman",
+      "priority": 2,
+      "sortOrder": -18629,
+      "prioritySortOrder": -146935,
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-23T21:30:39.626Z",
+      "labelIds": [],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "reactionData": [],
+      "priorityLabel": "High",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-205",
+      "url": "https://linear.app/skogai/issue/SKO-205/audit-refresh-claudemd-routing-for-skogai-caveman",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+        "color": "#bec2c8",
+        "name": "Backlog",
+        "type": "backlog"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [],
+      "description": "Repo: `/home/skogix/.local/src/marketplace/plugins/skogai-caveman`\n\nAudit and refresh the repo-root `CLAUDE.md` so it reflects the current skill inventory and routing model.\n\nKnown drift already visible:\n\n* it still references `project-vision` even though the repo now has `skills/skogai-vision/`\n* it should be checked against any new routing-file strategy for the repo\n\nScope:\n\n* update skill names and descriptions to match the current tree\n* keep routing concise and high-signal\n* ensure it points agents toward the right first artifacts and repo workflows\n\nDone when `CLAUDE.md` is an accurate current entrypoint for the repository.",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Repo: \"},{\"type\":\"text\",\"text\":\"/home/skogix/.local/src/marketplace/plugins/skogai-caveman\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Audit and refresh the repo-root \"},{\"type\":\"text\",\"text\":\"CLAUDE.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" so it reflects the current skill inventory and routing model.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Known drift already visible:\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"it still references \"},{\"type\":\"text\",\"text\":\"project-vision\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" even though the repo now has \"},{\"type\":\"text\",\"text\":\"skills/skogai-vision/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"it should be checked against any new routing-file strategy for the repo\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Scope:\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"update skill names and descriptions to match the current tree\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"keep routing concise and high-signal\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"ensure it points agents toward the right first artifacts and repo workflows\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Done when \"},{\"type\":\"text\",\"text\":\"CLAUDE.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" is an accurate current entrypoint for the repository.\"}]}]}"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-205/audit-refresh-claudemd-routing-for-skogai-caveman",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979840329,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-04-23T21:29:24.759888+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-23T21:29:24.080Z",
+    "data": {
+      "id": "97d41146-0fe7-4f61-af46-6a7e09e6a818",
+      "createdAt": "2026-04-23T21:29:24.080Z",
+      "updatedAt": "2026-04-23T21:29:24.080Z",
+      "number": 194,
+      "title": "audit: normalize skogai-caveman `autonomous-development` skill",
+      "priority": 3,
+      "sortOrder": -7784,
+      "prioritySortOrder": -146902,
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-23T21:29:24.110Z",
+      "labelIds": [],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "reactionData": [],
+      "priorityLabel": "Medium",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-194",
+      "url": "https://linear.app/skogai/issue/SKO-194/audit-normalize-skogai-caveman-autonomous-development-skill",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+        "color": "#bec2c8",
+        "name": "Backlog",
+        "type": "backlog"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [],
+      "description": "Repo: `/home/skogix/.local/src/marketplace/plugins/skogai-caveman`\n\nReview the repo-local `skills/autonomous-development/` skill and bring it in line with current SkogAI routing/skill conventions.\n\nScope:\n\n* audit `skills/autonomous-development/SKILL.md` and supporting files\n* verify the coordinator/sub-agent pattern is still coherent\n* check for stale path assumptions or outdated repo references\n* identify whether parts should move into workflows/references/templates for better progressive disclosure\n* align wording with current repo-local routing style\n\nDone when:\n\n* the skill has a clear issue owner/scope in Linear\n* gaps and normalization work are documented\n* follow-up implementation can update the skill without rediscovery",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Repo: \"},{\"type\":\"text\",\"text\":\"/home/skogix/.local/src/marketplace/plugins/skogai-caveman\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Review the repo-local \"},{\"type\":\"text\",\"text\":\"skills/autonomous-development/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" skill and bring it in line with current SkogAI routing/skill conventions.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Scope:\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"audit \"},{\"type\":\"text\",\"text\":\"skills/autonomous-development/SKILL.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" and supporting files\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"verify the coordinator/sub-agent pattern is still coherent\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"check for stale path assumptions or outdated repo references\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"identify whether parts should move into workflows/references/templates for better progressive disclosure\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"align wording with current repo-local routing style\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Done when:\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"the skill has a clear issue owner/scope in Linear\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"gaps and normalization work are documented\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"follow-up implementation can update the skill without rediscovery\"}]}]}]}]}"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-194/audit-normalize-skogai-caveman-autonomous-development-skill",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979764580,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

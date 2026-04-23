@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-04-23T21:30:50.104199+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "b9001d7d-c1e9-4482-b6ff-5367beec45a0",
+      "service": "github",
+      "type": "integration"
+    },
+    "createdAt": "2026-04-23T21:30:49.548Z",
+    "data": {
+      "id": "8139d70c-09e3-4420-81fc-9aa47a27f5a6",
+      "createdAt": "2026-04-23T21:30:49.548Z",
+      "updatedAt": "2026-04-23T21:30:49.548Z",
+      "title": "#74 feat: add `SKOGAI.md` root routing file to skogai-caveman",
+      "url": "https://github.com/SkogAI/claude/issues/74",
+      "metadata": {
+        "id": 4319007321,
+        "title": "feat: add `SKOGAI.md` root routing file to skogai-caveman"
+      },
+      "source": {
+        "type": "github",
+        "syncedCommentId": "06d790ce-aa4b-4c10-9182-6b3c190ca33e"
+      },
+      "sourceType": "github",
+      "groupBySource": false,
+      "issueId": "2daf6906-c15b-4fcc-9059-81ecded49df6"
+    },
+    "type": "Attachment",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979850036,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

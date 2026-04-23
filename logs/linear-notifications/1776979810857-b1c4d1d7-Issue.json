@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-04-23T21:30:10.857110+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-23T21:30:09.958Z",
+    "data": {
+      "id": "87ce2b17-652b-4b45-bafa-47ae4c2de524",
+      "createdAt": "2026-04-23T21:30:09.958Z",
+      "updatedAt": "2026-04-23T21:30:09.958Z",
+      "number": 201,
+      "title": "audit: normalize skogai-caveman `create-new-skill` skill",
+      "priority": 3,
+      "sortOrder": -14666,
+      "prioritySortOrder": -146929,
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-23T21:30:10.010Z",
+      "labelIds": [],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "reactionData": [],
+      "priorityLabel": "Medium",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-201",
+      "url": "https://linear.app/skogai/issue/SKO-201/audit-normalize-skogai-caveman-create-new-skill-skill",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+        "color": "#bec2c8",
+        "name": "Backlog",
+        "type": "backlog"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [],
+      "description": "Repo: `/home/skogix/.local/src/marketplace/plugins/skogai-caveman`\n\nAudit `skills/create-new-skill/` against current SkogAI skill-authoring conventions.\n\nScope:\n\n* review whether this skill overlaps with newer router-based skill-authoring patterns\n* identify stale structure, wording, or path assumptions\n* capture whether it should stay as-is, be modernized, or be retired in favor of newer routing\n\nDone when the repo-local backlog for this skill is explicit.",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Repo: \"},{\"type\":\"text\",\"text\":\"/home/skogix/.local/src/marketplace/plugins/skogai-caveman\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Audit \"},{\"type\":\"text\",\"text\":\"skills/create-new-skill/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" against current SkogAI skill-authoring conventions.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Scope:\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"review whether this skill overlaps with newer router-based skill-authoring patterns\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"identify stale structure, wording, or path assumptions\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"capture whether it should stay as-is, be modernized, or be retired in favor of newer routing\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Done when the repo-local backlog for this skill is explicit.\"}]}]}"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-201/audit-normalize-skogai-caveman-create-new-skill-skill",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979810785,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

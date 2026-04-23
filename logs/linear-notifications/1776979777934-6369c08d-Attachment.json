@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-04-23T21:29:37.934256+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "b9001d7d-c1e9-4482-b6ff-5367beec45a0",
+      "service": "github",
+      "type": "integration"
+    },
+    "createdAt": "2026-04-23T21:29:37.431Z",
+    "data": {
+      "id": "453a7ad9-6e0b-45bc-9c5c-d852fe4efbd5",
+      "createdAt": "2026-04-23T21:29:37.431Z",
+      "updatedAt": "2026-04-23T21:29:37.431Z",
+      "title": "#64 audit: normalize skogai-caveman `test-driven-development` skill",
+      "url": "https://github.com/SkogAI/claude/issues/64",
+      "metadata": {
+        "id": 4319001241,
+        "title": "audit: normalize skogai-caveman `test-driven-development` skill"
+      },
+      "source": {
+        "type": "github",
+        "syncedCommentId": "8d785015-04ee-407e-adc4-d1ac3c58af8d"
+      },
+      "sourceType": "github",
+      "groupBySource": false,
+      "issueId": "c3209aa8-71dd-44e4-a4ff-68cf4a8052f9"
+    },
+    "type": "Attachment",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979777844,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

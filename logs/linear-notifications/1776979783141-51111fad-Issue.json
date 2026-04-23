@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-04-23T21:29:43.141883+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-23T21:29:42.552Z",
+    "data": {
+      "id": "dc856538-56e9-4597-ac88-1608854f77c4",
+      "createdAt": "2026-04-23T21:29:42.552Z",
+      "updatedAt": "2026-04-23T21:29:42.552Z",
+      "number": 197,
+      "title": "audit: normalize skogai-caveman `project-planning` skill",
+      "priority": 2,
+      "sortOrder": -10714,
+      "prioritySortOrder": -146937,
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-23T21:29:42.577Z",
+      "labelIds": [],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "reactionData": [],
+      "priorityLabel": "High",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-197",
+      "url": "https://linear.app/skogai/issue/SKO-197/audit-normalize-skogai-caveman-project-planning-skill",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+        "color": "#bec2c8",
+        "name": "Backlog",
+        "type": "backlog"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [],
+      "description": "Repo: `/home/skogix/.local/src/marketplace/plugins/skogai-caveman`\n\nAudit `skills/project-planning/` and capture the remaining normalization work.\n\nScope:\n\n* review `SKILL.md` plus `templates/verification.md`\n* verify the research-first / interview-only-when-needed workflow is still structurally clear\n* check for opportunities to route more cleanly via workflows/references/templates\n* align project-planning with the repo-local vision-first flow\n* capture any stale paths or naming drift\n\nDone when the remaining work is clear enough to implement directly from the issue.",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Repo: \"},{\"type\":\"text\",\"text\":\"/home/skogix/.local/src/marketplace/plugins/skogai-caveman\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Audit \"},{\"type\":\"text\",\"text\":\"skills/project-planning/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" and capture the remaining normalization work.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Scope:\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"review \"},{\"type\":\"text\",\"text\":\"SKILL.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" plus \"},{\"type\":\"text\",\"text\":\"templates/verification.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"verify the research-first / interview-only-when-needed workflow is still structurally clear\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"check for opportunities to route more cleanly via workflows/references/templates\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"align project-planning with the repo-local vision-first flow\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"capture any stale paths or naming drift\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Done when the remaining work is clear enough to implement directly from the issue.\"}]}]}"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-197/audit-normalize-skogai-caveman-project-planning-skill",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979783075,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

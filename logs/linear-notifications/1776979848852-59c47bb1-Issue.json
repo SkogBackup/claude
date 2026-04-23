@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-04-23T21:30:48.852614+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-23T21:30:48.231Z",
+    "data": {
+      "id": "2daf6906-c15b-4fcc-9059-81ecded49df6",
+      "createdAt": "2026-04-23T21:30:48.231Z",
+      "updatedAt": "2026-04-23T21:30:48.231Z",
+      "number": 206,
+      "title": "feat: add `SKOGAI.md` root routing file to skogai-caveman",
+      "priority": 2,
+      "sortOrder": -19656,
+      "prioritySortOrder": -146862,
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-23T21:30:48.259Z",
+      "labelIds": [],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "reactionData": [],
+      "priorityLabel": "High",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-206",
+      "url": "https://linear.app/skogai/issue/SKO-206/feat-add-skogaimd-root-routing-file-to-skogai-caveman",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+        "color": "#bec2c8",
+        "name": "Backlog",
+        "type": "backlog"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [],
+      "description": "Repo: `/home/skogix/.local/src/marketplace/plugins/skogai-caveman`\n\nThis repo does not currently have a root `SKOGAI.md`.\n\nScope:\n\n* decide what repo-local routing/context belongs in `SKOGAI.md`\n* add the file at repo root if it adds value distinct from `CLAUDE.md` and `AGENTS.md`\n* keep the file focused on SkogAI-specific routing rather than duplicating full documentation\n* ensure the three root routing files have clear, non-overlapping roles\n\nDone when the repo has a justified `SKOGAI.md` with a clear routing purpose.",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Repo: \"},{\"type\":\"text\",\"text\":\"/home/skogix/.local/src/marketplace/plugins/skogai-caveman\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"This repo does not currently have a root \"},{\"type\":\"text\",\"text\":\"SKOGAI.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\".\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Scope:\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"decide what repo-local routing/context belongs in \"},{\"type\":\"text\",\"text\":\"SKOGAI.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"add the file at repo root if it adds value distinct from \"},{\"type\":\"text\",\"text\":\"CLAUDE.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" and \"},{\"type\":\"text\",\"text\":\"AGENTS.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"keep the file focused on SkogAI-specific routing rather than duplicating full documentation\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"ensure the three root routing files have clear, non-overlapping roles\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Done when the repo has a justified \"},{\"type\":\"text\",\"text\":\"SKOGAI.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" with a clear routing purpose.\"}]}]}"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-206/feat-add-skogaimd-root-routing-file-to-skogai-caveman",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979848785,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

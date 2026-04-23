@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-04-23T21:30:25.823169+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-23T21:30:24.806Z",
+    "data": {
+      "id": "cf780e90-9090-4849-a726-04be3d201c27",
+      "createdAt": "2026-04-23T21:30:24.806Z",
+      "updatedAt": "2026-04-23T21:30:24.806Z",
+      "number": 203,
+      "title": "audit: normalize skogai-caveman `skogai-vision` skill and naming",
+      "priority": 2,
+      "sortOrder": -16741,
+      "prioritySortOrder": -146916,
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-23T21:30:24.849Z",
+      "labelIds": [],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "reactionData": [],
+      "priorityLabel": "High",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-203",
+      "url": "https://linear.app/skogai/issue/SKO-203/audit-normalize-skogai-caveman-skogai-vision-skill-and-naming",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+        "color": "#bec2c8",
+        "name": "Backlog",
+        "type": "backlog"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [],
+      "description": "Repo: `/home/skogix/.local/src/marketplace/plugins/skogai-caveman`\n\nThe repo now contains `skills/skogai-vision/`, while `README.md` and `CLAUDE.md` still refer to `project-vision`.\n\nScope:\n\n* audit `skills/skogai-vision/` including workflows, references, and template\n* resolve naming drift between `skogai-vision` and `project-vision`\n* ensure this skill is treated as the first planning artifact (`docs/VISION.md` before deeper planning)\n* update any dependent docs or routing references as needed\n\nDone when the vision skill and its naming are internally consistent across the repo.",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Repo: \"},{\"type\":\"text\",\"text\":\"/home/skogix/.local/src/marketplace/plugins/skogai-caveman\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"The repo now contains \"},{\"type\":\"text\",\"text\":\"skills/skogai-vision/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\", while \"},{\"type\":\"text\",\"text\":\"README.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" and \"},{\"type\":\"text\",\"text\":\"CLAUDE.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" still refer to \"},{\"type\":\"text\",\"text\":\"project-vision\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\".\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Scope:\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"audit \"},{\"type\":\"text\",\"text\":\"skills/skogai-vision/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" including workflows, references, and template\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"resolve naming drift between \"},{\"type\":\"text\",\"text\":\"skogai-vision\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" and \"},{\"type\":\"text\",\"text\":\"project-vision\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"ensure this skill is treated as the first planning artifact (\"},{\"type\":\"text\",\"text\":\"docs/VISION.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" before deeper planning)\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"update any dependent docs or routing references as needed\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Done when the vision skill and its naming are internally consistent across the repo.\"}]}]}"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-203/audit-normalize-skogai-caveman-skogai-vision-skill-and-naming",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979825746,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

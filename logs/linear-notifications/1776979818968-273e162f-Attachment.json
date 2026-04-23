@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-04-23T21:30:18.968877+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "b9001d7d-c1e9-4482-b6ff-5367beec45a0",
+      "service": "github",
+      "type": "integration"
+    },
+    "createdAt": "2026-04-23T21:30:18.435Z",
+    "data": {
+      "id": "25148215-33ce-4cce-95cd-4a4abf85ae20",
+      "createdAt": "2026-04-23T21:30:18.435Z",
+      "updatedAt": "2026-04-23T21:30:18.435Z",
+      "title": "#70 audit: normalize skogai-caveman `using-tickets` skill",
+      "url": "https://github.com/SkogAI/claude/issues/70",
+      "metadata": {
+        "id": 4319004664,
+        "title": "audit: normalize skogai-caveman `using-tickets` skill"
+      },
+      "source": {
+        "type": "github",
+        "syncedCommentId": "f7156106-100a-4c76-8005-7325276a4f20"
+      },
+      "sourceType": "github",
+      "groupBySource": false,
+      "issueId": "12bb7dc7-c1c9-4fa4-9dfc-fdc16774ba92"
+    },
+    "type": "Attachment",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979818900,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

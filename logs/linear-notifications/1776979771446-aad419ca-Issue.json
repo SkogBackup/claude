@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-04-23T21:29:31.446516+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-23T21:29:30.943Z",
+    "data": {
+      "id": "010e033b-595a-43c9-ae1f-0720bf985eb4",
+      "createdAt": "2026-04-23T21:29:30.943Z",
+      "updatedAt": "2026-04-23T21:29:30.943Z",
+      "number": 195,
+      "title": "audit: normalize skogai-caveman `adversarial-review` skill",
+      "priority": 3,
+      "sortOrder": -8828,
+      "prioritySortOrder": -146855,
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-23T21:29:30.963Z",
+      "labelIds": [],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "reactionData": [],
+      "priorityLabel": "Medium",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-195",
+      "url": "https://linear.app/skogai/issue/SKO-195/audit-normalize-skogai-caveman-adversarial-review-skill",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+        "color": "#bec2c8",
+        "name": "Backlog",
+        "type": "backlog"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [],
+      "description": "Repo: `/home/skogix/.local/src/marketplace/plugins/skogai-caveman`\n\nAudit `skills/adversarial-review/SKILL.md` against the current repo-local skill quality bar.\n\nScope:\n\n* review routing clarity and structure\n* check for stale assumptions, legacy paths, or drift from repo conventions\n* ensure downstream use from the autonomous loop is clear\n* document any missing references/templates/scripts that would reduce monolithic [SKILL.md](<http://SKILL.md>) content\n\nDone when the remaining cleanup and normalization work for this skill is clearly captured.",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Repo: \"},{\"type\":\"text\",\"text\":\"/home/skogix/.local/src/marketplace/plugins/skogai-caveman\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Audit \"},{\"type\":\"text\",\"text\":\"skills/adversarial-review/SKILL.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" against the current repo-local skill quality bar.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Scope:\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"review routing clarity and structure\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"check for stale assumptions, legacy paths, or drift from repo conventions\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"ensure downstream use from the autonomous loop is clear\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"document any missing references/templates/scripts that would reduce monolithic \"},{\"type\":\"text\",\"text\":\"SKILL.md\",\"marks\":[{\"type\":\"link\",\"attrs\":{\"href\":\"http://SKILL.md\"}}]},{\"type\":\"text\",\"text\":\" content\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Done when the remaining cleanup and normalization work for this skill is clearly captured.\"}]}]}"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-195/audit-normalize-skogai-caveman-adversarial-review-skill",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979771337,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

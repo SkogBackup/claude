@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-04-23T21:29:50.341852+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "b9001d7d-c1e9-4482-b6ff-5367beec45a0",
+      "service": "github",
+      "type": "integration"
+    },
+    "createdAt": "2026-04-23T21:29:49.606Z",
+    "data": {
+      "id": "89f3b2f3-da24-40fe-ad03-85a338df50bd",
+      "createdAt": "2026-04-23T21:29:49.606Z",
+      "updatedAt": "2026-04-23T21:29:49.606Z",
+      "title": "#66 audit: normalize skogai-caveman `reviewing-plans` skill",
+      "url": "https://github.com/SkogAI/claude/issues/66",
+      "metadata": {
+        "id": 4319002218,
+        "title": "audit: normalize skogai-caveman `reviewing-plans` skill"
+      },
+      "source": {
+        "type": "github",
+        "syncedCommentId": "8a1a6e05-e3f6-4980-b37d-e99a8097d612"
+      },
+      "sourceType": "github",
+      "groupBySource": false,
+      "issueId": "59c7707d-b762-4e64-b222-df3ea7670c29"
+    },
+    "type": "Attachment",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979790270,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

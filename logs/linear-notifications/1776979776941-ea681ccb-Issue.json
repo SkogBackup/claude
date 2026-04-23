@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-04-23T21:29:36.941455+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-23T21:29:36.582Z",
+    "data": {
+      "id": "c3209aa8-71dd-44e4-a4ff-68cf4a8052f9",
+      "createdAt": "2026-04-23T21:29:36.582Z",
+      "updatedAt": "2026-04-23T21:29:36.582Z",
+      "number": 196,
+      "title": "audit: normalize skogai-caveman `test-driven-development` skill",
+      "priority": 3,
+      "sortOrder": -9776,
+      "prioritySortOrder": -146842,
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-23T21:29:36.608Z",
+      "labelIds": [],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "reactionData": [],
+      "priorityLabel": "Medium",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-196",
+      "url": "https://linear.app/skogai/issue/SKO-196/audit-normalize-skogai-caveman-test-driven-development-skill",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+        "color": "#bec2c8",
+        "name": "Backlog",
+        "type": "backlog"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [],
+      "description": "Repo: `/home/skogix/.local/src/marketplace/plugins/skogai-caveman`\n\nCreate a focused issue for `skills/test-driven-development/`.\n\nScope:\n\n* audit `SKILL.md` structure and wording\n* verify the red-green-refactor guidance is still crisp and executable\n* check for stale repo references or missing supporting assets\n* identify whether the skill should be partially split into workflows/references/templates\n\nDone when the repo-local work needed to normalize this skill is documented.",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Repo: \"},{\"type\":\"text\",\"text\":\"/home/skogix/.local/src/marketplace/plugins/skogai-caveman\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Create a focused issue for \"},{\"type\":\"text\",\"text\":\"skills/test-driven-development/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\".\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Scope:\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"audit \"},{\"type\":\"text\",\"text\":\"SKILL.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" structure and wording\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"verify the red-green-refactor guidance is still crisp and executable\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"check for stale repo references or missing supporting assets\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"identify whether the skill should be partially split into workflows/references/templates\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Done when the repo-local work needed to normalize this skill is documented.\"}]}]}"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-196/audit-normalize-skogai-caveman-test-driven-development-skill",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979776841,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

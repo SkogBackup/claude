@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-04-23T21:29:56.354882+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-23T21:29:55.330Z",
+    "data": {
+      "id": "9d454d7b-2686-4ee4-ad21-69abe4c8e1d8",
+      "createdAt": "2026-04-23T21:29:55.330Z",
+      "updatedAt": "2026-04-23T21:29:55.330Z",
+      "number": 199,
+      "title": "audit: normalize skogai-caveman `plan-to-tickets` skill",
+      "priority": 3,
+      "sortOrder": -12689,
+      "prioritySortOrder": -147003,
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-23T21:29:55.372Z",
+      "labelIds": [],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "reactionData": [],
+      "priorityLabel": "Medium",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-199",
+      "url": "https://linear.app/skogai/issue/SKO-199/audit-normalize-skogai-caveman-plan-to-tickets-skill",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+        "color": "#bec2c8",
+        "name": "Backlog",
+        "type": "backlog"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [],
+      "description": "Repo: `/home/skogix/.local/src/marketplace/plugins/skogai-caveman`\n\nCreate the backlog item for `skills/plan-to-tickets/`.\n\nScope:\n\n* audit `SKILL.md` against current repo-local skill conventions\n* verify ticket output expectations still match how the autonomous loop consumes work\n* check for stale assumptions, legacy references, or missing support assets\n* capture any routing or structural cleanup needed\n\nDone when the remaining normalization work is documented in a single issue.",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Repo: \"},{\"type\":\"text\",\"text\":\"/home/skogix/.local/src/marketplace/plugins/skogai-caveman\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Create the backlog item for \"},{\"type\":\"text\",\"text\":\"skills/plan-to-tickets/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\".\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Scope:\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"audit \"},{\"type\":\"text\",\"text\":\"SKILL.md\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" against current repo-local skill conventions\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"verify ticket output expectations still match how the autonomous loop consumes work\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"check for stale assumptions, legacy references, or missing support assets\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"capture any routing or structural cleanup needed\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Done when the remaining normalization work is documented in a single issue.\"}]}]}"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-199/audit-normalize-skogai-caveman-plan-to-tickets-skill",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979796211,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

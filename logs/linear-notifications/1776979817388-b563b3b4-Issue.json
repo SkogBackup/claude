@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-04-23T21:30:17.388082+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-23T21:30:16.996Z",
+    "data": {
+      "id": "12bb7dc7-c1c9-4fa4-9dfc-fdc16774ba92",
+      "createdAt": "2026-04-23T21:30:16.996Z",
+      "updatedAt": "2026-04-23T21:30:16.996Z",
+      "number": 202,
+      "title": "audit: normalize skogai-caveman `using-tickets` skill",
+      "priority": 3,
+      "sortOrder": -15705,
+      "prioritySortOrder": -147003,
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-23T21:30:17.035Z",
+      "labelIds": [],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "reactionData": [],
+      "priorityLabel": "Medium",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-202",
+      "url": "https://linear.app/skogai/issue/SKO-202/audit-normalize-skogai-caveman-using-tickets-skill",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+        "color": "#bec2c8",
+        "name": "Backlog",
+        "type": "backlog"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [],
+      "description": "Repo: `/home/skogix/.local/src/marketplace/plugins/skogai-caveman`\n\nCreate a focused issue for `skills/using-tickets/`.\n\nScope:\n\n* audit the ticket usage guidance against current `tk` expectations\n* check for outdated examples or assumptions\n* identify any routing/supporting-file cleanup needed\n* ensure the skill still fits the repo-local autonomous workflow cleanly\n\nDone when the remaining work is well scoped for implementation.",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Repo: \"},{\"type\":\"text\",\"text\":\"/home/skogix/.local/src/marketplace/plugins/skogai-caveman\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Create a focused issue for \"},{\"type\":\"text\",\"text\":\"skills/using-tickets/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\".\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Scope:\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"audit the ticket usage guidance against current \"},{\"type\":\"text\",\"text\":\"tk\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" expectations\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"check for outdated examples or assumptions\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"identify any routing/supporting-file cleanup needed\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"ensure the skill still fits the repo-local autonomous workflow cleanly\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Done when the remaining work is well scoped for implementation.\"}]}]}"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-202/audit-normalize-skogai-caveman-using-tickets-skill",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979817317,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

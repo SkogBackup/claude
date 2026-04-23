@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-04-23T21:30:05.534440+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "b9001d7d-c1e9-4482-b6ff-5367beec45a0",
+      "service": "github",
+      "type": "integration"
+    },
+    "createdAt": "2026-04-23T21:30:05.040Z",
+    "data": {
+      "id": "63e9b758-aa56-4f40-bbae-188c1d2a07b8",
+      "createdAt": "2026-04-23T21:30:05.040Z",
+      "updatedAt": "2026-04-23T21:30:05.040Z",
+      "title": "#68 audit: normalize skogai-caveman `investigate-blocker` skill",
+      "url": "https://github.com/SkogAI/claude/issues/68",
+      "metadata": {
+        "id": 4319003454,
+        "title": "audit: normalize skogai-caveman `investigate-blocker` skill"
+      },
+      "source": {
+        "type": "github",
+        "syncedCommentId": "175d2f97-940b-4f45-a268-82ee7169d37a"
+      },
+      "sourceType": "github",
+      "groupBySource": false,
+      "issueId": "d6b0497f-0080-415c-8820-ffcb212aa777"
+    },
+    "type": "Attachment",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979805439,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

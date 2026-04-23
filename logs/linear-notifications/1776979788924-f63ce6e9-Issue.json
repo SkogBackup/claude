@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-04-23T21:29:48.924059+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "name": "Emil Skogsund",
+      "email": "emil.skogsund@gmail.com",
+      "url": "https://linear.app/skogai/profiles/skogix",
+      "type": "user"
+    },
+    "createdAt": "2026-04-23T21:29:48.341Z",
+    "data": {
+      "id": "59c7707d-b762-4e64-b222-df3ea7670c29",
+      "createdAt": "2026-04-23T21:29:48.341Z",
+      "updatedAt": "2026-04-23T21:29:48.341Z",
+      "number": 198,
+      "title": "audit: normalize skogai-caveman `reviewing-plans` skill",
+      "priority": 3,
+      "sortOrder": -11750,
+      "prioritySortOrder": -146987,
+      "slaType": "all",
+      "addedToTeamAt": "2026-04-23T21:29:48.376Z",
+      "labelIds": [],
+      "teamId": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+      "previousIdentifiers": [],
+      "creatorId": "bd8e4951-8b83-4952-8fc5-09e9e6a61987",
+      "stateId": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+      "reactionData": [],
+      "priorityLabel": "Medium",
+      "inheritsSharedAccess": false,
+      "botActor": null,
+      "identifier": "SKO-198",
+      "url": "https://linear.app/skogai/issue/SKO-198/audit-normalize-skogai-caveman-reviewing-plans-skill",
+      "subscriberIds": [
+        "bd8e4951-8b83-4952-8fc5-09e9e6a61987"
+      ],
+      "state": {
+        "id": "e73b7eb6-5437-4323-ae2a-0c32926c5da8",
+        "color": "#bec2c8",
+        "name": "Backlog",
+        "type": "backlog"
+      },
+      "team": {
+        "id": "ac4c7f2d-98ae-438f-b85a-33374856fd1b",
+        "key": "SKO",
+        "name": "SkogAI"
+      },
+      "labels": [],
+      "description": "Repo: `/home/skogix/.local/src/marketplace/plugins/skogai-caveman`\n\nAudit `skills/reviewing-plans/` for repo-local skill consistency.\n\nScope:\n\n* review the plan-review workflow and expected inputs/outputs\n* check alignment with current planning and vision artifacts\n* identify stale path assumptions and structural cleanup opportunities\n* capture whether this should remain single-file or become more explicitly routed\n\nDone when the issue clearly describes the cleanup and normalization work still needed.",
+      "descriptionData": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Repo: \"},{\"type\":\"text\",\"text\":\"/home/skogix/.local/src/marketplace/plugins/skogai-caveman\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Audit \"},{\"type\":\"text\",\"text\":\"skills/reviewing-plans/\",\"marks\":[{\"type\":\"code\",\"attrs\":{}}]},{\"type\":\"text\",\"text\":\" for repo-local skill consistency.\"}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Scope:\"}]},{\"type\":\"bullet_list\",\"content\":[{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"review the plan-review workflow and expected inputs/outputs\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"check alignment with current planning and vision artifacts\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"identify stale path assumptions and structural cleanup opportunities\"}]}]},{\"type\":\"list_item\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"capture whether this should remain single-file or become more explicitly routed\"}]}]}]},{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Done when the issue clearly describes the cleanup and normalization work still needed.\"}]}]}"
+    },
+    "url": "https://linear.app/skogai/issue/SKO-198/audit-normalize-skogai-caveman-reviewing-plans-skill",
+    "type": "Issue",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979788806,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

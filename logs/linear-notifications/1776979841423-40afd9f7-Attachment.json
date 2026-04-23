@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-04-23T21:30:41.423177+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "b9001d7d-c1e9-4482-b6ff-5367beec45a0",
+      "service": "github",
+      "type": "integration"
+    },
+    "createdAt": "2026-04-23T21:30:41.060Z",
+    "data": {
+      "id": "9e68c5e1-2208-43df-926f-b0e599219ba6",
+      "createdAt": "2026-04-23T21:30:41.060Z",
+      "updatedAt": "2026-04-23T21:30:41.060Z",
+      "title": "#73 audit: refresh `CLAUDE.md` routing for skogai-caveman",
+      "url": "https://github.com/SkogAI/claude/issues/73",
+      "metadata": {
+        "id": 4319006499,
+        "title": "audit: refresh `CLAUDE.md` routing for skogai-caveman"
+      },
+      "source": {
+        "type": "github",
+        "syncedCommentId": "5dea99ba-ce72-470c-80a7-fa71ce9fa627"
+      },
+      "sourceType": "github",
+      "groupBySource": false,
+      "issueId": "9d67cb63-ea6e-40e7-8b56-dc9879881a38"
+    },
+    "type": "Attachment",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979841355,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}

@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-04-23T21:30:34.779701+00:00",
+  "payload": {
+    "action": "create",
+    "actor": {
+      "id": "b9001d7d-c1e9-4482-b6ff-5367beec45a0",
+      "service": "github",
+      "type": "integration"
+    },
+    "createdAt": "2026-04-23T21:30:34.060Z",
+    "data": {
+      "id": "aa9d6431-c6c5-4b9c-8e54-f6191add0244",
+      "createdAt": "2026-04-23T21:30:34.060Z",
+      "updatedAt": "2026-04-23T21:30:34.060Z",
+      "title": "#72 feat: add `AGENTS.md` routing file to skogai-caveman",
+      "url": "https://github.com/SkogAI/claude/issues/72",
+      "metadata": {
+        "id": 4319005939,
+        "title": "feat: add `AGENTS.md` routing file to skogai-caveman"
+      },
+      "source": {
+        "type": "github",
+        "syncedCommentId": "c99e1391-3d1d-4252-adc7-703bd192a8e5"
+      },
+      "sourceType": "github",
+      "groupBySource": false,
+      "issueId": "c3107fad-d76a-4ad5-80b0-12a4994ec718"
+    },
+    "type": "Attachment",
+    "organizationId": "b655a777-5904-4c64-a817-81f1a9779b8c",
+    "webhookTimestamp": 1776979834681,
+    "webhookId": "2a07b94c-07cb-4bfe-bf3b-7db3eafd830c"
+  },
+  "processed": false
+}
