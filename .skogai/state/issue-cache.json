@@ -158,145 +158,151 @@
   "https://github.com/SkogAI/claude/issues/22": {
     "state": "OPEN",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
     "updatedAt": "2026-04-17T13:49:55Z"
   },
   "https://github.com/SkogAI/claude/issues/23": {
     "state": "OPEN",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
     "updatedAt": "2026-04-17T13:49:59Z"
   },
   "https://github.com/SkogAI/claude/issues/24": {
     "state": "OPEN",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
     "updatedAt": "2026-04-17T13:50:02Z"
   },
   "https://github.com/SkogAI/claude/issues/25": {
-    "state": "OPEN",
+    "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
-    "updatedAt": "2026-04-17T13:50:06Z"
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:35:25Z"
   },
   "https://github.com/SkogAI/claude/issues/26": {
-    "state": "OPEN",
+    "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
-    "updatedAt": "2026-04-17T13:50:10Z"
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:32:49Z"
   },
   "https://github.com/SkogAI/claude/issues/27": {
-    "state": "OPEN",
+    "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
-    "updatedAt": "2026-04-18T16:04:57Z"
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:35:25Z"
   },
   "https://github.com/SkogAI/claude/issues/28": {
-    "state": "OPEN",
+    "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
-    "updatedAt": "2026-04-17T13:50:18Z"
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:32:49Z"
   },
   "https://github.com/SkogAI/claude/issues/29": {
-    "state": "OPEN",
+    "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
-    "updatedAt": "2026-04-17T13:50:20Z"
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:32:49Z"
   },
   "https://github.com/SkogAI/claude/issues/30": {
-    "state": "OPEN",
+    "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
-    "updatedAt": "2026-04-17T13:50:23Z"
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:32:49Z"
   },
   "https://github.com/SkogAI/claude/issues/31": {
-    "state": "OPEN",
+    "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
-    "updatedAt": "2026-04-17T13:50:28Z"
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:32:49Z"
   },
   "https://github.com/SkogAI/claude/issues/32": {
-    "state": "OPEN",
+    "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
-    "updatedAt": "2026-04-17T13:50:46Z"
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:35:33Z"
   },
   "https://github.com/SkogAI/claude/issues/33": {
-    "state": "OPEN",
+    "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
-    "updatedAt": "2026-04-17T13:50:50Z"
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:32:49Z"
   },
   "https://github.com/SkogAI/claude/issues/34": {
-    "state": "OPEN",
+    "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
-    "updatedAt": "2026-04-17T13:50:56Z"
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:32:49Z"
   },
   "https://github.com/SkogAI/claude/issues/35": {
-    "state": "OPEN",
+    "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
-    "updatedAt": "2026-04-17T13:50:57Z"
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:32:49Z"
   },
   "https://github.com/SkogAI/claude/issues/36": {
-    "state": "OPEN",
+    "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
-    "updatedAt": "2026-04-17T13:50:59Z"
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:32:49Z"
   },
   "https://github.com/SkogAI/claude/issues/37": {
-    "state": "OPEN",
+    "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
-    "updatedAt": "2026-04-17T13:51:03Z"
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:35:24Z"
   },
   "https://github.com/SkogAI/claude/issues/38": {
-    "state": "OPEN",
+    "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
-    "updatedAt": "2026-04-17T13:51:07Z"
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:32:49Z"
   },
   "https://github.com/SkogAI/claude/issues/39": {
     "state": "OPEN",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
     "updatedAt": "2026-04-17T13:51:11Z"
   },
   "https://github.com/SkogAI/claude/issues/40": {
     "state": "OPEN",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
     "updatedAt": "2026-04-17T13:51:15Z"
   },
   "https://github.com/SkogAI/claude/issues/41": {
     "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
     "updatedAt": "2026-04-18T05:58:59Z"
   },
   "https://github.com/SkogAI/claude/issues/43": {
     "state": "OPEN",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
     "updatedAt": "2026-04-18T14:06:29Z"
   },
   "https://github.com/SkogAI/claude/issues/44": {
     "state": "OPEN",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
     "updatedAt": "2026-04-18T14:06:43Z"
   },
   "https://github.com/SkogAI/claude/issues/45": {
     "state": "OPEN",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
     "updatedAt": "2026-04-18T14:10:41Z"
   },
   "https://github.com/SkogAI/claude/issues/46": {
-    "state": "OPEN",
+    "state": "CLOSED",
     "source": "github",
-    "last_fetched": "2026-04-19T03:36:51.386307+00:00",
-    "updatedAt": "2026-04-18T14:07:08Z"
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:32:49Z"
+  },
+  "https://github.com/small-hours-games/small-hours/issues/96": {
+    "state": "CLOSED",
+    "source": "github",
+    "last_fetched": "2026-04-23T10:17:42.350894+00:00",
+    "updatedAt": "2026-04-22T13:35:20Z"
   }
 }
