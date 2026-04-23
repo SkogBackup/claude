@@ -203,10 +203,9 @@
   "enabledPlugins": {
     "core@skogai-marketplace": false,
     "dreamers@skogai-marketplace": false,
-    "frontend-design@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": false,
     "worktrunk@worktrunk": true,
-    "codex@openai-codex": true,
-    "skogai-starter@skogai-marketplace": true
+    "codex@openai-codex": true
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
@@ -219,7 +218,8 @@
       "source": {
         "source": "git",
         "url": "git@github.com:SkogAI/marketplace.git"
-      }
+      },
+      "autoUpdate": true
     },
     "openai-codex": {
       "source": {
