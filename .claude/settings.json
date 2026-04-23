@@ -88,7 +88,8 @@
   },
   "enabledPlugins": {
     "frontend-design@claude-plugins-official": false,
-    "codex@openai-codex": false
+    "codex@openai-codex": false,
+    "agent-drugs@2389-research-marketplace": true
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
@@ -114,5 +115,23 @@
   "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,
   "skipAutoPermissionPrompt": true,
-  "defaultView": "transcript"
+  "defaultView": "transcript",
+  "attribution": {
+    "pr": "pr yao",
+    "commit": "commit yao"
+  },
+  "teammateMode": "tmux",
+  "plansDirectory": "~/claude/.skogai/plans",
+  "spinnerTipsOverride": {
+    "tips": [
+      "Analyzing the codebase... :mag:",
+      "Formulating a plan... :brain:",
+      "Executing the plan... :rocket:",
+      "Reviewing results... :eyes:",
+      "Consulting the drug database... :pill:",
+      "Evaluating drug interactions... :microscope:",
+      "Formulating treatment plan... :brain:",
+      "Reviewing medical guidelines... :book:"
+    ]
+  }
 }
