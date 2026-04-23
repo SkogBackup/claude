@@ -44,7 +44,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "\"$CLAUDE_PROJECT_DIR\"/claude-todo/bin/claude-md-linecheck",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.skogai/tools/claude-md-linecheck",
             "timeout": 10
           },
           {
@@ -105,7 +105,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "out=$(\"$CLAUDE_PROJECT_DIR\"/claude-todo/bin/healthcheck 2>&1); code=$?; if [ \"$code\" -ne 0 ]; then jq -nc --arg m \"$out\" '{\"systemMessage\":\"\u26a0 healthcheck failed\\n\\($m)\"}'; fi",
+            "command": "out=$(\"$CLAUDE_PROJECT_DIR\"/.skogai/tools/healthcheck 2>&1); code=$?; if [ \"$code\" -ne 0 ]; then jq -nc --arg m \"$out\" '{\"systemMessage\":\"\u26a0 healthcheck failed\\n\\($m)\"}'; fi",
             "timeout": 30
           }
         ]
