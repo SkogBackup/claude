@@ -1,8 +1,8 @@
 # this is WIP
 
-the whole .skogai/plan is work in progress
+the whole @.skogai/plan is work in progress
 
-will probably become something like "planning-with-files" ( @/home/skogix/claude/.skogai/skills/.dev-skogai/skogai-file-based-workflow/SKILL.md ) which is having three files you essentially _EDIT AND WRITE TO EVERY SINGLE MESSAGE_
+will probably become something like "skogai-file-based-workflow" ( @/home/skogix/claude/.skogai/skills/.dev-skogai/skogai-file-based-workflow/SKILL.md ) which is having three files you essentially _EDIT AND WRITE TO EVERY SINGLE MESSAGE_ combined with the old-school skogai-caveman ugga bugga-style
 
 if you read something, call a tool or do anything - then you write to one of those files in the same tool call _every single time_ - there is always a reason to write to one of those files, and if you didnt find a reason - that is something you should write down!
 
