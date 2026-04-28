@@ -6,40 +6,73 @@ permalink: claude/agents
 
 # AGENTS.md
 
-Codex/agent instructions for this repository.
+**Generated:** 2026-04-28T00:00:00+02:00
+**Commit:** c52cee0e
+**Branch:** master
 
-## Purpose
+## OVERVIEW
 
-This repository is a personal workspace (not a single app). Most context is documented in `CLAUDE.md` router files across the tree. As an agent, prefer loading the nearest `CLAUDE.md` for the area you are editing.
+Personal workspace + knowledge base for SkogAI ecosystem. Not an app — router-driven CLAUDE.md files at every level. Staged at `/home/skogix/claude`, deploying to `/home/claude`.
 
-## Scope and routing
+## STRUCTURE
 
-- Start with `./CLAUDE.md` for top-level orientation.
-- Before changing files in a subdirectory, check whether that directory has its own `CLAUDE.md` and follow it.
-- If a nested `AGENTS.md` exists, it overrides this file for that subtree.
+```
+~/
+├── .skogai/          # SkogAI bootstrap/submodule (symlink → /home/skogix/.skogai)
+├── .claude/          # Claude Code config (settings.json, commands/, skills/)
+├── .planning/        # GSD project planning (phases/, ROADMAP.md, STATE.md)
+├── personal/         # Identity, soul, memory blocks, journal
+├── lab/              # Experiments, WIP projects
+├── journal/          # Session journals (YYYY-MM-DD/)
+├── docs/             # Reference docs (deployment-gate, permissions)
+├── commands/         # Slash command definitions
+└── CLAUDE.md        # Top-level router (start here)
+```
 
-## Editing guidelines
+## WHERE TO LOOK
 
-- Keep changes minimal and focused; avoid broad refactors unless requested.
-- Preserve the repository's structure as a workspace + knowledge base.
-- Prefer additive documentation updates over rewriting historical notes.
-- Do not delete or rewrite journal/history-style files unless explicitly requested.
+| Task | Location | Notes |
+|------|----------|-------|
+| SkogAI bootstrap/conventions | `.skogai/CLAUDE.md` | Argc scripts, kebab-case, UPPERCASE.md |
+| Identity/soul/memory | `personal/CLAUDE.md` | 10-section soul, LORE museum |
+| Experiments/WIP | `lab/CLAUDE.md` | Unstable, move when done |
+| Project planning | `.planning/ROADMAP.md` | v1.0: 4/5 phases complete |
+| Plugin/skill dev | `.skogai/skills/` | Each skill: SKILL.md + manifest.json |
+| Session context | `.planning/memory/MEMORY.md` | Auto-generated feedback |
+| Git worktrees | `.config/wt.toml` | Worktrunk config |
 
-## Validation
+## CONVENTIONS (deviations only)
 
-- For documentation-only changes, run lightweight checks (for example, `git diff --check`).
-- For code changes, run the smallest relevant test/lint commands documented in the nearest context file.
+- **Naming**: kebab-case files, UPPERCASE.md for key docs, lowercase.md for standard
+- **Bash scripts**: `#!/usr/bin/env bash`, `set -euo pipefail`, argc framework
+- **@ notation**: `@path/to/file` expands at prompt-time (bypass cache)
+- **No standard app structure**: no `src/`, `main()`, `package.json` at root
+- **Symlinks**: `.skogai` → `/home/skogix/.skogai` (dogfooding mode)
+- **Commit style**: lowercase conventional (`docs:`, `feat:`, `fix:`, `chore:`)
 
-## Commit conventions
+## ANTI-PATTERNS (THIS PROJECT)
 
-- Use conventional commits in lowercase imperative style:
-  - `docs:` for documentation updates
-  - `chore:` for maintenance/config
-  - `feat:` for new capabilities
-  - `fix:` for bug fixes
+- Never delete journal/history files (append-only)
+- Never use `as any` / `@ts-ignore` in TypeScript
+- Never commit without explicit user request
+- Never bulk pre-load context — read routers lazily
+- `scripts/scripts` symlink loop — known issue, don't follow
 
-## Notes
+## COMMANDS
 
-- Existing `CLAUDE.md` files are still canonical context artifacts for this repo.
-- This `AGENTS.md` exists to make non-Claude coding agents work smoothly in the same workspace.
-- This repo uses @.skogai/docs/tools/rtk/RTK.md
+```bash
+rtk git status              # Prefixed with rtk (token savings)
+wt new <branch>            # Worktree in .claude/worktrees/
+gptodo list                 # Task/issue management
+skogai <cmd>               # SkogAI CLI
+argc --argc-eval <script>   # Argc CLI dispatch
+dagu start-all              # Workflow orchestration (localhost:8080)
+```
+
+## NOTES
+
+- Phase 5 active: `skogai-live-chat-implementation` (chat-io contract, `[@agent:"msg"]` routing)
+- MCP servers: searxng (web search via searxng.aldervall.se)
+- Hook files in `.github/hooks/` + `.claude/` (gsd-*, rtk-rewrite)
+- Email dir (19059 files) is noise — exclude from all searches
+- LSP unavailable for this workspace (knowledge base, not code)

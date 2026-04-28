@@ -2,3 +2,8 @@
 /.claude/worktrees
 /CLAUDE.local.md
 /.worktrees/claude
+
+.env*
+.flaskenv*
+!.env.project
+!.env.vault
